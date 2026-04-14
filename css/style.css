@@ -177,6 +177,29 @@ footer { background: var(--navy); border-top: 1px solid rgba(196,86,26,0.18); pa
 .reveal-delay-2 { transition-delay: 0.3s; }
 .reveal-delay-3 { transition-delay: 0.45s; }
 
+
+/* Plan feature links */
+.plan-feature-link { color: inherit; text-decoration: underline; text-decoration-style: dotted; text-underline-offset: 3px; text-decoration-color: var(--orange); transition: color 0.2s; }
+.plan-feature-link:hover { color: #fff; }
+/* FAQ */
+.faq { background: var(--navy); }
+.faq-title { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 900; line-height: 1.05; letter-spacing: -0.02em; max-width: 640px; margin-bottom: 1rem; }
+.faq-title em { font-style: italic; color: var(--orange); }
+.faq-intro { font-size: 0.93rem; color: rgba(245,240,232,0.45); margin-bottom: 3.5rem; }
+.faq-grid { display: flex; flex-direction: column; gap: 0; border-top: 1px solid rgba(196,86,26,0.2); }
+.faq-item { border-bottom: 1px solid rgba(196,86,26,0.2); }
+.faq-q { width: 100%; background: none; border: none; color: var(--cream); font-family: var(--sans); font-size: 1rem; font-weight: 600; text-align: left; padding: 1.6rem 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 2rem; transition: color 0.2s; }
+.faq-q:hover { color: var(--orange-pale); }
+.faq-q[aria-expanded="true"] { color: var(--orange); }
+.faq-icon { font-size: 1.4rem; font-weight: 300; flex-shrink: 0; transition: transform 0.3s; color: var(--orange); }
+.faq-q[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
+.faq-a { padding: 0 0 1.6rem; }
+.faq-a p { font-size: 0.93rem; line-height: 1.85; color: rgba(245,240,232,0.55); max-width: 680px; }
+/* Counter */
+@keyframes countUp { from { opacity: 0; } to { opacity: 1; } }
+.about-stat-num { animation: countUp 0.2s ease forwards; }
+
+
 @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
 @keyframes expandLine { to { transform: scaleX(1); } }
 @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
