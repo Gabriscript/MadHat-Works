@@ -1,841 +1,502 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MadHat Works — Siti Web per Attività Locali</title>
-    <link rel="icon" type="image/png" href="images/logo.png">
-    <link rel="apple-touch-icon" href="images/logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Syne:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/logoFI.png" />
+    <link rel="apple-touch-icon" href="images/logoFI.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-</head>
-
-<body>
+  <body>
 
     <nav id="nav">
-        <a href="#top" class="nav-logo">
-            <img src="images/logo.png" alt="MadHat" height="36">
-            <span class="nav-logo-text">MaD<span>HaT</span></span>
-        </a>
-        <div class="nav-right">
-            <ul class="nav-links">
-                <li><a href="#about" data-it="Chi siamo" data-en="About">Chi siamo</a></li>
-                <li><a href="#services" data-it="Servizi" data-en="Services">Servizi</a></li>
-                <li><a href="#how" data-it="Come funziona" data-en="How it works">Come funziona</a></li>
-                <li><a href="#faq" data-it="FAQ" data-en="FAQ">FAQ</a></li>
-                <li><a href="#contact" data-it="Contatto" data-en="Contact">Contatto</a></li>
-            </ul>
-            <div class="lang-toggle">
-                <button class="lang-btn active" onclick="setLang('it')">IT</button>
-                <button class="lang-btn" onclick="setLang('en')">EN</button>
-            </div>
-            <a href="#contact" class="nav-cta" data-it="Inizia ora" data-en="Get started">Inizia ora</a>
+      <a href="#top" class="nav-logo">
+        <img src="images/logo.png" alt="MadHat" height="36" />
+        <span class="nav-logo-text">MaD<span>HaT</span></span>
+      </a>
+      <div class="nav-right">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about" data-it="Chi siamo" data-en="About" onclick="closeMenu()">Chi siamo</a></li>
+          <li><a href="#services" data-it="Servizi" data-en="Services" onclick="closeMenu()">Servizi</a></li>
+          <li><a href="#how" data-it="Come funziona" data-en="How it works" onclick="closeMenu()">Come funziona</a></li>
+          <li><a href="#faq" data-it="FAQ" data-en="FAQ" onclick="closeMenu()">FAQ</a></li>
+          <li><a href="#contact" data-it="Contatto" data-en="Contact" onclick="closeMenu()">Contatto</a></li>
+        </ul>
+        <div class="lang-toggle">
+          <button class="lang-btn active" onclick="setLang('it')">IT</button>
+          <button class="lang-btn" onclick="setLang('en')">EN</button>
         </div>
+        <a href="#contact" class="nav-cta" data-it="Inizia ora" data-en="Get started">Inizia ora</a>
+        <button class="nav-hamburger" id="nav-hamburger" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </nav>
 
+
     <section class="hero" id="top">
-        <div class="hero-bg"></div>
-        <div class="hero-line"></div>
-        <div class="hero-label" data-it="Agenzia Web · Attività Locali" data-en="Web Agency · Local Business">Agenzia
-            Web · Attività Locali</div>
-        <h1 class="hero-title">
-            <span data-it="Il tuo<br><em>sito web</em><br>che lavora<br>per te."
-                data-en="Your<br><em>website</em><br>working<br>for you.">Il tuo<br><em>sito web</em><br>che
-                lavora<br>per te.</span>
-        </h1>
-        <p class="hero-sub"
-            data-it="Siti professionali, automazioni intelligenti e presenza online concreta — per ristoranti, artigiani e attività locali che vogliono crescere senza perdere tempo."
-            data-en="Professional websites, smart automations and real online visibility — for restaurants, tradespeople and local businesses ready to grow without wasting time.">
-            Siti professionali, automazioni intelligenti e presenza online concreta — per ristoranti, artigiani e
-            attività locali che vogliono crescere senza perdere tempo.
-        </p>
-        <div class="hero-actions">
-            <a href="#services" class="btn-primary" data-it="Scopri i piani" data-en="See our plans">Scopri i piani</a>
-            <a href="#how" class="btn-ghost" data-it="Come funziona" data-en="How it works">Come funziona</a>
-        </div>
-        <div class="hero-scroll">
-            <div class="scroll-line"></div>
-            <span class="scroll-text" data-it="Scorri" data-en="Scroll">Scorri</span>
-        </div>
+      <div class="hero-bg"></div>
+      <div class="hero-line"></div>
+      <div class="hero-label" data-it="Agenzia Web · Attività Locali" data-en="Web Agency · Local Business">
+        Agenzia Web · Attività Locali
+      </div>
+      <h1 class="hero-title">
+        <span data-it="Il tuo<br><em>sito web</em><br>che lavora<br>per te." data-en="Your<br><em>website</em><br>working<br>for you.">Il tuo<br /><em>sito web</em><br />che lavora<br />per te.</span>
+      </h1>
+      <p class="hero-sub" data-it="Siti professionali, automazioni intelligenti e presenza online concreta — per ristoranti, artigiani e attività locali che vogliono crescere senza perdere tempo." data-en="Professional websites, smart automations and real online visibility — for restaurants, tradespeople and local businesses ready to grow without wasting time.">
+        Siti professionali, automazioni intelligenti e presenza online concreta
+        — per ristoranti, artigiani e attività locali che vogliono crescere
+        senza perdere tempo.
+      </p>
+      <div class="hero-actions">
+        <a href="#services" class="btn-primary" data-it="Scopri i piani" data-en="See our plans">Scopri i piani</a>
+        <a href="#how" class="btn-ghost" data-it="Come funziona" data-en="How it works">Come funziona</a>
+      </div>
+      <div class="hero-scroll">
+        <div class="scroll-line"></div>
+        <span class="scroll-text" data-it="Scorri" data-en="Scroll">Scorri</span>
+      </div>
     </section>
 
     <div class="ticker-wrap">
-        <div class="ticker">
-            <span data-it="Siti Web Professionali" data-en="Professional Websites">Siti Web Professionali</span><span
-                class="sep">◆</span>
-            <span data-it="Automazioni WhatsApp" data-en="WhatsApp Automations">Automazioni WhatsApp</span><span
-                class="sep">◆</span>
-            <span data-it="Google Business" data-en="Google Business">Google Business</span><span class="sep">◆</span>
-            <span data-it="Online in 7 giorni" data-en="Live in 7 days">Online in 7 giorni</span><span
-                class="sep">◆</span>
-            <span data-it="Gestione Richieste" data-en="Request Management">Gestione Richieste</span><span
-                class="sep">◆</span>
-            <span data-it="Assistenza inclusa" data-en="Support included">Assistenza inclusa</span><span
-                class="sep">◆</span>
-            <span data-it="Siti Web Professionali" data-en="Professional Websites">Siti Web Professionali</span><span
-                class="sep">◆</span>
-            <span data-it="Automazioni WhatsApp" data-en="WhatsApp Automations">Automazioni WhatsApp</span><span
-                class="sep">◆</span>
-            <span data-it="Google Business" data-en="Google Business">Google Business</span><span class="sep">◆</span>
-            <span data-it="Online in 7 giorni" data-en="Live in 7 days">Online in 7 giorni</span><span
-                class="sep">◆</span>
-            <span data-it="Gestione Richieste" data-en="Request Management">Gestione Richieste</span><span
-                class="sep">◆</span>
-            <span data-it="Assistenza inclusa" data-en="Support included">Assistenza inclusa</span><span
-                class="sep">◆</span>
-        </div>
+      <div class="ticker">
+        <span data-it="Siti Web Professionali" data-en="Professional Websites">Siti Web Professionali</span><span class="sep">◆</span>
+        <span data-it="Automazioni WhatsApp" data-en="WhatsApp Automations">Automazioni WhatsApp</span><span class="sep">◆</span>
+        <span data-it="Google Business" data-en="Google Business">Google Business</span><span class="sep">◆</span>
+        <span data-it="Online in 7 giorni" data-en="Live in 7 days">Online in 7 giorni</span><span class="sep">◆</span>
+        <span data-it="Gestione Richieste" data-en="Request Management">Gestione Richieste</span><span class="sep">◆</span>
+        <span data-it="Assistenza inclusa" data-en="Support included">Assistenza inclusa</span><span class="sep">◆</span>
+        <span data-it="Siti Web Professionali" data-en="Professional Websites">Siti Web Professionali</span><span class="sep">◆</span>
+        <span data-it="Automazioni WhatsApp" data-en="WhatsApp Automations">Automazioni WhatsApp</span><span class="sep">◆</span>
+        <span data-it="Google Business" data-en="Google Business">Google Business</span><span class="sep">◆</span>
+        <span data-it="Online in 7 giorni" data-en="Live in 7 days">Online in 7 giorni</span><span class="sep">◆</span>
+        <span data-it="Gestione Richieste" data-en="Request Management">Gestione Richieste</span><span class="sep">◆</span>
+        <span data-it="Assistenza inclusa" data-en="Support included">Assistenza inclusa</span><span class="sep">◆</span>
+      </div>
     </div>
 
+
     <section class="about" id="about">
-        <div class="section-label" data-it="Chi siamo" data-en="About us">Chi siamo</div>
-        <div class="about-grid">
+      <div class="section-label" data-it="Chi siamo" data-en="About us">Chi siamo</div>
+      <div class="about-grid">
+        <div>
+          <h2 class="about-headline reveal">
+            <span data-it="Non siamo<br>una grande <em>agenzia.</em><br>Siamo meglio." data-en="We're not<br>a big <em>agency.</em><br>We're better.">Non siamo<br />una grande <em>agenzia.</em><br />Siamo meglio.</span>
+          </h2>
+          <div class="about-stats reveal reveal-delay-2">
             <div>
-                <h2 class="about-headline reveal">
-                    <span data-it="Non siamo<br>una grande <em>agenzia.</em><br>Siamo meglio."
-                        data-en="We're not<br>a big <em>agency.</em><br>We're better.">Non siamo<br>una grande
-                        <em>agenzia.</em><br>Siamo meglio.</span>
-                </h2>
-                <div class="about-stats reveal reveal-delay-2">
-                    <div>
-                        <div class="about-stat-num" id="stat-days">0</div>
-                        <div class="about-stat-label" data-it="giorni per andare online" data-en="days to go live">
-                            giorni per andare online</div>
-                    </div>
-                    <div>
-                        <div class="about-stat-num" id="stat-pct">0%</div>
-                        <div class="about-stat-label" data-it="prezzi trasparenti" data-en="transparent pricing">prezzi
-                            trasparenti</div>
-                    </div>
-                    <div>
-                        <div class="about-stat-num" id="stat-inf">0</div>
-                        <div class="about-stat-label" data-it="caffè consumati" data-en="coffees consumed">caffè
-                            consumati</div>
-                    </div>
-                </div>
+              <div class="about-stat-num" id="stat-days">0</div>
+              <div class="about-stat-label" data-it="giorni per andare online" data-en="days to go live">giorni per andare online</div>
             </div>
-            <div class="reveal reveal-delay-1">
-                <p class="about-body"
-                    data-it="Siamo nati <strong>dall'interno del settore</strong> — con anni nel mondo della ristorazione e dell'ospitalità, sappiamo cosa significa gestire un'attività locale: poche ore, budget limitato, e clienti che non aspettano."
-                    data-en="We come from <strong>inside the industry</strong> — with years in hospitality and food service, we know what running a local business really means: no spare time, limited budgets, and customers who won't wait.">
-                    Siamo nati <strong>dall'interno del settore</strong> — con anni nel mondo della ristorazione e
-                    dell'ospitalità, sappiamo cosa significa gestire un'attività locale: poche ore, budget limitato, e
-                    clienti che non aspettano.
-                </p>
-                <p class="about-body"
-                    data-it="Per questo offriamo siti che <strong>funzionano davvero</strong> — non template anonimi, ma strumenti pensati per il tuo settore, con automazioni che lavorano al posto tuo anche quando sei in cucina o sul cantiere."
-                    data-en="That's why we build websites that <strong>actually work</strong> — not anonymous templates, but tools built for your industry, with automations that handle things for you while you're busy on the job.">
-                    Per questo offriamo siti che <strong>funzionano davvero</strong> — non template anonimi, ma
-                    strumenti pensati per il tuo settore, con automazioni che lavorano al posto tuo anche quando sei in
-                    cucina o sul cantiere.
-                </p>
-                <p class="about-body"
-                    data-it="Prezzi trasparenti. Nessuna sorpresa. <strong>Un unico interlocutore.</strong>"
-                    data-en="Transparent pricing. No surprises. <strong>One single point of contact.</strong>">
-                    Prezzi trasparenti. Nessuna sorpresa. <strong>Un unico interlocutore.</strong>
-                </p>
+            <div>
+              <div class="about-stat-num" id="stat-pct">0%</div>
+              <div class="about-stat-label" data-it="prezzi trasparenti" data-en="transparent pricing">prezzi trasparenti</div>
             </div>
+            <div>
+              <div class="about-stat-num" id="stat-inf">0</div>
+              <div class="about-stat-label" data-it="caffè consumati" data-en="coffees consumed">caffè consumati</div>
+            </div>
+          </div>
+        </div>
+        <div class="reveal reveal-delay-1">
+          <p class="about-body" data-it="Siamo nati <strong>dall'interno del settore</strong> — con anni nel mondo della ristorazione e dell'ospitalità..." data-en="We come from <strong>inside the industry</strong> — with years in hospitality...">
+            Siamo nati <strong>dall'interno del settore</strong> — con anni nel mondo della ristorazione e dell'ospitalità, sappiamo cosa significa gestire un'attività locale: poche ore, budget limitato, e clienti che non aspettano.
+          </p>
+          <p class="about-body" data-it="Per questo offriamo siti che <strong>funzionano davvero</strong>..." data-en="That's why we build websites that <strong>actually work</strong>...">
+            Per questo offriamo siti che <strong>funzionano davvero</strong> — non template anonimi, ma strumenti pensati per il tuo settore, con automazioni che lavorano al posto tuo anche quando sei in cucina o sul cantiere.
+          </p>
+          <p class="about-body" data-it="Prezzi trasparenti. Nessuna sorpresa. <strong>Un unico interlocutore.</strong>" data-en="Transparent pricing. No surprises. <strong>One single point of contact.</strong>">
+            Prezzi trasparenti. Nessuna sorpresa. <strong>Un unico interlocutore.</strong>
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="services" id="services">
+      <div class="services-header">
+        <div>
+          <div class="section-label reveal" data-it="Piani e prezzi" data-en="Plans & pricing">Piani e prezzi</div>
+          <h2 class="services-title reveal reveal-delay-1">
+            <span data-it="Tre piani.<br><em>Una scelta</em><br>semplice." data-en="Three plans.<br><em>One simple</em><br>choice.">Tre piani.<br /><em>Una scelta</em><br />semplice.</span>
+          </h2>
+        </div>
+        <p class="services-intro reveal reveal-delay-2" data-it="Setup una tantum, poi un abbonamento mensile..." data-en="A one-time setup fee, then a monthly subscription...">
+          Setup una tantum, poi un abbonamento mensile che copre hosting, dominio, aggiornamenti e supporto. Nessun costo nascosto, nessun contratto annuale obbligatorio.
+        </p>
+      </div>
+
+      <div class="plans">
+        <div class="plan reveal">
+          <span class="plan-badge" data-it="Start Smart" data-en="Start Smart">Start Smart</span>
+          <div class="plan-name">Starter</div>
+          <div class="plan-tagline" data-it="Il modo più veloce per essere online..." data-en="The fastest way to get online...">Il modo più veloce per essere online e credibile.</div>
+          <div class="plan-setup">349€<small data-it="setup" data-en="setup">setup</small></div>
+          <div class="plan-monthly" data-it="poi 29€/mese" data-en="then 29€/month">poi 29€/mese</div>
+          <div class="plan-divider"></div>
+          <div class="plan-pages" data-it="1 pagina · +50€/pagina extra" data-en="1 page · +50€/extra page">1 pagina</div>
+          <ul class="plan-features">
+            <li data-it="Sito professionale pronto in pochi giorni" data-en="Professional website ready in a few days">Sito professionale pronto in pochi giorni</li>
+            <li data-it="Design su misura ottimizzato per mobile" data-en="Custom mobile-first design">Design su misura ottimizzato per mobile</li>
+            <li data-it="Hosting & dominio inclusi" data-en="Hosting & domain included">Hosting & dominio inclusi</li>
+            <li data-it="Presenza base su Google" data-en="Basic Google presence">Presenza base su Google</li>
+            <li data-it="+50€/pagina extra" data-en="+50€/extra page">+50€/pagina extra</li>
+            <li class="muted"><s data-it="Aggiornamenti contenuti inclusi" data-en="Content updates included">Aggiornamenti contenuti inclusi</s></li>
+            <li class="muted"><s data-it="Ottimizzazione SEO" data-en="SEO optimisation">Ottimizzazione SEO</s></li>
+          </ul>
+          <a href="#contact" class="plan-cta" data-it="Parti subito" data-en="Start now">Parti subito</a>
+        </div>
+
+        <div class="plan featured reveal reveal-delay-1">
+          <span class="plan-badge" data-it="✦ Più scelto" data-en="✦ Most popular">✦ Più scelto</span>
+          <div class="plan-name">Growth</div>
+          <div class="plan-tagline" data-it="Per chi vuole più richieste..." data-en="More enquiries...">Per chi vuole più richieste e meno clienti persi.</div>
+          <div class="plan-setup">499€<small data-it="setup" data-en="setup">setup</small></div>
+          <div class="plan-monthly" data-it="poi 199€/mese" data-en="then 199€/month">poi 199€/mese</div>
+          <div class="plan-divider"></div>
+          <div class="plan-pages" data-it="3 pagine incluse" data-en="3 pages included">3 pagine incluse</div>
+          <ul class="plan-features">
+            <li data-it="Tutto dello Starter" data-en="Everything in Starter">Tutto dello Starter</li>
+            <li><a href="#faq-digital-receptionist" class="plan-feature-link" data-it="Segretaria digitale" data-en="Digital receptionist">Segretaria digitale</a></li>
+            <li><a href="#faq-seo" class="plan-feature-link" data-it="Ottimizzazione SEO & Google Business Profile" data-en="SEO & Google Business Profile optimised">Ottimizzazione SEO & Google Business Profile</a></li>
+            <li><a href="#faq-whatsapp" class="plan-feature-link" data-it="Promemoria WhatsApp e recupero clienti" data-en="WhatsApp Reminders & Client Recovery">Promemoria WhatsApp e recupero clienti</a></li>
+            <li data-it="Gestione attiva e risposta personalizzata recensioni" data-en="Active Review Management & Custom Replies">Gestione attiva e risposta personalizzata recensioni</li>
+            <li data-it="Report mensile con Analytics" data-en="Monthly Analytics report">Report mensile con Analytics</li>
+            <li data-it="Aggiornamenti contenuti inclusi" data-en="Content updates included">Aggiornamenti contenuti inclusi</li>
+          </ul>
+          <a href="#contact" class="plan-cta" data-it="Voglio più clienti" data-en="I want more clients">Voglio più clienti</a>
+        </div>
+
+        <div class="plan reveal reveal-delay-2">
+          <span class="plan-badge" data-it="Premium" data-en="Premium">Premium</span>
+          <div class="plan-name">Full Service</div>
+          <div class="plan-tagline" data-it="Tu lavori. Noi gestiamo la presenza online..." data-en="You run the business...">Tu lavori. Noi gestiamo la presenza online e la visibilità.</div>
+          <div class="plan-setup">799€<small data-it="setup" data-en="setup">setup</small></div>
+          <div class="plan-monthly" data-it="poi 599€/mese" data-en="then 599€/month">poi 599€/mese</div>
+          <div class="plan-divider"></div>
+          <div class="plan-pages" data-it="5 pagine incluse" data-en="5 pages included">5 pagine incluse</div>
+          <ul class="plan-features">
+            <li data-it="Tutto del Growth" data-en="Everything in Growth">Tutto del Growth</li>
+            <li data-it="ChatBot incluso" data-en="ChatBot included">ChatBot incluso</li>
+            <li data-it="Gestione social media" data-en="Social media management">Gestione social media</li>
+            <li data-it="Pagina di autorità professionale" data-en="Professional authority page">Pagina di autorità professionale</li>
+            <li data-it="Aggiornamenti contenuti via vocale o testo" data-en="Content updates via voice or text">Aggiornamenti via vocale o testo</li>
+            <li data-it="Modifiche pubblicate entro 24 ore" data-en="Changes published within 24 hours">Modifiche pubblicate entro 24 ore</li>
+            <li data-it="Supporto prioritario diretto" data-en="Priority direct support">Supporto prioritario diretto</li>
+          </ul>
+          <a href="#contact" class="plan-cta" data-it="Delego tutto" data-en="Delegate everything">Delego tutto</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="section-label reveal" data-it="Testimonianze" data-en="Testimonials">Testimonianze</div>
+      <div class="testimonials-container reveal reveal-delay-1">
+        <div class="testimonials-slider" id="testimonial-slider">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text" data-it="&ldquo;Prima perdevo un sacco di tempo...&rdquo;" data-en="&ldquo;I used to waste a lot of time...&rdquo;">
+              “Prima perdevo un sacco di tempo dietro ai social e alle recensioni. Ora è tutto gestito e posso concentrarmi sul ristorante.”
+            </p>
+            <div class="testimonial-author">Marco R. — Ristoratore</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text" data-it="&ldquo;La segretaria su WhatsApp è stata una svolta...&rdquo;" data-en="&ldquo;The secretary on WhatsApp has been a game-changer...&rdquo;">
+              “La segretaria su WhatsApp è stata una svolta. Mi arrivano le richieste mentre sono in cantiere, senza dover stare sempre al telefono.”
+            </p>
+            <div class="testimonial-author">Luca V. — Idraulico</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text" data-it="&ldquo;Avevo paura dei costi nascosti...&rdquo;" data-en="&ldquo;I was afraid of hidden costs...&rdquo;">
+              “Avevo paura dei costi nascosti, invece è stato tutto chiaro fin da subito. E quando ho bisogno, rispondono davvero”
+            </p>
+            <div class="testimonial-author">Elena G. — Centro Estetico</div>
+          </div>
+        </div>
+        <div class="slider-nav">
+          <button onclick="prevSlide()" class="slider-btn">←</button>
+          <div class="slider-dots" id="slider-dots"></div>
+          <button onclick="nextSlide()" class="slider-btn">→</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="addon-block reveal">
+      <div class="addon-content">
+        <div class="addon-eyebrow" data-it="Servizio standalone" data-en="Standalone service">Servizio standalone</div>
+        <div class="addon-title" data-it="Gestione social media" data-en="Social media management">Gestione social media</div>
+        <p class="addon-desc" data-it="Mantieni i tuoi social attivi..." data-en="Keep your social media active...">
+          Mantieni i tuoi social attivi, professionali e coerenti con il tuo brand. Creiamo e pubblichiamo contenuti, curiamo il profilo e ti aiutiamo a comunicare in modo chiaro con i tuoi clienti. Così rimani visibile online senza doverci pensare.
+        </p>
+        <a href="#contact" class="addon-cta" data-it="Scopri di più" data-en="Find out more">Scopri di più</a>
+      </div>
+      <div class="addon-price-panel">
+        <div class="addon-price-num">+199€</div>
+        <div class="addon-price-label" data-it="al mese" data-en="monthly">al mese</div>
+      </div>
+    </div>
+
+    <div class="addon-block reveal">
+      <div class="addon-content">
+        <div class="addon-eyebrow" data-it="Add-on opzionale" data-en="Optional add-on">Add-on opzionale</div>
+        <div class="addon-title" data-it="Chatbot FAQ per il tuo sito" data-en="FAQ Chatbot for your website">Chatbot FAQ per il tuo sito</div>
+        <p class="addon-desc" data-it="Un assistente automatico risponde 24/7..." data-en="An automated assistant answers 24/7...">
+          Un assistente automatico risponde 24/7 alle domande più frequenti dei tuoi clienti — orari, prezzi, servizi, come raggiungerti. Configurato sulle informazioni del tuo sito, senza bisogno di intervento manuale.
+        </p>
+        <a href="#contact" class="addon-cta" data-it="Scopri di più" data-en="Find out more">Scopri di più</a>
+      </div>
+      <div class="addon-price-panel">
+        <div class="addon-price-num">+299€</div>
+        <div class="addon-price-label" data-it="una tantum" data-en="one-time">una tantum</div>
+      </div>
+    </div>
+
+    <div class="addon-block reveal">
+      <div class="addon-content">
+        <div class="addon-eyebrow" data-it="Servizio standalone" data-en="Standalone service">Servizio standalone</div>
+        <div class="addon-title" data-it="Segretaria Digitale" data-en="Digital Secretary">Segretaria Digitale</div>
+        <p class="addon-desc" data-it="Un form intelligente raccoglie nome..." data-en="A smart form collects name...">
+          Un form intelligente raccoglie nome, telefono, descrizione, CAP e priorità — e te li manda su WhatsApp. Perfetto per artigiani e tecnici. Nessun cliente perso.
+        </p>
+        <a href="#contact" class="addon-cta" data-it="Aggiungi al tuo sito" data-en="Add to your site">Aggiungi al tuo sito</a>
+      </div>
+      <div class="addon-price-panel">
+        <div class="addon-price-num">+99€</div>
+        <div class="addon-price-label" data-it="al mese" data-en="monthly">al mese</div>
+      </div>
+    </div>
+
+    <div class="addon-block reveal">
+      <div class="addon-content">
+        <div class="addon-eyebrow" data-it="Servizio standalone" data-en="Standalone service">Servizio standalone</div>
+        <div class="addon-title" data-it="Promemoria Appuntamenti WhatsApp" data-en="WhatsApp Appointment Reminders">Promemoria Appuntamenti WhatsApp</div>
+        <p class="addon-desc" data-it="Un messaggio automatico il giorno prima..." data-en="An automatic message the day before...">
+          Un messaggio automatico il giorno prima dell'appuntamento. Meno no-show, più organizzazione — zero sforzo da parte tua.
+        </p>
+        <a href="#contact" class="addon-cta" data-it="Aggiungi al tuo sito" data-en="Add to your site">Aggiungi al tuo sito</a>
+      </div>
+      <div class="addon-price-panel">
+        <div class="addon-price-num">+99€</div>
+        <div class="addon-price-label" data-it="al mese" data-en="monthly">al mese</div>
+      </div>
+    </div>
+
+
+    <section class="how" id="how">
+      <div class="section-label" data-it="Come funziona" data-en="How it works">Come funziona</div>
+      <h2 class="how-title reveal">
+        <span data-it="Dal primo contatto<br>al sito <em>online</em><br>in una settimana." data-en="From first contact<br>to your site <em>live</em><br>in one week.">Dal primo contatto<br />al sito <em>online</em><br />in una settimana.</span>
+      </h2>
+      <div class="steps">
+        <div class="step reveal">
+          <span class="step-num">01</span>
+          <div class="step-icon">✉️</div>
+          <div class="step-title" data-it="Scrivici" data-en="Drop us a message">Scrivici</div>
+          <p class="step-desc" data-it="Email o WhatsApp..." data-en="Email or WhatsApp...">Email o WhatsApp — bastano due righe su di te e la tua attività. Nessun form infinito, nessuna burocrazia.</p>
+          <span class="step-tag" data-it="Email → WhatsApp" data-en="Email → WhatsApp">Email → WhatsApp</span>
+        </div>
+        <div class="step reveal reveal-delay-1">
+          <span class="step-num">02</span>
+          <div class="step-icon">☕</div>
+          <div class="step-title" data-it="Una chiamata veloce" data-en="A quick call">Una chiamata veloce</div>
+          <p class="step-desc" data-it="30 minuti per capire..." data-en="30 minutes to understand...">30 minuti per capire cosa ti serve, scegliere il piano giusto e raccogliere i tuoi materiali. Tu parli, noi prendiamo nota.</p>
+          <span class="step-tag" data-it="Senza pressioni" data-en="No pressure">Senza pressioni</span>
+        </div>
+        <div class="step reveal reveal-delay-2">
+          <span class="step-num">03</span>
+          <div class="step-icon">🚀</div>
+          <div class="step-title" data-it="Online in 7 giorni" data-en="Live in 7 days">Online in 7 giorni</div>
+          <p class="step-desc" data-it="Costruiamo, testiamo..." data-en="We build, test...">Costruiamo, testiamo e pubblichiamo il sito. Te lo presentiamo, dai il via libera, e sei operativo — con supporto continuo.</p>
+          <span class="step-tag" data-it="Consegna garantita" data-en="Guaranteed delivery">Consegna garantita</span>
+        </div>
+        <div class="step reveal">
+          <span class="step-num">04</span>
+          <div class="step-icon">🌐</div>
+          <div class="step-title" data-it="Visibilità" data-en="Visibility">Visibilità</div>
+          <p class="step-desc" data-it="Ogni giorno qualcuno..." data-en="Every day someone...">Ogni giorno qualcuno vicino a te cerca esattamente quello che offri. Con un sito professionale e la presenza su Google, quel cliente arriva da te.</p>
+          <span class="step-tag" data-it="Growth &amp; Full Service" data-en="Growth &amp; Full Service">Growth &amp; Full Service</span>
+        </div>
+        <div class="step reveal reveal-delay-1">
+          <span class="step-num">05</span>
+          <div class="step-icon">📊</div>
+          <div class="step-title" data-it="Crescita continua" data-en="Continuous growth">Crescita continua</div>
+          <p class="step-desc" data-it="Report mensile..." data-en="Monthly reports...">Report mensile, aggiornamenti contenuti, ottimizzazione progressiva. Restiamo al tuo fianco nel lungo periodo.</p>
+          <span class="step-tag" data-it="Supporto incluso" data-en="Support included">Supporto incluso</span>
+        </div>
+        <div class="step reveal reveal-delay-2">
+          <span class="step-num">06</span>
+          <div class="step-icon">💬</div>
+          <div class="step-title" data-it="Un contatto diretto, sempre" data-en="One direct contact, always">Un contatto diretto, sempre</div>
+          <p class="step-desc" data-it="Nessun ticket..." data-en="No tickets...">Nessun ticket, nessun supporto generico. Hai il nostro numero — risposta garantita entro 24 ore lavorative.</p>
+          <span class="step-tag" data-it="Sempre raggiungibili" data-en="Always reachable">Sempre raggiungibili</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="who" id="who">
+      <div class="section-label reveal" data-it="Per chi è fatto" data-en="Who it's for">Per chi è fatto</div>
+      <h2 class="who-title reveal reveal-delay-1">
+        <span data-it="Se hai un'<em>attività locale,</em><br>sei nel posto giusto." data-en="If you run a<br><em>local business,</em><br>you're in the right place.">Se hai un'<em>attività locale,</em><br />sei nel posto giusto.</span>
+      </h2>
+      <div class="who-grid">
+        <div class="who-card reveal">
+          <div class="who-emoji">🍝</div>
+          <div class="who-card-title" data-it="Ristoranti & Bar" data-en="Restaurants & Cafés">Ristoranti & Bar</div>
+          <p class="who-card-desc" data-it="Menu online, prenotazioni..." data-en="Online menu, reservations...">Menu online, prenotazioni, Google Maps ottimizzato e raccolta recensioni automatica.</p>
+        </div>
+        <div class="who-card reveal reveal-delay-1">
+          <div class="who-emoji">🔧</div>
+          <div class="who-card-title" data-it="Artigiani & Tecnici" data-en="Tradespeople & Technicians">Artigiani & Tecnici</div>
+          <p class="who-card-desc" data-it="La tua segretaria digitale..." data-en="Your digital receptionist...">La tua segretaria digitale raccoglie ogni richiesta e te la manda su WhatsApp con tutti i dettagli.</p>
+        </div>
+        <div class="who-card reveal reveal-delay-2">
+          <div class="who-emoji">💇</div>
+          <div class="who-card-title" data-it="Saloni & Benessere" data-en="Salons & Wellness">Saloni & Benessere</div>
+          <p class="who-card-desc" data-it="Sito con galleria, listino..." data-en="Website with gallery, price list...">Sito con galleria, listino, prenotazioni online e promemoria automatici.</p>
+        </div>
+        <div class="who-card reveal reveal-delay-3">
+          <div class="who-emoji">🏪</div>
+          <div class="who-card-title" data-it="Negozi & Retail" data-en="Shops & Retail">Negozi & Retail</div>
+          <p class="who-card-desc" data-it="Vetrina online..." data-en="Online showcase...">Vetrina online, catalogo prodotti, orari e indicazioni — tutto ciò che serve.</p>
+        </div>
+        <div class="who-card reveal">
+          <div class="who-emoji">⚖️</div>
+          <div class="who-card-title" data-it="Professionisti & Studi" data-en="Professionals & Firms">Professionisti & Studi</div>
+          <p class="who-card-desc" data-it="Pagine di autorità..." data-en="Authority pages...">Pagine di autorità per medici, avvocati e ingegneri. Pubblichiamo le tue ricerche.</p>
+        </div>
+        <div class="who-card reveal reveal-delay-1">
+          <div class="who-emoji">🏋️</div>
+          <div class="who-card-title" data-it="Fitness & Sport" data-en="Fitness & Sport">Fitness & Sport</div>
+          <p class="who-card-desc" data-it="Palestre, personal trainer..." data-en="Gyms, personal trainers...">Schede online, prenotazione corsi e promemoria automatici.</p>
+        </div>
+        <div class="who-card reveal reveal-delay-2">
+          <div class="who-emoji">🏡</div>
+          <div class="who-card-title" data-it="Immobiliari & Agenti" data-en="Estate Agents & Agencies">Immobiliari & Agenti</div>
+          <p class="who-card-desc" data-it="Portfolio immobili..." data-en="Property portfolio...">Portfolio immobili, form intelligente e presenza su Google.</p>
+        </div>
+        <div class="who-card reveal reveal-delay-3">
+          <div class="who-emoji">🎓</div>
+          <div class="who-card-title" data-it="Formazione & Corsi" data-en="Education & Courses">Formazione & Corsi</div>
+          <p class="who-card-desc" data-it="Scuole guida..." data-en="Driving schools...">Pagina professionale con programma, prezzi e iscrizioni.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="referral">
+      <div class="referral-inner">
+        <div>
+          <div class="referral-label" data-it="Programma referral" data-en="Referral programme">Programma referral</div>
+          <h3 class="referral-headline" data-it="Presenta un cliente.<br>Guadagni 200€." data-en="Refer a client.<br>Earn 200€.">Presenta un cliente.<br />Guadagni 200€.</h3>
+        </div>
+        <div class="referral-big">200€</div>
+        <div>
+          <p class="referral-desc" data-it="Per ogni cliente Growth o Full..." data-en="For every Growth or Full client...">
+            Per ogni cliente Growth o Full che presenti e rimane attivo per almeno 2 mesi, ti accreditiamo 200€.
+          </p>
+          <a href="#contact" class="btn-dark" data-it="Scopri di più" data-en="Find out more">Scopri di più</a>
+        </div>
+      </div>
+    </div>
+
+    <section class="faq" id="faq">
+      <div class="section-label reveal" data-it="Domande frequenti" data-en="FAQ">Domande frequenti</div>
+      <h2 class="faq-title reveal">
+        <span data-it="Quanto vale un <em>sito web</em><br>che lavora davvero per te?" data-en="What is a <em>professional website</em><br>that actually works for you worth?">
+          Quanto vale un <em>sito web</em><br />che lavora davvero per te?
+        </span>
+      </h2>
+      <div class="faq-intro reveal reveal-delay-1" data-it="Prezzi reali, senza sorprese..." data-en="Real prices, no surprises...">
+        Prezzi reali, senza sorprese. Ecco le risposte alle domande più frequenti.
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false">
+            <span data-it="Quanto costa un sito web professionale?" data-en="How much does a professional website cost?">Quanto costa un sito web professionale?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a" hidden>
+            <p data-it="Con MadHat Works..." data-en="With MadHat Works...">Con MadHat Works, il costo parte da 349€ di setup una tantum + 29€/mese per il piano Starter. Nessun costo nascosto.</p>
+          </div>
+        </div>
         </div>
     </section>
 
-    <section class="services" id="services">
-        <div class="services-header">
-            <div>
-                <div class="section-label reveal" data-it="Piani e prezzi" data-en="Plans & pricing">Piani e prezzi
-                </div>
-                <h2 class="services-title reveal reveal-delay-1">
-                    <span data-it="Tre piani.<br><em>Una scelta</em><br>semplice."
-                        data-en="Three plans.<br><em>One simple</em><br>choice.">Tre piani.<br><em>Una
-                            scelta</em><br>semplice.</span>
-                </h2>
-            </div>
-            <p class="services-intro reveal reveal-delay-2"
-                data-it="Setup una tantum, poi un abbonamento mensile che copre hosting, dominio, aggiornamenti e supporto. Nessun costo nascosto. Durata minima: 3 mesi per Basic e Growth, 6 mesi per Full Service."
-                data-en="A one-time setup fee, then a monthly subscription covering hosting, domain, updates and support. No hidden costs. Minimum term: 3 months for Basic and Growth, 6 months for Full Service.">
-                Setup una tantum, poi un abbonamento mensile che copre hosting, dominio, aggiornamenti e supporto.
-                Nessun costo nascosto, nessun contratto annuale obbligatorio.
-            </p>
-        </div>
-
-        <div class="plans">
-            <div class="plan reveal">
-                <span class="plan-badge" data-it="Start Smart" data-en="Start Smart">Start Smart</span>
-                <div class="plan-name">Starter</div>
-                <div class="plan-tagline"
-                    data-it="Il modo più veloce per essere online e credibile. Durata minima 3 mesi."
-                    data-en="The fastest way to get online and look credible. Min. 3 months.">
-                    Il modo più veloce per essere online e credibile.
-                </div>
-                <div class="plan-setup">349€<small data-it="setup" data-en="setup">setup</small></div>
-                <div class="plan-monthly" data-it="poi 29€/mese" data-en="then 29€/month">poi 29€/mese</div>
-                <div class="plan-divider"></div>
-                <div class="plan-pages" data-it="1 pagina · +50€/pagina extra" data-en="1 page · +50€/extra page">
-                    1 pagina
-                </div>
-                <ul class="plan-features">
-                    <li data-it="Sito professionale pronto in pochi giorni"
-                        data-en="Professional website ready in a few days">
-                        Sito professionale pronto in pochi giorni
-                    </li>
-                    <li data-it="Design su misura ottimizzato per mobile" data-en="Custom mobile-first design">
-                        Design su misura ottimizzato per mobile
-                    </li>
-                    <li data-it="Hosting & dominio inclusi" data-en="Hosting & domain included">
-                        Hosting & dominio inclusi
-                    </li>
-                    <li data-it="Presenza base su Google" data-en="Basic Google presence">
-                        Presenza base su Google
-                    </li>
-                    <li data-it=" +50€/pagina extra" data-en=" +50€/extra page">
-                        +50€/pagina extra
-                    </li>
-                    <s>
-                        <li class="muted" data-it="Aggiornamenti contenuti inclusi" data-en="Content updates included">
-                            Aggiornamenti contenuti inclusi
-                        </li>
-                    </s>
-                    <s>
-                        <li class="muted" data-it="Ottimizazzione SEO" data-en="SEO optimisation">
-                            Ottimizazzione SEO
-                        </li>
-                    </s>
-                </ul>
-                <a href="#contact" class="plan-cta" data-it="Parti subito" data-en="Start now">Parti subito</a>
-            </div>
-
-            <div class="plan featured reveal reveal-delay-1">
-                <span class="plan-badge" data-it="✦ Più scelto" data-en="✦ Most popular">✦ Più scelto</span>
-                <div class="plan-name">Growth</div>
-                <div class="plan-tagline"
-                    data-it="Per chi vuole più richieste e meno clienti persi. Durata minima 3 mesi."
-                    data-en="More enquiries. Fewer lost customers. Min. 3 months.">
-                    Per chi vuole più richieste e meno clienti persi.
-                </div>
-                <div class="plan-setup">499€<small data-it="setup" data-en="setup">setup</small></div>
-                <div class="plan-monthly" data-it="poi 199€/mese" data-en="then 199€/month">poi 199€/mese</div>
-                <div class="plan-divider"></div>
-                <div class="plan-pages" data-it="3 pagine incluse" data-en="3 pages included">3 pagine incluse</div>
-                <ul class="plan-features">
-                    <li data-it="Tutto dello Starter" data-en="Everything in Starter">Tutto dello Starter</li>
-                    <a href="#faq-digital-receptionist" class="plan-feature-link">
-                        <li data-it="Segretaria digitale" data-en="Digital receptionist">
-                            Segretaria digitale
-                        </li>
-                    </a>
-                    <a href="#faq-seo" class="plan-feature-link">
-                        <li data-it="Ottimizzazione SEO & Google Business Profile "
-                            data-en="SEO & Google Business Profile optimised">
-                            Ottimizzazione SEO & Google Business Profile
-                        </li>
-                    </a>
-                    <a href="#faq-whatsapp" class="plan-feature-link">
-                        <li data-it="Promemoria WhatsApp e recupero clienti"
-                            data-en="WhatsApp Reminders & Client Recovery">Promemoria WhatsApp e recupero clienti</li>
-                    </a>
-                    <li data-it="Gestione attiva e risposta personalizzata recensioni"
-                        data-en="Active Review Management & Custom Replies">
-                        Gestione attiva e risposta personalizzata recensioni
-                    </li>
-                    <li data-it="Report mensile con Analytics" data-en="Monthly Analytics report">
-                        Report mensile con Analytics
-                    </li>
-                    <li data-it="Aggiornamenti contenuti inclusi" data-en="Content updates included">
-                        Aggiornamenti contenuti inclusi
-                    </li>
-                </ul>
-                <a href="#contact" class="plan-cta" data-it="Voglio più clienti" data-en="I want more clients">
-                    Voglio più clienti
-                </a>
-            </div>
-
-            <div class="plan reveal reveal-delay-2">
-                <span class="plan-badge" data-it="Premium" data-en="Premium">Premium</span>
-                <div class="plan-name">Full Service</div>
-                <div class="plan-tagline"
-                    data-it="Tu lavori. Noi gestiamo la presenza online e l'acquisizione. Durata minima 6 mesi."
-                    data-en="You run the business. We handle your online presence and acquisition. Min. 6 months.">
-                    Tu lavori. Noi gestiamo la presenza online e l'acquisizione.
-                </div>
-                <div class="plan-setup">799€<small data-it="setup" data-en="setup">setup</small></div>
-                <div class="plan-monthly" data-it="poi 599€/mese" data-en="then 599€/month">poi 599€/mese</div>
-                <div class="plan-divider"></div>
-                <div class="plan-pages" data-it="5 pagine incluse" data-en="5 pages included">5 pagine incluse</div>
-                <ul class="plan-features">
-                    <li data-it="Tutto del Growth" data-en="Everything in Growth">Tutto del Growth</li>
-                    <li data-it="ChatBot incluso" data-en="ChatBot included">ChatBot incluso</li>
-                    <li data-it="Gestione social media" data-en="Social media management">Gestione social media</li>
-                    <li data-it="Pagina di autorità professionale (ricerche, portfolio, casi studio)"
-                        data-en="Professional authority page (research, portfolio, case studies)">
-                        Pagina di autorità professionale
-                    </li>
-                    <li data-it="Aggiornamenti contenuti via vocale o testo — pubblichiamo noi"
-                        data-en="Content updates via voice or text — we handle publishing">
-                        Aggiornamenti via vocale o testo
-                    </li>
-                    <li data-it="Modifiche pubblicate entro 24 ore" data-en="Changes published within 24 hours">
-                        Modifiche pubblicate entro 24 ore
-                    </li>
-                    <li data-it="Supporto prioritario diretto" data-en="Priority direct support">
-                        Supporto prioritario diretto
-                    </li>
-                </ul>
-                <a href="#contact" class="plan-cta" data-it="Delego tutto" data-en="Delegate everything">
-                    Delego tutto
-                </a>
-            </div>
-        </div>
-
-        <div class="addon-block reveal">
-            <div class="addon-content">
-                <div class="addon-eyebrow" data-it="Servizio standalone" data-en="Standalone service">
-                    Servizio standalone
-                </div>
-                <div class="addon-title" data-it="Gestione social media" data-en="Social media management">
-                    Gestione social media
-                </div>
-                <p class="addon-desc"
-                    data-it="Mantieni i tuoi social attivi, professionali e coerenti con il tuo brand. Creiamo e pubblichiamo contenuti, curiamo il profilo e ti aiutiamo a comunicare in modo chiaro con i tuoi clienti. Così rimani visibile online senza doverci pensare."
-                    data-en="Keep your social media active, professional and aligned with your brand. We create and publish content, manage your profile and help you communicate clearly with your customers. So you stay visible online without having to think about it.">
-                    Mantieni i tuoi social attivi, professionali e coerenti con il tuo brand. Creiamo e pubblichiamo
-                    contenuti, curiamo il profilo e ti aiutiamo a comunicare in modo chiaro con i tuoi clienti. Così
-                    rimani visibile online senza doverci pensare.
-                </p>
-                <a href="#contact" class="addon-cta" data-it="Scopri di più" data-en="Find out more">
-                    Scopri di più
-                </a>
-            </div>
-            <div class="addon-price-panel">
-                <div class="addon-price-num">+299€</div>
-                <div class="addon-price-label" data-it="al mese" data-en="monthly">al mese</div>
-            </div>
-        </div>
-
-
-        <div class="addon-block reveal">
-            <div class="addon-content">
-                <div class="addon-eyebrow" data-it="Add-on opzionale" data-en="Optional add-on">Add-on opzionale</div>
-                <div class="addon-title" data-it="Chatbot FAQ per il tuo sito" data-en="FAQ Chatbot for your website">
-                    Chatbot FAQ per il tuo sito</div>
-                <p class="addon-desc"
-                    data-it="Un assistente automatico risponde 24/7 alle domande più frequenti dei tuoi clienti — orari, prezzi, servizi, come raggiungerti. Configurato sulle informazioni del tuo sito, senza bisogno di intervento manuale."
-                    data-en="An automated assistant answers your customers' most common questions 24/7 — opening hours, prices, services, how to find you. Configured on your website content, no manual intervention needed.">
-                    Un assistente automatico risponde 24/7 alle domande più frequenti dei tuoi clienti — orari, prezzi,
-                    servizi, come raggiungerti. Configurato sulle informazioni del tuo sito, senza bisogno di intervento
-                    manuale.
-                </p>
-                <a href="#contact" class="addon-cta" data-it="Scopri di più" data-en="Find out more">Scopri di più</a>
-            </div>
-            <div class="addon-price-panel">
-                <div class="addon-price-num">+299€</div>
-                <div class="addon-price-label" data-it="una tantum" data-en="one-time">una tantum</div>
-            </div>
-        </div>
-        <div class="addon-block reveal">
-            <div class="addon-content">
-                <div class="addon-eyebrow" data-it="Servizio standalone" data-en="Standalone service">Servizio
-                    standalone</div>
-                <div class="addon-title" data-it="Segretaria Digitale" data-en="Digital Secretary">Segretaria Digitale
-                </div>
-                <p class="addon-desc"
-                    data-it="Un form intelligente sul tuo sito raccoglie nome, telefono, descrizione del problema, CAP e priorità (normale/urgente) — e te li manda direttamente su WhatsApp. Perfetto per artigiani, idraulici, elettricisti e chiunque non possa rispondere al telefono mentre lavora. Nessun cliente perso."
-                    data-en="A smart form on your site collects name, phone, issue description, postcode and priority (normal/urgent) — and sends it directly to your WhatsApp. Perfect for tradespeople, plumbers, electricians and anyone who can't answer the phone while working. No more lost clients.">
-                    Un form intelligente raccoglie nome, telefono, descrizione, CAP e priorità — e te li manda su
-                    WhatsApp. Nessun cliente perso.
-                </p>
-                <a href="#contact" class="addon-cta" data-it="Aggiungi al tuo sito" data-en="Add to your site">Aggiungi
-                    al tuo sito</a>
-            </div>
-            <div class="addon-price-panel">
-                <div class="addon-price-num">+99€</div>
-                <div class="addon-price-label" data-it="al mese" data-en="monthly">al mese</div>
-            </div>
-        </div>
-
-        <div class="addon-block reveal">
-            <div class="addon-content">
-                <div class="addon-eyebrow" data-it="Servizio standalone" data-en="Standalone service">Servizio
-                    standalone</div>
-                <div class="addon-title" data-it="Promemoria Appuntamenti WhatsApp"
-                    data-en="WhatsApp Appointment Reminders">Promemoria Appuntamenti WhatsApp</div>
-                <p class="addon-desc"
-                    data-it="Un messaggio automatico viene inviato al cliente il giorno prima dell'appuntamento via WhatsApp. Riduce i no-show, risparmia telefonate e migliora la tua organizzazione — senza che tu debba fare niente. Ideale per saloni, barbieri, estetiste e attività su prenotazione."
-                    data-en="An automatic message is sent to the client the day before their appointment via WhatsApp. Reduces no-shows, saves phone calls and improves your scheduling — without you lifting a finger. Ideal for salons, barbers, beauty therapists and booking-based businesses.">
-                    Un messaggio automatico il giorno prima dell'appuntamento. Meno no-show, più organizzazione — zero
-                    sforzo da parte tua.
-                </p>
-                <a href="#contact" class="addon-cta" data-it="Aggiungi al tuo sito" data-en="Add to your site">Aggiungi
-                    al tuo sito</a>
-            </div>
-            <div class="addon-price-panel">
-                <div class="addon-price-num">+99€</div>
-                <div class="addon-price-label" data-it="al mese" data-en="monthly">al mese</div>
-            </div>
-        </div>
-
-        <section class="how" id="how">
-            <div class="section-label" data-it="Come funziona" data-en="How it works">Come funziona</div>
-            <h2 class="how-title reveal">
-                <span data-it="Dal primo contatto<br>al sito <em>online</em><br>in una settimana."
-                    data-en="From first contact<br>to your site <em>live</em><br>in one week.">Dal primo contatto<br>al
-                    sito <em>online</em><br>in una settimana.</span>
-            </h2>
-            <div class="steps">
-                <div class="step reveal">
-                    <span class="step-num">01</span>
-                    <div class="step-icon">✉️</div>
-                    <div class="step-title" data-it="Scrivici" data-en="Drop us a message">Scrivici</div>
-                    <p class="step-desc"
-                        data-it="Email o WhatsApp — bastano due righe su di te e la tua attività. Nessun form infinito, nessuna burocrazia."
-                        data-en="Email or WhatsApp — a couple of lines about you and your business is enough. No endless forms, no fuss.">
-                        Email o WhatsApp — bastano due righe su di te e la tua attività. Nessun form infinito, nessuna
-                        burocrazia.</p>
-                    <span class="step-tag" data-it="Email → WhatsApp" data-en="Email → WhatsApp">Email → WhatsApp</span>
-                </div>
-                <div class="step reveal reveal-delay-1">
-                    <span class="step-num">02</span>
-                    <div class="step-icon">☕</div>
-                    <div class="step-title" data-it="Una chiamata veloce" data-en="A quick call">Una chiamata veloce
-                    </div>
-                    <p class="step-desc"
-                        data-it="30 minuti per capire cosa ti serve, scegliere il piano giusto e raccogliere i tuoi materiali. Tu parli, noi prendiamo nota."
-                        data-en="30 minutes to understand what you need, pick the right plan and collect your materials. You talk, we take notes.">
-                        30 minuti per capire cosa ti serve, scegliere il piano giusto e raccogliere i tuoi materiali. Tu
-                        parli, noi prendiamo nota.</p>
-                    <span class="step-tag" data-it="Senza pressioni" data-en="No pressure">Senza pressioni</span>
-                </div>
-                <div class="step reveal reveal-delay-2">
-                    <span class="step-num">03</span>
-                    <div class="step-icon">🚀</div>
-                    <div class="step-title" data-it="Online in 7 giorni" data-en="Live in 7 days">Online in 7 giorni
-                    </div>
-                    <p class="step-desc"
-                        data-it="Costruiamo, testiamo e pubblichiamo il sito. Te lo presentiamo, dai il via libera, e sei operativo — con supporto continuo dal giorno uno."
-                        data-en="We build, test and publish your site. You review, approve, and you're live — with ongoing support from day one.">
-                        Costruiamo, testiamo e pubblichiamo il sito. Te lo presentiamo, dai il via libera, e sei
-                        operativo — con supporto continuo dal giorno uno.</p>
-                    <span class="step-tag" data-it="Consegna garantita" data-en="Guaranteed delivery">Consegna
-                        garantita</span>
-                </div>
-                <div class="step reveal">
-                    <span class="step-num">04</span>
-                    <div class="step-icon">🌐</div>
-                    <div class="step-title" data-it="Visibilità" data-en="Visibility">Visibilità</div>
-                    <p class="step-desc"
-                        data-it="Ogni giorno qualcuno vicino a te cerca esattamente quello che offri — e finisce dal concorrente. Con un sito professionale e la presenza su Google, quel cliente arriva da te."
-                        data-en="Every day someone near you searches for exactly what you offer — and ends up with a competitor. With a professional website and Google presence, that client comes to you instead.">
-                        Ogni giorno qualcuno vicino a te cerca esattamente quello che offri — e finisce dal concorrente.
-                        Con un sito professionale e la presenza su Google, quel cliente arriva da te.
-                    </p>
-                    <span class="step-tag" data-it="Growth &amp; Full Service"
-                        data-en="Growth &amp; Full Service">Growth &amp; Full Service</span>
-                </div>
-                <div class="step reveal reveal-delay-1">
-                    <span class="step-num">05</span>
-                    <div class="step-icon">📊</div>
-                    <div class="step-title" data-it="Crescita continua" data-en="Continuous growth">Crescita continua
-                    </div>
-                    <p class="step-desc"
-                        data-it="Report mensile, aggiornamenti contenuti, ottimizzazione progressiva.Restiamo al tuo fianco nel lungo periodo."
-                        data-en="Monthly reports, content updates, progressive optimisation. We don't deliver and disappear — we stay with you for the long run.">
-                        Report mensile, aggiornamenti contenuti, ottimizzazione progressiva. Restiamo al tuo fianco nel
-                        lungo periodo.</p>
-                    <span class="step-tag" data-it="Supporto incluso" data-en="Support included">Supporto incluso</span>
-                </div>
-                <div class="step reveal reveal-delay-2">
-                    <span class="step-num">06</span>
-                    <div class="step-icon">💬</div>
-                    <div class="step-title" data-it="Un contatto diretto, sempre" data-en="One direct contact, always">
-                        Un contatto diretto, sempre</div>
-                    <p class="step-desc"
-                        data-it="Nessun ticket, nessun supporto generico. Hai il nostro numero — risposta garantita entro 24 ore lavorative, via WhatsApp o email."
-                        data-en="No tickets, no generic support lines. You have our number — reply guaranteed within 24 business hours, via WhatsApp or email.">
-                        Nessun ticket, nessun supporto generico. Hai il nostro numero — risposta garantita entro 24 ore
-                        lavorative, via WhatsApp o email.</p>
-                    <span class="step-tag" data-it="Sempre raggiungibili" data-en="Always reachable">Sempre
-                        raggiungibili</span>
-                </div>
-            </div>
-        </section>
-
-        <section class="who" id="who">
-            <div class="section-label reveal" data-it="Per chi è fatto" data-en="Who it's for">Per chi è fatto</div>
-            <h2 class="who-title reveal reveal-delay-1">
-                <span data-it="Se hai un'<em>attività locale,</em><br>sei nel posto giusto."
-                    data-en="If you run a<br><em>local business,</em><br>you're in the right place.">Se hai
-                    un'<em>attività locale,</em><br>sei nel posto giusto.</span>
-            </h2>
-            <div class="who-grid">
-                <div class="who-card reveal">
-                    <div class="who-emoji">🍝</div>
-                    <div class="who-card-title" data-it="Ristoranti & Bar" data-en="Restaurants & Cafés">Ristoranti &
-                        Bar</div>
-                    <p class="who-card-desc"
-                        data-it="Menu online, prenotazioni, Google Maps ottimizzato e raccolta recensioni automatica. La tua sala è piena — non il tuo calendario."
-                        data-en="Online menu, reservations, optimised Google Maps and automatic review collection. A full house — not a full diary.">
-                        Menu online, prenotazioni, Google Maps ottimizzato e raccolta recensioni automatica. La tua sala
-                        è piena — non il tuo calendario.</p>
-                </div>
-                <div class="who-card reveal reveal-delay-1">
-                    <div class="who-emoji">🔧</div>
-                    <div class="who-card-title" data-it="Artigiani & Tecnici" data-en="Tradespeople & Technicians">
-                        Artigiani & Tecnici</div>
-                    <p class="who-card-desc"
-                        data-it="La tua segretaria digitale raccoglie ogni richiesta e te la manda su WhatsApp con tutti i dettagli — così non perdi mai un cliente mentre sei al lavoro."
-                        data-en="Your digital receptionist collects every enquiry and sends it to your WhatsApp with all the details — so you never miss a client while you're on the job.">
-                        La tua segretaria digitale raccoglie ogni richiesta e te la manda su WhatsApp con tutti i
-                        dettagli — così non perdi mai un cliente mentre sei al lavoro.</p>
-                </div>
-                <div class="who-card reveal reveal-delay-2">
-                    <div class="who-emoji">💇</div>
-                    <div class="who-card-title" data-it="Saloni & Benessere" data-en="Salons & Wellness">Saloni &
-                        Benessere</div>
-                    <p class="who-card-desc"
-                        data-it="Sito con galleria, listino, prenotazioni online e promemoria automatici per gli appuntamenti — meno no-show, più clienti soddisfatti."
-                        data-en="Website with gallery, price list, online bookings and automatic appointment reminders — fewer no-shows, happier clients.">
-                        Sito con galleria, listino, prenotazioni online e promemoria automatici per gli appuntamenti —
-                        meno no-show, più clienti soddisfatti.</p>
-                </div>
-                <div class="who-card reveal reveal-delay-3">
-                    <div class="who-emoji">🏪</div>
-                    <div class="who-card-title" data-it="Negozi & Retail" data-en="Shops & Retail">Negozi & Retail</div>
-                    <p class="who-card-desc"
-                        data-it="Vetrina online, catalogo prodotti, orari e indicazioni — tutto ciò che trasforma una ricerca Google in una visita al negozio."
-                        data-en="Online showcase, product catalogue, opening hours and directions — everything that turns a Google search into a store visit.">
-                        Vetrina online, catalogo prodotti, orari e indicazioni — tutto ciò che trasforma una ricerca
-                        Google in una visita al negozio.</p>
-                </div>
-            </div>
-        </section>
-
-        <div class="referral">
-            <div class="referral-inner">
-                <div>
-                    <div class="referral-label" data-it="Programma referral" data-en="Referral programme">Programma
-                        referral</div>
-                    <h3 class="referral-headline" data-it="Presenta un cliente.<br>Guadagni 200€."
-                        data-en="Refer a client.<br>Earn 200€.">Presenta un cliente.<br>Guadagni 200€.</h3>
-                </div>
-                <div class="referral-big">200€</div>
-                <div>
-                    <p class="referral-desc"
-                        data-it="Per ogni cliente Growth o Full che presenti e rimane attivo per almeno 2 mesi, ti accreditiamo 200€."
-                        data-en="For every Growth or Full client you refer who stays active for at least 2 months, we credit you 200€.">
-                        Per ogni cliente Growth o Full che presenti e rimane attivo per almeno 2 mesi, ti accreditiamo
-                        200€.
-                    </p>
-                    <a href="#contact" class="btn-dark" data-it="Scopri di più" data-en="Find out more">Scopri di
-                        più</a>
-                </div>
-            </div>
-        </div>
-
-        <section class="faq" id="faq">
-            <div class="section-label reveal" data-it="Domande frequenti" data-en="FAQ">Domande frequenti</div>
-            <h2 class="faq-title reveal">
-                <span data-it="Quanto costa un <em>sito web</em><br>per una piccola impresa nel 2026?"
-                    data-en="How much does a <em>website</em><br>cost for a small business in 2026?">Quanto costa un
-                    <em>sito web</em><br>per una piccola impresa nel 2026?</span>
-            </h2>
-            <div class="faq-intro reveal reveal-delay-1"
-                data-it="Prezzi reali, senza sorprese. Ecco le risposte alle domande più frequenti."
-                data-en="Real prices, no surprises. Here are answers to the most common questions.">
-                Prezzi reali, senza sorprese. Ecco le risposte alle domande più frequenti.
-            </div>
-
-            <div class="faq-grid">
-                <div class="faq-item reveal">
-                    <button class="faq-q" aria-expanded="false">
-                        <span data-it="Quanto costa un sito web professionale per un'attività locale?"
-                            data-en="How much does a professional website cost for a local business?">Quanto costa un
-                            sito web professionale per un'attività locale?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-a" hidden>
-                        <p data-it="Con MadHat Works, il costo parte da 349€ di setup una tantum + 29€/mese per il piano Starter. Il piano Growth costa 499€ di setup + 199€/mese e include automazioni e segretaria digitale. Il piano Full Service è 799€ setup + 599€/mese con gestione completa. Tutti i prezzi includono hosting, dominio e supporto. Nessun costo nascosto."
-                            data-en="With MadHat Works, prices start from a 349€ one-time setup + 29€/month for the Starter plan. The Growth plan is 499€ setup + 199€/month and includes automations and digital receptionist. Full Service is 799€ setup + 599€/month with full management. All prices include hosting, domain and support. No hidden costs.">
-                            Con MadHat Works, il costo parte da 349€ di setup una tantum + 29€/mese per il piano
-                            Starter. Il piano Growth costa 499€ di setup + 199€/mese e include automazioni e segretaria
-                            digitale. Il piano Full Service è 799€ setup + 599€/mese con gestione completa. Tutti i
-                            prezzi includono hosting, dominio e supporto. Nessun costo nascosto.</p>
-                    </div>
-                </div>
-                <div class="faq-item reveal" id="faq-seo">
-                    <button class="faq-q" aria-expanded="false" data-en="What is SEO and why is it important?">Cos'è la
-                        SEO e perché è importante?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-a" hidden>
-                        <p data-it="SEO significa Search Engine Optimization: è l'insieme delle attività che rendono il tuo sito più facile da trovare e da capire per Google e gli altri motori di ricerca. È importante perché ti aiuta a portare traffico qualificato, più visibilità e più richieste. Oggi però non basta più solo la SEO tradizionale: serve anche un approccio più ampio che includa AEO e Search Everywhere Optimization, per farti trovare anche nelle risposte generate dall'AI e negli altri canali digitali."
-                            data-en="SEO means Search Engine Optimization: it is the set of activities that make your website easier to find and understand for Google and other search engines. It matters because it helps bring qualified traffic, more visibility and more enquiries. Today, though, traditional SEO is not enough on its own: you also need a broader approach that includes AEO and Search Everywhere Optimization, so you can appear in AI-generated answers and across other digital channels.">
-                            SEO significa Search Engine Optimization: è l'insieme delle attività che rendono il tuo sito
-                            più facile da trovare e da capire per Google e gli altri motori di ricerca. È importante
-                            perché ti aiuta a portare traffico qualificato, più visibilità e più richieste. Oggi però
-                            non basta più solo la SEO tradizionale: serve anche un approccio più ampio che includa AEO e
-                            Search Everywhere Optimization, per farti trovare anche nelle risposte generate dall'AI e
-                            negli altri canali digitali.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="faq-item reveal reveal-delay-1">
-                    <button class="faq-q" aria-expanded="false">
-                        <span data-it="In quanto tempo viene realizzato il sito?"
-                            data-en="How long does it take to build the website?">In quanto tempo viene realizzato il
-                            sito?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-a" hidden>
-                        <p data-it="Dal primo contatto alla pubblicazione online in 7 giorni lavorativi. La timeline: giorno 1 chiamata conoscitiva, giorni 2–5 sviluppo, giorno 6 revisione con il cliente, giorno 7 go live. Consegna garantita per tutti i piani."
-                            data-en="From first contact to going live in 7 working days. The timeline: day 1 intro call, days 2–5 development, day 6 client review, day 7 go live. Guaranteed delivery on all plans.">
-                            Dal primo contatto alla pubblicazione online in 7 giorni lavorativi. La timeline: giorno 1
-                            chiamata conoscitiva, giorni 2–5 sviluppo, giorno 6 revisione con il cliente, giorno 7 go
-                            live. Consegna garantita per tutti i piani.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item reveal reveal-delay-2" id="faq-digital-receptionist">
-                    <button class="faq-q" aria-expanded="false">
-                        <span data-it="Cos'è la segretaria digitale e come funziona?"
-                            data-en="What is the digital receptionist and how does it work?">Cos'è la segretaria
-                            digitale e come funziona?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-a" hidden>
-                        <p data-it="È un form intelligente sul tuo sito che raccoglie: nome del cliente, numero di telefono, descrizione del problema, CAP e priorità (normale o urgente). Ogni richiesta ti arriva in tempo reale su WhatsApp — così non perdi mai un cliente anche mentre sei al lavoro, ti puoi organizzare raggruppando le richieste nella stessa zona risparmiando tempo e benzina. Disponibile dal piano Growth (incluso) o come add-on standalone a 99€."
-                            data-en="It's a smart form on your website that collects: client name, phone number, issue description, postcode and priority (normal or urgent). Every request reaches you in real time on WhatsApp — so you never miss a client even while you're on the job, and you can organize requests by location, saving time and gas. Available from the Growth plan (included) or as a standalone add-on for 99€.">
-                            È un form intelligente sul tuo sito che raccoglie: nome del cliente, numero di telefono,
-                            descrizione del problema, CAP e priorità (normale o urgente). Ogni richiesta ti arriva in
-                            tempo reale su WhatsApp — così non perdi mai un cliente anche mentre sei al lavoro, ti puoi
-                            organizzare raggruppando le richieste nella stessa zona risparmiando tempo e benzina.
-                            Disponibile dal piano Growth (incluso) o come add-on standalone a 99€.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item reveal">
-                    <button class="faq-q" aria-expanded="false">
-                        <span data-it="I prezzi includono hosting e dominio?"
-                            data-en="Do prices include hosting and domain?">I prezzi includono hosting e dominio?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-a" hidden>
-                        <p data-it="Sì. Tutti i piani mensili includono hosting su server dedicato, dominio personalizzato, certificato SSL, backup regolari e aggiornamenti tecnici. Non hai bisogno di gestire nulla da solo."
-                            data-en="Yes. All monthly plans include hosting on a dedicated server, custom domain, SSL certificate, regular backups and technical updates. You don't need to manage anything yourself.">
-                            Sì. Tutti i piani mensili includono hosting su server dedicato, dominio personalizzato,
-                            certificato SSL, backup regolari e aggiornamenti tecnici. Non hai bisogno di gestire nulla
-                            da solo.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item reveal reveal-delay-1" id="faq-whatsapp">
-                    <button class="faq-q" aria-expanded="false">
-                        <span data-it="Come funzionano i promemoria WhatsApp e il recupero clienti?"
-                            data-en="How do WhatsApp reminders and client recovery work?">Come funzionano i promemoria
-                            WhatsApp e il recupero clienti?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-a" hidden>
-                        <p data-it="Zero chiamate e nessun ritardo: il nostro promemoria automatico avvisa il cliente un'ora prima dell'incontro. Attivarlo è semplicissimo: inviaci data, ora e contatti via WhatsApp, con un PDF o scattando una foto alla tua agenda. E per chi non si vede da un po'? Il sistema di recupero clienti invia un invito personalizzato dopo 6 settimane di assenza. Pensiamo a tutto noi, lasciando a te solo il piacere di dedicarti ai tuoi clienti."
-                            data-en="No more phone calls or delays: our automated reminders notify your clients one hour before their appointment. Setting it up is effortless—just send us the date, time, and contact details via WhatsApp, as a PDF, or even by snapping a photo of your planner. And for those you haven't seen in a while? Our client recovery system sends a personalized invitation after 6 weeks of absence. We take care of everything, so you can focus on what you do best: your work.">
-                            Zero chiamate e nessun ritardo: il nostro promemoria automatico avvisa il cliente un'ora
-                            prima dell'incontro. Attivarlo è semplicissimo: inviaci data, ora e contatti via WhatsApp,
-                            con un PDF o scattando una foto alla tua agenda. E per chi non si vede da un po'? Il sistema
-                            di recupero clienti invia un invito personalizzato dopo 6 settimane di assenza. Pensiamo a
-                            tutto noi, lasciando a te solo il piacere di dedicarti ai tuoi clienti.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item reveal reveal-delay-1">
-                    <button class="faq-q" aria-expanded="false">
-                        <span data-it="Posso aggiungere i promemoria WhatsApp anche se ho già un sito?"
-                            data-en="Can I add WhatsApp reminders even if I already have a website?">Posso aggiungere i
-                            promemoria WhatsApp anche se ho già un sito?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-a" hidden>
-                        <p data-it="I promemoria WhatsApp appuntamenti sono disponibili come add-on standalone a 99€ una tantum, indipendentemente dal piano scelto. Vengono inviati automaticamente al cliente il giorno prima dell'appuntamento — riducono i no-show e risparmiano telefonate manuali."
-                            data-en="WhatsApp appointment reminders are available as a standalone add-on for 99€ one-time, regardless of the plan you choose. They're sent automatically to the client the day before their appointment — reducing no-shows and saving manual phone calls.">
-                            I promemoria WhatsApp appuntamenti sono disponibili come add-on standalone a 99€ una tantum,
-                            indipendentemente dal piano scelto. Vengono inviati automaticamente al cliente il giorno
-                            prima dell'appuntamento — riducono i no-show e risparmiano telefonate manuali.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item reveal reveal-delay-2">
-                    <button class="faq-q" aria-expanded="false">
-                        <span data-it="C'è un contratto annuale obbligatorio?"
-                            data-en="Is there a mandatory annual contract?">C'è un contratto annuale
-                            obbligatorio?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-a" hidden>
-                        <p data-it="No. I piani Basic e Growth hanno una durata minima di 3 mesi, il piano Full Service di 6 mesi. Nessun contratto annuale obbligatorio. Dopo il periodo minimo puoi disdire con un preavviso mensile."
-                            data-en="No. Basic and Growth plans have a minimum term of 3 months, Full Service of 6 months. No mandatory annual contract. After the minimum period you can cancel with one month's notice.">
-                            No. I piani Basic e Growth hanno una durata minima di 3 mesi, il piano Full Service di 6
-                            mesi. Nessun contratto annuale obbligatorio. Dopo il periodo minimo puoi disdire con un
-                            preavviso mensile.</p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Quanto costa un sito web professionale per un'attività locale?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Con MadHat Works, il costo parte da 349€ di setup una tantum + 39€/mese per il piano Starter. Il piano Growth costa 499€ di setup + 199€/mese e include automazioni e segretaria digitale. Il piano Full Service è 799€ setup + 599€/mese con gestione completa. Tutti i prezzi includono hosting, dominio e supporto."
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": []
       }
-    },
-    {
-  "@type": "Question",
-  "name": "Cos'è la SEO e perché è importante?",
-  "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "SEO significa Search Engine Optimization: è l'insieme delle attività che rendono il tuo sito più facile da trovare e da capire per Google e gli altri motori di ricerca. È importante perché ti aiuta a portare traffico qualificato, più visibilità e più richieste. Oggi però non basta più solo la SEO tradizionale: serve anche un approccio più ampio che includa AEO e Search Everywhere Optimization, per farti trovare anche nelle risposte generate dall'AI e negli altri canali digitali."
-  }
-},
-    {
-      "@type": "Question",
-      "name": "In quanto tempo viene realizzato il sito?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Dal primo contatto alla pubblicazione online in 7 giorni lavorativi. La timeline: giorno 1 chiamata conoscitiva, giorni 2–5 sviluppo, giorno 6 revisione con il cliente, giorno 7 go live. Consegna garantita per tutti i piani."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Cos'è la segretaria digitale e come funziona?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "È un form intelligente sul tuo sito che raccoglie: nome del cliente, numero di telefono, descrizione del problema, CAP e priorità (normale o urgente). Ogni richiesta ti arriva in tempo reale su WhatsApp — così non perdi mai un cliente anche mentre sei al lavoro. Disponibile dal piano Growth (incluso) o come add-on standalone a 99€."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "I prezzi includono hosting e dominio?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sì. Tutti i piani mensili includono hosting su server dedicato, dominio personalizzato, certificato SSL, backup regolari e aggiornamenti tecnici. Nessun costo nascosto."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Posso aggiungere i promemoria WhatsApp anche se ho già un sito?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "I promemoria WhatsApp appuntamenti sono disponibili come add-on standalone a 99€ una tantum. Vengono inviati automaticamente al cliente il giorno prima dell'appuntamento — riducono i no-show e risparmiano telefonate manuali."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "C'è un contratto annuale obbligatorio?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. I piani Basic e Growth hanno una durata minima di 3 mesi, il piano Full Service di 6 mesi. Nessun contratto annuale obbligatorio. Dopo il periodo minimo puoi disdire con un preavviso mensile."
-      }
-    }
-  ]
-}
-</script>
+    </script>
 
-        <section class="contact" id="contact">
-            <div class="section-label reveal" data-it="Contatto" data-en="Contact">Contatto</div>
-            <div class="contact-inner">
-                <div>
-                    <h2 class="contact-title reveal">
-                        <span data-it="Parliamoci.<br>Senza <em>impegno.</em>"
-                            data-en="Let's talk.<br>No <em>commitment.</em>">Parliamoci.<br>Senza
-                            <em>impegno.</em></span>
-                    </h2>
-                    <p class="contact-body reveal reveal-delay-1"
-                        data-it="Mandaci un messaggio con una breve descrizione della tua attività. Rispondiamo entro 24 ore con una proposta su misura — senza costi, senza pressioni."
-                        data-en="Send us a message with a brief description of your business. We'll reply within 24 hours with a tailored proposal — no costs, no pressure.">
-                        Mandaci un messaggio con una breve descrizione della tua attività. Rispondiamo entro 24 ore con
-                        una proposta su misura — senza costi, senza pressioni.
-                    </p>
-                    <div class="contact-links reveal reveal-delay-2">
-                        <a href="https://wa.me/358000000000" class="contact-link">
-                            <div class="contact-link-icon">💬</div>
-                            <span data-it="Scrivici su WhatsApp" data-en="Message us on WhatsApp">Scrivici su
-                                WhatsApp</span>
-                        </a>
-                        <a href="/cdn-cgi/l/email-protection#7f1c161e103f121e1b171e0b08100d140c511c1012"
-                            class="contact-link">
-                            <div class="contact-link-icon">✉️</div>
-                            <span class="__cf_email__"
-                                data-cfemail="64070d050b240905000c0510130b160f174a070b09">[email&#160;protected]</span>
-                        </a>
-                    </div>
-                </div>
-                <form class="contact-form reveal reveal-delay-1" onsubmit="return false;">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label class="form-label" data-it="Nome" data-en="Name">Nome</label>
-                            <input class="form-input" type="text" placeholder="Mario Rossi">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" data-it="Attività" data-en="Business">Attività</label>
-                            <input class="form-input" type="text" placeholder="Ristorante Da Mario">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Email</label>
-                        <input class="form-input" type="email" placeholder="mario@example.com">
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" data-it="Piano di interesse" data-en="Plan of interest">Piano di
-                            interesse</label>
-                        <select class="form-select">
-                            <option data-it="Seleziona un piano..." data-en="Select a plan...">Seleziona un piano...
-                            </option>
-                            <option data-it="Starter — 349€ setup + 39€/mese"
-                                data-en="Starter — 349€ setup + 39€/month">Starter — 349€ setup + 39€/mese</option>
-                            <option data-it="Growth — 499€ setup + 199€/mese"
-                                data-en="Growth — 499€ setup + 199€/month">Growth — 499€ setup + 199€/mese</option>
-                            <option data-it="Full Service — 799€ setup + 599€/mese"
-                                data-en="Full Service — 799€ setup + 599€/month">Full Service — 799€ setup + 599€/mese
-                            </option>
-                            <option data-it="Segretaria Digitale — 99€ add-on" data-en="Digital Secretary — 99€ add-on">
-                                Segretaria Digitale — 99€ add-on</option>
-                            <option data-it="Promemoria WhatsApp — 99€ add-on"
-                                data-en="WhatsApp Reminders — 99€ add-on">Promemoria WhatsApp — 99€ add-on</option>
-                            <option data-it="Google Business Profile — 199€" data-en="Google Business Profile — 199€">
-                                Google Business Profile — 199€</option>
-                            <option data-it="Chatbot FAQ — 300€" data-en="FAQ Chatbot — 300€">Chatbot FAQ — 300€
-                            </option>
-                            <option data-it="Non so ancora, voglio informazioni" data-en="Not sure yet, just exploring">
-                                Non so ancora, voglio informazioni</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" data-it="Messaggio (opzionale)" data-en="Message (optional)">Messaggio
-                            (opzionale)</label>
-                        <textarea class="form-textarea" data-placeholder-it="Raccontaci brevemente la tua attività..."
-                            data-placeholder-en="Tell us briefly about your business..."
-                            placeholder="Raccontaci brevemente la tua attività..."></textarea>
-                    </div>
-                    <button class="form-submit" type="submit" data-it="Invia richiesta →" data-en="Send request →">Invia
-                        richiesta →</button>
-                </form>
+
+    <section class="contact" id="contact">
+      <div class="section-label reveal" data-it="Contatto" data-en="Contact">Contatto</div>
+      <div class="contact-inner">
+        <div>
+          <h2 class="contact-title reveal">
+            <span data-it="Parliamoci.<br>Senza <em>impegno.</em>" data-en="Let's talk.<br>No <em>commitment.</em>">Parliamoci.<br />Senza <em>impegno.</em></span>
+          </h2>
+          <p class="contact-body reveal reveal-delay-1" data-it="Mandaci un messaggio..." data-en="Send us a message...">
+            Mandaci un messaggio con una breve descrizione della tua attività. Rispondiamo entro 24 ore.
+          </p>
+          <div class="contact-links reveal reveal-delay-2">
+            <a href="https://wa.me/358000000000" class="contact-link">
+              <div class="contact-link-icon">💬</div>
+              <span data-it="Scrivici su WhatsApp" data-en="Message us on WhatsApp">Scrivici su WhatsApp</span>
+            </a>
+            <a href="mailto:info@tuodominio.com" class="contact-link">
+              <div class="contact-link-icon">✉️</div>
+              <span>info@tuodominio.com</span>
+            </a>
+          </div>
+        </div>
+
+        <form action="https://formspree.io/f/INSERISCI_IL_TUO_ID" method="POST" class="contact-form reveal reveal-delay-1">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nome" class="form-label" data-it="Nome" data-en="Name">Nome</label>
+              <input id="nome" name="nome" class="form-input" type="text" placeholder="Mario Rossi" required />
             </div>
-        </section>
+            <div class="form-group">
+              <label for="attivita" class="form-label" data-it="Attività" data-en="Business">Attività</label>
+              <input id="attivita" name="attivita" class="form-input" type="text" placeholder="Ristorante Da Mario" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input id="email" name="email" class="form-input" type="email" placeholder="mario@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="piano" class="form-label" data-it="Piano di interesse" data-en="Plan of interest">Piano di interesse</label>
+            <select id="piano" name="piano" class="form-select">
+              <option data-it="Seleziona un piano..." data-en="Select a plan...">Seleziona un piano...</option>
+              <option data-it="Starter — 349€ setup + 29€/mese" data-en="Starter — 349€ setup + 29€/month">Starter — 349€ setup + 29€/mese</option>
+              <option data-it="Growth — 499€ setup + 199€/mese" data-en="Growth — 499€ setup + 199€/month">Growth — 499€ setup + 199€/mese</option>
+              <option data-it="Full Service — 799€ setup + 599€/mese" data-en="Full Service — 799€ setup + 599€/month">Full Service — 799€ setup + 599€/mese</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="messaggio" class="form-label" data-it="Messaggio (opzionale)" data-en="Message (optional)">Messaggio (opzionale)</label>
+            <textarea id="messaggio" name="messaggio" class="form-textarea" placeholder="Raccontaci brevemente la tua attività..."></textarea>
+          </div>
+          <button class="form-submit" type="submit" data-it="Invia richiesta →" data-en="Send request →">Invia richiesta →</button>
+        </form>
+      </div>
+    </section>
 
-        <footer>
-            <div class="footer-brand">MaD<span>HaT</span></div>
-            <span class="footer-copy" data-it="© 2026 MaDHaT Works — Web Agency" data-en="© 2026 M
-aDHaT Works — Web Agency">© 2026 MaDHaT Works — Web Agency</span>
-        </footer>
-        <script src="js/main.js"></script>
-</body>
+    <footer>
+      <div class="footer-brand">MaD<span>HaT</span></div>
+      <span class="footer-copy" data-it="© 2026 MaDHaT Works — Web Agency" data-en="© 2026 MaDHaT Works — Web Agency">© 2026 MaDHaT Works — Web Agency</span>
+    </footer>
 
+    <script src="js/main.js"></script>
+  </body>
 </html>
