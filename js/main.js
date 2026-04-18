@@ -2,31 +2,7 @@
 // 1. FUNZIONI GLOBALI (Richiamate dall'HTML)
 // ==========================================
 
-// --- Gestione Lingua ---
-function setLang(lang) {
-    document.documentElement.lang = lang;
-    document.querySelectorAll('.lang-btn').forEach(b => {
-        b.classList.toggle('active', b.textContent === lang.toUpperCase());
-    });
-  
-    document.querySelectorAll('[data-it][data-en]').forEach(el => {
-        const val = el.getAttribute('data-' + lang);
-        if (!val) return;
-        if (val.includes('<')) { 
-            el.innerHTML = val; 
-        } else { 
-            el.textContent = val; 
-        }
-    });
-  
-    document.querySelectorAll('[data-placeholder-it]').forEach(el => {
-        el.placeholder = el.getAttribute('data-placeholder-' + lang);
-    });
-  
-    document.title = lang === 'it'
-      ? 'MadHat Works — Siti Web per Attività Locali'
-      : 'MadHat Works — Websites for Local Business';
-}
+
 
 // --- Gestione Menu Mobile ---
 window.toggleMenu = function() {
