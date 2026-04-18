@@ -216,21 +216,45 @@ function initSlider() {
     });
 
     function startAutoplay() {
-        window.sliderData.interval = setInterval(() => {
-            window.nextSlide();
-        }, 5000); 
+        if (!window.sliderData.interval) {
+            window.sliderData.interval = setInterval(window.nextSlide, 5000); 
+        }
     }
 
     function stopAutoplay() {
         clearInterval(window.sliderData.interval);
+        window.sliderData.interval = null;
+    }
+
+    // GESTIONE SWIPE TOUCH
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    if (container) {
+        // Pausa mouse
+        container.addEventListener('mouseenter', stopAutoplay);
+        container.addEventListener('mouseleave', startAutoplay);
+        
+        // Touch e Swipe
+        container.addEventListener('touchstart', (e) => {
+            stopAutoplay();
+            touchStartX = e.changedTouches[0].screenX;
+        }, {passive: true});
+
+        container.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+            startAutoplay(); // FIX: Ripristina scorrimento
+        }, {passive: true});
+    }
+
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        if (touchEndX < touchStartX - swipeThreshold) window.nextSlide();
+        if (touchEndX > touchStartX + swipeThreshold) window.prevSlide();
     }
 
     startAutoplay();
-    if (container) {
-        container.addEventListener('mouseenter', stopAutoplay);
-        container.addEventListener('mouseleave', startAutoplay);
-        container.addEventListener('touchstart', stopAutoplay, {passive: true});
-    }
 }
 
 // Funzioni Globali per lo Slider
