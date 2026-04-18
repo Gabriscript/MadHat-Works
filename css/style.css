@@ -282,17 +282,24 @@ nav.scrolled {
 .addon-price-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(12, 26, 58, 0.55); }
 .addon-cta { display: inline-block; margin-top: 2rem; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cream); background: var(--navy); padding: 0.75rem 1.8rem; text-decoration: none; transition: background 0.2s; }
 .addon-cta:hover { background: var(--navy-light); }
-
+.addon-note {
+    display: block;
+    font-size: 0.75rem;
+    opacity: 0.65;
+    font-style: italic;
+    margin-bottom: 1.2rem;
+    color: var(--cream);
+}
 /* --- HOW IT WORKS --- */
 .how-title { font-family: var(--serif); font-size: clamp(2.3rem, 4.5vw, 4rem); font-weight: 900; line-height: 1.05; letter-spacing: -0.02em; max-width: 580px; margin-bottom: 5rem; }
 .how-title em { font-style: italic; color: var(--orange); }
 .steps { display: grid; grid-template-columns: repeat(3, 1fr); border-left: 1px solid rgba(12, 26, 58, 0.1); }
-.step { padding: 2.8rem; border-right: 1px solid rgba(12, 26, 58, 0.1); border-bottom: 1px solid rgba(12, 26, 58, 0.1); position: relative; }
+.step { padding: 2.8rem; border-right: 1px solid rgba(12, 26, 58, 0.1); border-bottom: 1px solid rgba(12, 26, 58, 0.1); position: relative;display: flex;    flex-direction: column; align-items: flex-start; height: 100% }
 .step-num { font-family: var(--serif); font-size: 4.5rem; font-weight: 900; color: rgba(12, 26, 58, 0.05); line-height: 1; position: absolute; top: 1.5rem; right: 2rem; }
 .step-icon { font-size: 1.7rem; margin-bottom: 1.4rem; }
 .step-title { font-family: var(--serif); font-size: 1.35rem; font-weight: 700; margin-bottom: 0.75rem; }
-.step-desc { font-size: 0.87rem; line-height: 1.8; color: rgba(12, 26, 58, 0.6); }
-.step-tag { display: inline-block; margin-top: 1.4rem; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--orange); border-bottom: 1px solid var(--orange); padding-bottom: 1px; }
+.step-desc { font-size: 0.87rem; line-height: 1.8; color: rgba(12, 26, 58, 0.6);margin-bottom: 1.8rem; }
+.step-tag { display: inline-block; margin-top: auto; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--orange); border-bottom: 1px solid var(--orange); padding-bottom: 1px; }
 
 /* --- WHO IT'S FOR --- */
 .who { background: var(--navy); }
@@ -391,6 +398,7 @@ footer { background: var(--navy); border-top: 1px solid rgba(196, 86, 26, 0.18);
     .who-grid {
         grid-template-columns: 1fr 1fr;
     }
+    
 }
 /* ==========================================================================
    6. RESPONSIVE (MEDIA QUERIES)
@@ -420,6 +428,7 @@ footer { background: var(--navy); border-top: 1px solid rgba(196, 86, 26, 0.18);
         letter-spacing: 0.1em; border-bottom: 1px solid rgba(196, 86, 26, 0.15);
         opacity: 1;
     }
+    
 
     /* Struttura base mobile */
     section, .referral { padding: 5rem 1.5rem; }
@@ -445,7 +454,40 @@ footer { background: var(--navy); border-top: 1px solid rgba(196, 86, 26, 0.18);
 
 @media (max-width: 480px) {
     .who-grid { grid-template-columns: 1fr; }
+   
+    /* La griglia che avevi già */
+    .who-grid { grid-template-columns: 1fr; }
+    
+    /* 1. Recuperiamo spazio dai bordi dello schermo */
+    nav { 
+        padding: 1rem 1rem; 
+    }
+    
+    /* 2. Riduciamo lo spazio tra lingua, bottone e hamburger */
+    .nav-right { 
+        gap: 0.6rem; 
+    }
+    
+    /* 3. Rimpiccioliamo leggermente il bottone "Inizia ora" */
+    .nav-cta { 
+        padding: 0.4rem 0.6rem; 
+        font-size: 0.65rem; 
+        letter-spacing: 0.05em; 
+    }
+    
+    /* 4. Togliamo padding in eccesso dai tasti lingua */
+    .lang-btn { 
+        padding: 0.3rem 0.4rem; 
+        min-width: auto; 
+    }
+
+    /* 5. PROTEGGIAMO L'HAMBURGER: impediamo che Flexbox lo schiacci */
+    .nav-hamburger { 
+        padding: 8px; 
+        flex-shrink: 0; /* Questa è la vera magia che lo tiene sempre visibile */
+    }
 }
+
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
         animation-duration: 0.01ms !important;
