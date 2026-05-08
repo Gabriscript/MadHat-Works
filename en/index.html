@@ -12,16 +12,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Professional websites, WhatsApp automations and Google Business management for local restaurants, tradespeople and beauty salons. Built in 7 days, from €29/month."
+      content="Professional websites, WhatsApp automations and Google Business management for local restaurants, tradespeople and beauty salons. Built in 14 days, from €29/month."
     />
     <meta
       property="og:title"
-      content="MadHat Works — Siti Web per Attività Locali"
+      content="MadHat Works — Websites for Local Businesses"
     />
     <meta
       property="og:description"
-      content="Il tuo sito web che lavora per te. Siti professionali e automazioni intelligenti senza perdere tempo."
+      content="Your website working for you. Professional sites and smart automations without wasting time."
     />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="MadHat Works" />
     <meta property="og:type" content="website" />
     <meta
       property="og:image"
@@ -29,18 +31,21 @@
     />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <title>MadHat Works — Siti Web per Attività Locali</title>
-    <link rel="icon" type="image/png" href="../images/logoFI.png" />
-    <link rel="apple-touch-icon" href="../images/logoFI.png" />
+    <title>MadHat Works — Websites for Local Businesses</title>
+    <link rel="icon" type="image/png" href="../images/logoFI-favicon.png" />
+    <link rel="apple-touch-icon" href="../images/logoFIAppleTouch.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Syne:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="canonical" href="https://madhatworks.com/en/" />
     <link rel="stylesheet" href="../css/style.css" />
   </head>
 
   <body>
+    <a href="#top" class="skip-link">Skip to main content</a>
     <nav id="nav">
       <a href="#top" class="nav-logo">
         <img src="../images/logo.png" alt="MadHat" height="36" />
@@ -55,8 +60,8 @@
           <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
         </ul>
         <div class="lang-toggle">
-          <a href="/" class="lang-btn">IT</a>
-          <a href="/en/" class="lang-btn active">EN</a>
+          <a href="../index.html" class="lang-btn">IT</a>
+          <a href="index.html" class="lang-btn active" aria-current="page">EN</a>
         </div>
         <a href="#contact" class="nav-cta">Get started</a>
         <button
@@ -98,13 +103,13 @@
         <span>Professional Websites</span><span class="sep">◆</span>
         <span>WhatsApp Automations</span><span class="sep">◆</span>
         <span>Google Business</span><span class="sep">◆</span>
-        <span>Live in 7 days</span><span class="sep">◆</span>
+        <span>Live in 14 days</span><span class="sep">◆</span>
         <span>Request Management</span><span class="sep">◆</span>
         <span>Support included</span><span class="sep">◆</span>
         <span>Professional Websites</span><span class="sep">◆</span>
         <span>WhatsApp Automations</span><span class="sep">◆</span>
         <span>Google Business</span><span class="sep">◆</span>
-        <span>Live in 7 days</span><span class="sep">◆</span>
+        <span>Live in 14 days</span><span class="sep">◆</span>
         <span>Request Management</span><span class="sep">◆</span>
         <span>Support included</span><span class="sep">◆</span>
       </div>
@@ -182,7 +187,7 @@
           <div class="plan-divider"></div>
           <div class="plan-pages">1 page</div>
           <ul class="plan-features">
-            <li>Professional website ready in a few days</li>
+            <li>Professional website ready in 14 days</li>
             <li>Custom mobile-first design</li>
             <li>Hosting & domain included</li>
             <li>Small adjustments included (e.g., menu, hours, texts)</li>
@@ -239,8 +244,16 @@
           <div class="plan-pages">5 pages included</div>
           <ul class="plan-features">
             <li>Everything in Growth</li>
-            <li>ChatBot included</li>
-            <li>Social media management</li>
+            <li>
+              <a href="#addon-social" class="plan-feature-detail-link">
+                Social media management
+              </a>
+            </li>
+            <li>
+              <a href="#addon-chatbot" class="plan-feature-detail-link">
+                FAQ chatbot
+              </a>
+            </li>
             <li>Professional authority page</li>
             <li>Content updates via voice or text</li>
             <li>Changes published within 24 hours</li>
@@ -249,9 +262,47 @@
           <a href="#contact" class="plan-cta">Delegate everything</a>
         </div>
       </div>
+      <!-- Custom Projects Section -->
+      <div class="custom-project reveal">
+        <div class="custom-project-label">Need something more?</div>
+        <div class="custom-project-inner">
+          <div class="custom-project-left">
+            <div class="custom-project-name">Custom Project</div>
+            <div class="custom-project-tagline">
+              Advanced features built to fit your business.
+            </div>
+            <div class="custom-project-types">
+              <div class="custom-type">
+                <span class="custom-type-icon">🛒</span>
+                <div>
+                  <strong>E-commerce</strong>
+                  <span>Online product sales, digital menus with orders, shops with integrated payments</span>
+                </div>
+              </div>
+              <div class="custom-type">
+                <span class="custom-type-icon">📅</span>
+                <div>
+                  <strong>Booking Web App</strong>
+                  <span>Booking system for restaurants, B&amp;Bs, rehearsal studios, clinics and beauty centres</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="custom-project-right">
+            <div class="custom-project-price">
+              <div class="custom-price-setup">999€<small>setup</small></div>
+              <div class="custom-price-monthly">
+                <small>monthly fee defined per project.</small>
+              </div>
+            </div>
+            <a href="#contact" class="plan-cta custom-project-cta">Let's talk first →</a>
+            <p class="custom-project-note">Every project is different — tell us what you need and we'll build the solution together.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="testimonials">
+    <!--<section class="testimonials">
       <div class="section-label reveal">Testimonials</div>
       <div class="testimonials-container reveal reveal-delay-1">
         <div class="testimonials-slider" id="testimonial-slider">
@@ -266,11 +317,10 @@
           <div class="testimonial-card">
             <div class="testimonial-stars">★★★★★</div>
             <p class="testimonial-text">
-              “The secretary on WhatsApp has been a game-changer. The WhatsApp
-              receptionist has cut down a lot of phone calls. Requests come
-              straight to me while I'm on site. ”
+              "The WhatsApp receptionist has been a game-changer. Requests come
+              straight to me while I'm on site — no more missed calls."
             </p>
-            <div class="testimonial-author">Simone — Plumber , Rome</div>
+            <div class="testimonial-author">Simone — Plumber, Rome</div>
           </div>
           <div class="testimonial-card">
             <div class="testimonial-stars">★★★★★</div>
@@ -282,14 +332,14 @@
           </div>
         </div>
         <div class="slider-nav">
-          <button onclick="prevSlide()" class="slider-btn">←</button>
+          <button onclick="prevSlide()" class="slider-btn" aria-label="Previous testimonial">←</button>
           <div class="slider-dots" id="slider-dots"></div>
-          <button onclick="nextSlide()" class="slider-btn">→</button>
+          <button onclick="nextSlide()" class="slider-btn" aria-label="Next testimonial">→</button>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <div class="addon-block reveal">
+    <div class="addon-block reveal" id="addon-social">
       <div class="addon-content">
         <div class="addon-eyebrow">Standalone service</div>
         <div class="addon-title">Social media management</div>
@@ -307,7 +357,7 @@
       </div>
     </div>
 
-    <div class="addon-block reveal">
+    <div class="addon-block reveal" id="addon-chatbot">
       <div class="addon-content">
         <div class="addon-eyebrow">Optional add-on</div>
         <div class="addon-title">FAQ Chatbot for your website</div>
@@ -365,8 +415,8 @@
       <div class="section-label">How it works</div>
       <h2 class="how-title reveal">
         <span
-          >From first contact<br />to your site <em>live</em><br />in one
-          week.</span
+          >From first contact<br />to your site <em>live</em><br />in two
+          weeks.</span
         >
       </h2>
       <div class="steps">
@@ -374,7 +424,10 @@
           <span class="step-num">01</span>
           <div class="step-icon">✉️</div>
           <div class="step-title">Drop us a message</div>
-          <p class="step-desc">Email → WhatsApp</p>
+          <p class="step-desc">
+            Send us a message by email or WhatsApp with a short description of
+            your business. No complicated forms, no pressure.
+          </p>
           <span class="step-tag">Email → WhatsApp</span>
         </div>
         <div class="step reveal reveal-delay-1">
@@ -390,13 +443,13 @@
         <div class="step reveal reveal-delay-2">
           <span class="step-num">03</span>
           <div class="step-icon">🚀</div>
-          <div class="step-title">Live in 7 days</div>
+          <div class="step-title">Live in 14 days</div>
           <p class="step-desc">
             We build, test and publish the website. We present it to you, you
             give the green light, and you're operational — with continuous
             support.
           </p>
-          <span class="step-tag">Guaranteed delivery</span>
+          <span class="step-tag">Fast and proven process</span>
         </div>
         <div class="step reveal">
           <span class="step-num">04</span>
@@ -517,7 +570,7 @@
         <div class="referral-big">200€</div>
         <div>
           <p class="referral-desc">
-            For every Growth or Full client you refer who stays active for at
+            For every Growth, Full or Custom client you refer who stays active for at
             least 2 months, we credit you 200€.
           </p>
           <a href="#contact" class="btn-dark">Find out more</a>
@@ -546,11 +599,13 @@
           </button>
           <div class="faq-a" hidden>
             <p>
-              With MadHat Works, prices start from a 349€ one-time setup +
-              29€/month for the Starter plan. The Growth plan is 499€ setup +
-              199€/month and includes automations and digital receptionist. Full
-              Service is 799€ setup + 599€/month with full management. All
-              prices include hosting, domain and support. No hidden costs.
+              Prices start from a 349€ setup + 29€/month with the Starter plan.
+              The Growth plan is 499€ + 199€/month and includes SEO, WhatsApp
+              automations and digital receptionist. Full Service is 799€ +
+              599€/month with social media and chatbot included. For e-commerce
+              or booking web apps, the Custom Project starts from 999€ +
+              99€/month. All plans include hosting, domain and support. No
+              hidden costs.
             </p>
           </div>
         </div>
@@ -576,8 +631,11 @@
           </button>
           <div class="faq-a" hidden>
             <p>
-              From first contact to going live in 7 working days. Guaranteed
-              delivery on all plans.
+              From contract signing to going live in less than 14 working days.
+              <br>
+              <small>
+                *Timelines apply after receipt of all required materials.
+              </small>
             </p>
           </div>
         </div>
@@ -638,7 +696,7 @@
                 "name": "How much does a professional website cost?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Prices start from a 349€ one-time setup + 29€/month for the Starter plan. No hidden costs."
+                  "text": "Prices start from a 349€ setup + 29€/month with the Starter plan. The Growth plan is 499€ + 199€/month and includes SEO, WhatsApp automations and digital receptionist. Full Service is 799€ + 599€/month with social media and chatbot included. For e-commerce or booking web apps, the Custom Project starts from 999€ + 99€/month. All plans include hosting, domain and support. No hidden costs."
                 }
               },
               {
@@ -654,7 +712,7 @@
                 "name": "How long does it take to build the website?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "From the first contact to going live in 7 working days."
+                  "text": "From contract signing to going live in less than 14 working days. Timelines apply after receipt of all required materials."
                 }
               },
               {
@@ -714,6 +772,20 @@
                   "name": "Full Service Plan",
                   "description": "Complete management: 5-page website, chatbot, social media management and priority support (Setup fee: 799€)."
                 }
+              },
+              {
+                "@type": "Offer",
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "price": "99.00",
+                  "priceCurrency": "EUR",
+                  "valueAddedTaxIncluded": true
+                },
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Custom Project",
+                  "description": "Bespoke e-commerce or booking web app for restaurants, B&Bs, rehearsal studios and service businesses (Setup fee: 999€)."
+                }
               }
             ]
           }
@@ -745,7 +817,7 @@
         </div>
 
         <form
-          action="https://formspree.io/f/INSERISCI_IL_TUO_ID"
+          action="https://formspree.io/f/your-form-id-here"
           method="POST"
           class="contact-form reveal reveal-delay-1"
         >
@@ -757,7 +829,7 @@
                 name="nome"
                 class="form-input"
                 type="text"
-                placeholder="Mario Rossi"
+                placeholder="John Smith"
                 required
               />
             </div>
@@ -768,7 +840,7 @@
                 name="attivita"
                 class="form-input"
                 type="text"
-                placeholder="Ristorante Da Mario"
+                placeholder="John's Restaurant"
               />
             </div>
           </div>
@@ -779,17 +851,18 @@
               name="email"
               class="form-input"
               type="email"
-              placeholder="mario@example.com"
+              placeholder="john@example.com"
               required
             />
           </div>
           <div class="form-group">
             <label for="piano" class="form-label">Plan of interest</label>
             <select id="piano" name="piano" class="form-select">
-              <option>Select a plan...</option>
+              <option value="" disabled selected>Select a plan...</option>
               <option>Starter — 349€ setup + 29€/month</option>
               <option>Growth — 499€ setup + 199€/month</option>
               <option>Full Service — 799€ setup + 599€/month</option>
+              <option>Custom Project — 999€ setup + 99€/month</option>
             </select>
           </div>
           <div class="form-group">
@@ -798,7 +871,7 @@
               id="messaggio"
               name="messaggio"
               class="form-textarea"
-              placeholder="Raccontaci brevemente la tua attività..."
+              placeholder="Tell us briefly about your business..."
             ></textarea>
           </div>
           <button class="form-submit" type="submit">Send request →</button>
@@ -809,8 +882,24 @@
     <footer>
       <div class="footer-brand">MaD<span>HaT</span></div>
       <span class="footer-copy">© 2026 MaDHaT Works — Web Agency</span>
+      <nav class="footer-legal" aria-label="Legal links">
+        <a href="privacy.html">Privacy Policy</a>
+        <span class="footer-sep">·</span>
+        <a href="cookie.html">Cookie Policy</a>
+      </nav>
     </footer>
 
-    <script src="../js/main.js"></script>
+    <div class="cookie-banner" id="cookie-banner" aria-live="polite">
+      <p class="cookie-banner-text">
+        This site does not use profiling cookies. We only use essential technical
+        cookies.
+        <a href="cookie.html" class="cookie-banner-link">Read the Cookie Policy</a>
+      </p>
+      <button class="cookie-banner-btn" id="cookie-dismiss" aria-label="Dismiss cookie banner">
+        Got it
+      </button>
+    </div>
+
+    <script src="../js/main.js" defer></script>
   </body>
 </html>

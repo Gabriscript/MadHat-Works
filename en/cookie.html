@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, follow" />
+  <title>Cookie Policy — MadHat Works</title>
+  <link rel="icon" type="image/png" href="../images/logoFI-favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0d1b2a;
+      --orange: #e07b39;
+      --cream: #f5f0e8;
+      --text: #1a1a1a;
+      --border: #e0dbd0;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Syne', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.8;
+    }
+    .top-nav {
+      background: var(--navy);
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .top-nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+    .top-nav a:hover { opacity: 1; }
+    .top-nav-brand {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      opacity: 1 !important;
+    }
+    .top-nav-brand span { color: var(--orange); }
+    .page-hero {
+      background: var(--navy);
+      color: #fff;
+      padding: 3rem 2rem 4rem;
+      text-align: center;
+    }
+    .page-hero-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    .page-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.15;
+    }
+    .page-hero h1 em {
+      font-style: italic;
+      color: var(--orange);
+    }
+    .page-hero-date {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      opacity: 0.6;
+    }
+    .summary-bar {
+      background: var(--navy);
+      color: #fff;
+      text-align: center;
+      padding: 1.25rem 2rem;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .summary-bar strong { color: var(--orange); }
+    .legal-wrapper {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+    }
+    .legal-section {
+      margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .legal-section:last-child { border-bottom: none; }
+    .legal-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: var(--navy);
+    }
+    .legal-section h2 .num {
+      color: var(--orange);
+      margin-right: 0.4em;
+      font-style: italic;
+    }
+    .legal-section p {
+      font-size: 0.95rem;
+      margin-bottom: 0.75rem;
+    }
+    .legal-section p:last-child { margin-bottom: 0; }
+    .cookie-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.875rem;
+    }
+    .cookie-table th {
+      background: var(--navy);
+      color: #fff;
+      padding: 0.6rem 0.85rem;
+      text-align: left;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+    .cookie-table td {
+      padding: 0.6rem 0.85rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .cookie-table tr:nth-child(even) td { background: #fff; }
+    .badge {
+      display: inline-block;
+      padding: 0.15em 0.6em;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .badge-tech { background: #d4edda; color: #155724; }
+    .badge-third { background: #fff3cd; color: #7a5000; }
+    .badge-none { background: #f8d7da; color: #721c24; }
+    .highlight-box {
+      background: #fff;
+      border-left: 3px solid var(--orange);
+      padding: 1rem 1.25rem;
+      border-radius: 0 6px 6px 0;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+    }
+    .highlight-box strong {
+      display: block;
+      margin-bottom: 0.25rem;
+      color: var(--navy);
+    }
+    .highlight-box a { color: var(--orange); }
+    .legal-footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 1.5rem 2rem;
+      font-size: 0.8rem;
+    }
+    .legal-footer a {
+      color: var(--orange);
+      text-decoration: none;
+    }
+    .legal-footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <nav class="top-nav">
+    <a href="index.html" class="top-nav-brand">MaD<span>HaT</span> Works</a>
+    <a href="index.html">&larr; Back to website</a>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-hero-label">Legal information</div>
+    <h1>Cookie <em>Policy</em></h1>
+    <div class="page-hero-date">Last updated: June 2025</div>
+  </div>
+
+  <div class="summary-bar">
+    This website <strong>does not use profiling or marketing cookies.</strong>
+    We only use essential technical cookies and a font-related IP transfer via Google Fonts.
+  </div>
+
+  <div class="legal-wrapper">
+    <div class="legal-section">
+      <h2><span class="num">1.</span> What cookies are</h2>
+      <p>Cookies are small text files that websites store in your browser during navigation. They can be used to make a site work, remember preferences, or collect analytics and marketing information.</p>
+      <p>Not all cookies are the same: some are essential for the website to function, while others require your explicit consent.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">2.</span> Cookies used on this website</h2>
+      <p>This website only uses essential technical cookies. We do not use profiling, tracking, or marketing cookies of any kind.</p>
+      <table class="cookie-table">
+        <thead>
+          <tr>
+            <th>Cookie / Technology</th>
+            <th>Type</th>
+            <th>Purpose</th>
+            <th>Duration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>cookie-notice-dismissed</strong></td>
+            <td><span class="badge badge-tech">Technical</span></td>
+            <td>Remembers that you dismissed the cookie information banner.</td>
+            <td>365 days</td>
+          </tr>
+          <tr>
+            <td><strong>Google Fonts CDN</strong></td>
+            <td><span class="badge badge-third">Third party</span></td>
+            <td>Loads web fonts. When loaded, your IP address is sent to Google. No browser cookie is set.</td>
+            <td>Not applicable</td>
+          </tr>
+          <tr>
+            <td><strong>Profiling cookies</strong></td>
+            <td><span class="badge badge-none">Not used</span></td>
+            <td>&mdash;</td>
+            <td>&mdash;</td>
+          </tr>
+          <tr>
+            <td><strong>Analytics cookies</strong></td>
+            <td><span class="badge badge-none">Not used</span></td>
+            <td>&mdash;</td>
+            <td>&mdash;</td>
+          </tr>
+          <tr>
+            <td><strong>Advertising cookies</strong></td>
+            <td><span class="badge badge-none">Not used</span></td>
+            <td>&mdash;</td>
+            <td>&mdash;</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">3.</span> Google Fonts and IP transfer</h2>
+      <p>This website loads fonts via Google Fonts (fonts.googleapis.com). When you visit this website, your browser sends a direct request to Google servers, automatically transmitting your IP address.</p>
+      <p>Google does not set cookies in your browser through this service, but the IP transfer is still considered personal data processing. Google is certified under the <strong>EU-US Data Privacy Framework</strong>, which provides safeguards for transfers to the United States.</p>
+      <div class="highlight-box">
+        <strong>Google LLC</strong>
+        Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a><br />
+        Google Fonts FAQ: <a href="https://developers.google.com/fonts/faq/privacy" target="_blank" rel="noopener">developers.google.com/fonts/faq/privacy</a>
+      </div>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">4.</span> Contact form (Formspree)</h2>
+      <p>The contact form on this website uses Formspree to send and manage messages. Formspree does not set cookies in your browser, but it processes the data you submit in the form (name, email, message) to deliver it to us.</p>
+      <div class="highlight-box">
+        <strong>Formspree, Inc.</strong>
+        Privacy Policy: <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">formspree.io/legal/privacy-policy</a>
+      </div>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">5.</span> How to manage cookies</h2>
+      <p>Because this website only uses essential technical cookies, your consent is not required for their use. You can still manage or delete cookies at any time in your browser settings:</p>
+      <ul style="margin: 0.75rem 0 0.75rem 1.25rem;">
+        <li><a href="https://support.google.com/chrome/answer/95647?hl=en" target="_blank" rel="noopener">Google Chrome</a></li>
+        <li><a href="https://support.mozilla.org/en-US/kb/cookies-information-websites-store-on-your-computer" target="_blank" rel="noopener">Mozilla Firefox</a></li>
+        <li><a href="https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac" target="_blank" rel="noopener">Apple Safari</a></li>
+        <li><a href="https://support.microsoft.com/en-us/microsoft-edge/manage-cookies-in-microsoft-edge-view-allow-block-delete-and-use-168dab11-0753-043d-7c16-ede5947fc64d" target="_blank" rel="noopener">Microsoft Edge</a></li>
+      </ul>
+      <p>Please note that disabling technical cookies may affect some website functionality.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">6.</span> Changes to this Cookie Policy</h2>
+      <p>This Cookie Policy may be updated in the event of technical website changes or legal developments. The latest update date is always shown at the top of the page.</p>
+      <p>For any questions: <a href="mailto:info@madhatworks.com">info@madhatworks.com</a></p>
+    </div>
+  </div>
+
+  <footer class="legal-footer">
+    &copy; 2025 MadHat Works — Gabriele Gargani &nbsp;|&nbsp;
+    <a href="privacy.html">Privacy Policy</a> &nbsp;|&nbsp;
+    <a href="index.html">Back to website</a>
+  </footer>
+</body>
+</html>

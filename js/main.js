@@ -48,7 +48,7 @@ function initNav() {
         const hamburger = document.getElementById('nav-hamburger');
         if (navLinks && navLinks.classList.contains('open')) {
             if (!navLinks.contains(event.target) && !hamburger.contains(event.target)) {
-                window.closeMenu(); 
+                window.closeMenu();
             }
         }
     });
@@ -62,6 +62,30 @@ function initNav() {
     window.addEventListener('resize', () => {
         if (window.innerWidth > 900) window.closeMenu();
     });
+
+    // Aggiusta l'altezza del menu mobile quando si apre
+    const updateMobileMenuHeight = () => {
+        if (window.innerWidth <= 900) {
+            const navLinks = document.getElementById('nav-links');
+            if (navLinks && navLinks.classList.contains('open')) {
+                // Imposta l'altezza massima disponibile meno lo spazio per l'header
+                navLinks.style.maxHeight = `${window.innerHeight - 80}px`;
+            }
+        }
+    };
+
+    // Aggiorna l'altezza al ridimensionamento e all'apertura del menu
+    window.addEventListener('resize', updateMobileMenuHeight);
+
+    // Aggiorna quando il menu si apre
+    const originalToggleMenu = window.toggleMenu;
+    window.toggleMenu = function() {
+        originalToggleMenu();
+        // Aggiorna l'altezza dopo aver aperto il menu
+        if (window.innerWidth <= 900) {
+            setTimeout(updateMobileMenuHeight, 100);
+        }
+    };
 }
 
 function initReveal() {
@@ -95,6 +119,7 @@ function initCounters() {
             const progress = Math.min((timestamp - start) / duration, 1);
             const eased = 1 - (1 - progress) * (1 - progress);
             const current = Math.floor(eased * target);
+            
             if (isInfinity && current >= target) {
                 el.textContent = '∞';
             } else {
@@ -110,9 +135,16 @@ function initCounters() {
             if (e.isIntersecting) {
                 counterObserver.unobserve(e.target);
                 const el = e.target;
-                if (el.id === 'stat-days')  animateCounter(el, 7,   900,  '',  false);
-                if (el.id === 'stat-pct')   animateCounter(el, 100, 1100, '%', false);
-                if (el.id === 'stat-inf')   animateCounter(el, 999, 1400, '',  true);
+                
+                // NOVITÀ: Legge il valore "data-target" dall'HTML.
+                // Usa il 10 come base decimale per il parseInt.
+                const targetValue = parseInt(el.getAttribute('data-target'), 10);
+
+                // Passa "targetValue" al posto dei numeri fissi (7, 100, 999).
+                // Ho inserito un fallback (||) nel caso ti dimenticassi di mettere il data-target in futuro.
+                if (el.id === 'stat-days')  animateCounter(el, targetValue || 14,   900,  '',  false);
+                if (el.id === 'stat-pct')   animateCounter(el, targetValue || 100, 1100, '%', false);
+                if (el.id === 'stat-inf')   animateCounter(el, targetValue || 999, 1400, '',  true);
             }
         });
     }, { threshold: 0.5 });
@@ -235,6 +267,7 @@ function initSlider() {
 
 // Funzioni Globali per lo Slider
 window.updateSlider = function() {
+    if (!window.sliderData) return;
     const slider = document.getElementById('testimonial-slider');
     if (!slider) return;
     
@@ -245,16 +278,19 @@ window.updateSlider = function() {
 }
 
 window.nextSlide = function() {
+    if (!window.sliderData) return;
     window.sliderData.currentSlide = (window.sliderData.currentSlide + 1) % window.sliderData.totalSlides;
     window.updateSlider();
 }
 
 window.prevSlide = function() {
+    if (!window.sliderData) return;
     window.sliderData.currentSlide = (window.sliderData.currentSlide - 1 + window.sliderData.totalSlides) % window.sliderData.totalSlides;
     window.updateSlider();
 }
 
 window.goToSlide = function(n) {
+    if (!window.sliderData) return;
     window.sliderData.currentSlide = n;
     window.updateSlider();
 }
@@ -270,3 +306,27 @@ document.addEventListener('DOMContentLoaded', () => {
     initFAQ();
     initSlider();
 });
+
+
+// ==========================================
+// 4. COOKIE BANNER
+// ==========================================
+(function() {
+    var banner = document.getElementById('cookie-banner');
+    var btn = document.getElementById('cookie-dismiss');
+ 
+    // Controllo se già accettato
+    if (localStorage.getItem('cookie-notice-dismissed') === '1') {
+      banner.style.display = 'none';
+      return;
+    }
+ 
+    // Mostra banner
+    banner.style.display = 'flex';
+ 
+    btn.addEventListener('click', function() {
+      banner.classList.add('hidden');
+      localStorage.setItem('cookie-notice-dismissed', '1');
+      setTimeout(function() { banner.style.display = 'none'; }, 450);
+    });
+  })();

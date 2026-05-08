@@ -1,6 +1,12 @@
 <!doctype html>
 <html lang="it">
   <head>
+    <!-- TO ADD: Google Analytics 4 (GA4), Google Search Console – Il Rilevatore SEO, 1. Placeholder content is still live
+Three things that would immediately kill trust if a real prospect lands on the page:
+
+WhatsApp link: wa.me/358000000000 — obviously fake
+Email: info@tuodominio.com — literally "info@yourdomain.com" in Italian
+Formspree ID: your-form-id-here — the contact form silently does nothing -->
     <meta charset="UTF-8" />
     <link rel="alternate" hreflang="it" href="https://madhatworks.com/" />
     <link rel="alternate" hreflang="en" href="https://madhatworks.com/en/" />
@@ -12,7 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Agenzia Web per attività locali. Siti web professionali, automazioni WhatsApp e ottimizzazione Google Business pronti in 7 giorni."
+      content="Agenzia Web per attività locali. Siti web professionali, automazioni WhatsApp e ottimizzazione Google Business pronti in 14 giorni."
     />
     <meta
       property="og:title"
@@ -22,6 +28,8 @@
       property="og:description"
       content="Il tuo sito web che lavora per te. Siti professionali e automazioni intelligenti senza perdere tempo."
     />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:site_name" content="MadHat Works" />
     <meta property="og:type" content="website" />
     <meta
       property="og:image"
@@ -30,19 +38,22 @@
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <title>MadHat Works — Siti Web per Attività Locali</title>
-    <link rel="icon" type="image/png" href="images/logoFI.png" />
+    <link rel="icon" type="image/png" href="images/logoFI-favicon.png" />
     <link rel="apple-touch-icon" href="images/logoFI.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Syne:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="canonical" href="https://madhatworks.com/" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
+    <a href="#main-content" class="skip-link">Vai al contenuto principale</a>
     <nav id="nav">
-      <a href="#top" class="nav-logo">
+      <a href="#main-content" class="nav-logo">
         <img src="images/logo.png" alt="MadHat" height="36" />
         <span class="nav-logo-text">MaD<span>HaT</span></span>
       </a>
@@ -55,8 +66,8 @@
           <li><a href="#contact" onclick="closeMenu()">Contatto</a></li>
         </ul>
         <div class="lang-toggle">
-          <a href="/" class="lang-btn active">IT</a>
-          <a href="/en/" class="lang-btn">EN</a>
+          <a href="/" class="lang-btn active" aria-current="page">IT</a>
+          <a href="en/index.html" class="lang-btn">EN</a>
         </div>
         <a href="#contact" class="nav-cta">Inizia ora</a>
         <button
@@ -70,189 +81,258 @@
         </button>
       </div>
     </nav>
-
-    <section class="hero" id="top">
-      <div class="hero-bg"></div>
-      <div class="hero-line"></div>
-      <div class="hero-label">Agenzia Web · Attività Locali</div>
-      <h1 class="hero-title">
-        <span>Il tuo<br /><em>sito web</em><br />che lavora<br />per te.</span>
-      </h1>
-      <p class="hero-sub">
-        Siti professionali, automazioni intelligenti e presenza online concreta
-        — per ristoranti, artigiani e attività locali che vogliono crescere
-        senza perdere tempo.
-      </p>
-      <div class="hero-actions">
-        <a href="#services" class="btn-primary">Scopri i piani</a>
-        <a href="#how" class="btn-ghost">Come funziona</a>
-      </div>
-      <div class="hero-scroll">
-        <div class="scroll-line"></div>
-        <span class="scroll-text">Scorri</span>
-      </div>
-    </section>
-
-    <div class="ticker-wrap">
-      <div class="ticker">
-        <span>Siti Web Professionali</span><span class="sep">◆</span>
-        <span>Automazioni WhatsApp</span><span class="sep">◆</span>
-        <span>Google Business</span><span class="sep">◆</span>
-        <span>Online in 7 giorni</span><span class="sep">◆</span>
-        <span>Gestione Richieste</span><span class="sep">◆</span>
-        <span>Assistenza inclusa</span><span class="sep">◆</span>
-        <span>Siti Web Professionali</span><span class="sep">◆</span>
-        <span>Automazioni WhatsApp</span><span class="sep">◆</span>
-        <span>Google Business</span><span class="sep">◆</span>
-        <span>Online in 7 giorni</span><span class="sep">◆</span>
-        <span>Gestione Richieste</span><span class="sep">◆</span>
-        <span>Assistenza inclusa</span><span class="sep">◆</span>
-      </div>
-    </div>
-
-    <section class="about" id="about">
-      <div class="section-label">Chi siamo</div>
-      <div class="about-grid">
-        <div>
-          <h2 class="about-headline reveal">
-            <span
-              >Non siamo<br />una grande <em>agenzia.</em><br />Siamo
-              meglio.</span
-            >
-          </h2>
-          <div class="about-stats reveal reveal-delay-2">
-            <div>
-              <div class="about-stat-num" id="stat-days">0</div>
-              <div class="about-stat-label">giorni per andare online</div>
-            </div>
-            <div>
-              <div class="about-stat-num" id="stat-pct">0%</div>
-              <div class="about-stat-label">prezzi trasparenti</div>
-            </div>
-            <div>
-              <div class="about-stat-num" id="stat-inf">0</div>
-              <div class="about-stat-label">caffè consumati</div>
-            </div>
-          </div>
-        </div>
-        <div class="reveal reveal-delay-1">
-          <p class="about-body">
-            Siamo nati <strong>dall'interno del settore</strong> — con anni nel
-            mondo della ristorazione e dell'ospitalità, sappiamo cosa significa
-            gestire un'attività locale: poche ore, budget limitato, e clienti
-            che non aspettano.
-          </p>
-          <p class="about-body">
-            Per questo offriamo siti che <strong>funzionano davvero</strong> —
-            non template anonimi, ma strumenti pensati per il tuo settore, con
-            automazioni che lavorano al posto tuo anche quando sei in cucina o
-            sul cantiere.
-          </p>
-          <p class="about-body">
-            Prezzi trasparenti. Nessuna sorpresa.
-            <strong>Un unico interlocutore.</strong>
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="services" id="services">
-      <div class="services-header">
-        <div>
-          <div class="section-label reveal">Piani e prezzi</div>
-          <h2 class="services-title reveal reveal-delay-1">
-            <span>Tre piani.<br /><em>Una scelta</em><br />semplice.</span>
-          </h2>
-        </div>
-        <p class="services-intro reveal reveal-delay-2">
-          Setup una tantum, poi un abbonamento mensile che copre hosting,
-          dominio, aggiornamenti e supporto. Nessun costo nascosto, nessun
-          contratto annuale obbligatorio.
+    <main id="main-content">
+      <section class="hero" id="top">
+        <div class="hero-bg"></div>
+        <div class="hero-line"></div>
+        <div class="hero-label">Agenzia Web · Attività Locali</div>
+        <h1 class="hero-title">
+          <span
+            >Il tuo<br /><em>sito web</em><br />che lavora<br />per te.</span
+          >
+        </h1>
+        <p class="hero-sub">
+          Siti professionali, automazioni intelligenti e presenza online
+          concreta — per ristoranti, artigiani e attività locali che vogliono
+          crescere senza perdere tempo.
         </p>
-      </div>
-
-      <div class="plans">
-        <div class="plan reveal">
-          <span class="plan-badge">Start Smart</span>
-          <div class="plan-name">Starter</div>
-          <div class="plan-tagline">
-            Il modo più veloce per essere online e credibile.
-          </div>
-          <div class="plan-setup">349€<small>setup</small></div>
-          <div class="plan-monthly">poi 29€/mese</div>
-          <div class="plan-divider"></div>
-          <div class="plan-pages">1 pagina</div>
-          <ul class="plan-features">
-            <li>Sito professionale pronto in pochi giorni</li>
-            <li>Design su misura ottimizzato per mobile</li>
-            <li>Hosting & dominio inclusi</li>
-            <li>Aggiustamenti minori inclusi (es. menu, orari, testi)</li>
-            <li>+50€/pagina extra</li>
-            <li class="muted">Aggiornamenti contenuti frequenti</li>
-            <li class="muted">Ottimizzazione SEO</li>
-          </ul>
-          <a href="#contact" class="plan-cta">Parti subito</a>
+        <div class="hero-actions">
+          <a href="#services" class="btn-primary">Scopri i piani</a>
+          <a href="#how" class="btn-ghost">Come funziona</a>
         </div>
-
-        <div class="plan featured reveal reveal-delay-1">
-          <span class="plan-badge">✦ Più scelto</span>
-          <div class="plan-name">Growth</div>
-          <div class="plan-tagline">
-            Per chi vuole più richieste e meno clienti persi.
-          </div>
-          <div class="plan-setup">499€<small>setup</small></div>
-          <div class="plan-monthly">poi 199€/mese</div>
-          <div class="plan-divider"></div>
-          <div class="plan-pages">3 pagine incluse</div>
-          <ul class="plan-features">
-            <li>Tutto dello Starter</li>
-            <li>
-              <a href="#faq-digital-receptionist" class="plan-feature-link"
-                >Segretaria digitale</a
-              >
-            </li>
-            <li>
-              <a href="#faq-seo" class="plan-feature-link"
-                >Ottimizzazione SEO & Google Business Profile</a
-              >
-            </li>
-            <li>
-              <a href="#faq-whatsapp" class="plan-feature-link"
-                >Promemoria WhatsApp e recupero clienti</a
-              >
-            </li>
-            <li>Gestione attiva e risposta personalizzata recensioni</li>
-            <li>Report mensile con Analytics</li>
-            <li>Aggiornamenti contenuti inclusi</li>
-          </ul>
-          <a href="#contact" class="plan-cta">Voglio più clienti</a>
+        <div class="hero-scroll">
+          <div class="scroll-line"></div>
+          <span class="scroll-text">Scorri</span>
         </div>
+      </section>
 
-        <div class="plan reveal reveal-delay-2">
-          <span class="plan-badge">Premium</span>
-          <div class="plan-name">Full Service</div>
-          <div class="plan-tagline">
-            Tu lavori. Noi gestiamo la presenza online e la visibilità.
-          </div>
-          <div class="plan-setup">799€<small>setup</small></div>
-          <div class="plan-monthly">poi 599€/mese</div>
-          <div class="plan-divider"></div>
-          <div class="plan-pages">5 pagine incluse</div>
-          <ul class="plan-features">
-            <li>Tutto del Growth</li>
-            <li>ChatBot incluso</li>
-            <li>Gestione social media</li>
-            <li>Pagina di autorità professionale</li>
-            <li>Aggiornamenti via vocale o testo</li>
-            <li>Modifiche pubblicate entro 24 ore</li>
-            <li>Supporto prioritario diretto</li>
-          </ul>
-          <a href="#contact" class="plan-cta">Delego tutto</a>
+      <div class="ticker-wrap">
+        <div class="ticker">
+          <span>Siti Web Professionali</span><span class="sep">◆</span>
+          <span>Automazioni WhatsApp</span><span class="sep">◆</span>
+          <span>Google Business</span><span class="sep">◆</span>
+          <span>Online in 14 giorni</span><span class="sep">◆</span>
+          <span>Gestione Richieste</span><span class="sep">◆</span>
+          <span>Assistenza inclusa</span><span class="sep">◆</span>
+          <span>Siti Web Professionali</span><span class="sep">◆</span>
+          <span>Automazioni WhatsApp</span><span class="sep">◆</span>
+          <span>Google Business</span><span class="sep">◆</span>
+          <span>Online in 14 giorni</span><span class="sep">◆</span>
+          <span>Gestione Richieste</span><span class="sep">◆</span>
+          <span>Assistenza inclusa</span><span class="sep">◆</span>
         </div>
       </div>
-    </section>
 
-    <section class="testimonials">
+      <section class="about" id="about">
+        <div class="section-label">Chi siamo</div>
+
+        <div class="about-grid">
+          <div>
+            <h2 class="about-headline reveal">
+              <span
+                >Non siamo<br />una grande <em>agenzia.</em><br />Siamo
+                meglio.</span
+              >
+            </h2>
+
+            <div class="about-stats reveal reveal-delay-2">
+              <div>
+                <div class="about-stat-num" id="stat-days" data-target="14">
+                  14
+                </div>
+                <div class="about-stat-label">giorni per andare online</div>
+              </div>
+              <div>
+                <div class="about-stat-num" id="stat-pct" data-target="100">
+                  100%
+                </div>
+                <div class="about-stat-label">prezzi trasparenti</div>
+              </div>
+              <div>
+                <div class="about-stat-num" id="stat-inf" data-target="500">
+                  500+
+                </div>
+                <div class="about-stat-label">caffè consumati</div>
+              </div>
+            </div>
+          </div>
+          <div class="reveal reveal-delay-1">
+            <p class="about-body">
+              Siamo nati <strong>dall'interno del settore</strong> — con anni
+              nel mondo della ristorazione e dell'ospitalità, sappiamo cosa
+              significa gestire un'attività locale: poche ore, budget limitato,
+              e clienti che non aspettano.
+            </p>
+            <p class="about-body">
+              Per questo offriamo siti che <strong>funzionano davvero</strong> —
+              non template anonimi, ma strumenti pensati per il tuo settore, con
+              automazioni che lavorano al posto tuo anche quando sei in cucina o
+              sul cantiere.
+            </p>
+            <p class="about-body">
+              Prezzi trasparenti. Nessuna sorpresa.
+              <strong>Un unico interlocutore.</strong>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="services" id="services">
+        <div class="services-header">
+          <div>
+            <div class="section-label reveal">Piani e prezzi</div>
+            <h2 class="services-title reveal reveal-delay-1">
+              <span>Tre piani.<br /><em>Una scelta</em><br />semplice.</span>
+            </h2>
+          </div>
+          <p class="services-intro reveal reveal-delay-2">
+            Setup una tantum, poi un abbonamento mensile che copre hosting,
+            dominio, aggiornamenti e supporto. Nessun costo nascosto, nessun
+            contratto annuale obbligatorio.
+          </p>
+        </div>
+
+        <div class="plans">
+          <div class="plan reveal">
+            <span class="plan-badge">Start Smart</span>
+            <div class="plan-name">Starter</div>
+            <div class="plan-tagline">
+              Il modo più veloce per essere online e credibile.
+            </div>
+            <div class="plan-setup">349€<small>setup</small></div>
+            <div class="plan-monthly">poi 29€/mese</div>
+            <div class="plan-divider"></div>
+            <div class="plan-pages">1 pagina</div>
+            <ul class="plan-features">
+              <li>Sito professionale pronto in 14 giorni</li>
+              <li>Design su misura ottimizzato per mobile</li>
+              <li>Hosting & dominio inclusi</li>
+              <li>Aggiustamenti minori inclusi (es. menu, orari, testi)</li>
+              <li>+50€/pagina extra</li>
+              <li class="muted">Aggiornamenti contenuti frequenti</li>
+              <li class="muted">Ottimizzazione SEO</li>
+            </ul>
+            <a href="#contact" class="plan-cta">Parti subito</a>
+          </div>
+
+          <div class="plan featured reveal reveal-delay-1">
+            <span class="plan-badge">✦ Più scelto</span>
+            <div class="plan-name">Growth</div>
+            <div class="plan-tagline">
+              Per chi vuole più richieste e meno clienti persi.
+            </div>
+            <div class="plan-setup">499€<small>setup</small></div>
+            <div class="plan-monthly">poi 199€/mese</div>
+            <div class="plan-divider"></div>
+            <div class="plan-pages">3 pagine incluse</div>
+            <ul class="plan-features">
+              <li>Tutto dello Starter</li>
+              <li>
+                <a href="#faq-digital-receptionist" class="plan-feature-link"
+                  >Segretaria digitale</a
+                >
+              </li>
+              <li>
+                <a href="#faq-seo" class="plan-feature-link"
+                  >Ottimizzazione SEO & Google Business Profile</a
+                >
+              </li>
+              <li>
+                <a href="#faq-whatsapp" class="plan-feature-link"
+                  >Promemoria WhatsApp e recupero clienti</a
+                >
+              </li>
+              <li>Gestione attiva e risposta personalizzata recensioni</li>
+              <li>Report mensile con Analytics</li>
+              <li>Aggiornamenti contenuti inclusi</li>
+            </ul>
+            <a href="#contact" class="plan-cta">Voglio più clienti</a>
+          </div>
+
+          <div class="plan reveal reveal-delay-2">
+            <span class="plan-badge">Premium</span>
+            <div class="plan-name">Full Service</div>
+            <div class="plan-tagline">
+              Tu lavori. Noi gestiamo la presenza online e la visibilità.
+            </div>
+            <div class="plan-setup">799€<small>setup</small></div>
+            <div class="plan-monthly">poi 599€/mese</div>
+            <div class="plan-divider"></div>
+            <div class="plan-pages">5 pagine incluse</div>
+            <ul class="plan-features">
+              <li>Tutto del Growth</li>
+              <li>
+                <a href="#addon-social" class="plan-feature-detail-link">
+                  Gestione social media
+                </a>
+              </li>
+              <li>
+                <a href="#addon-chatbot" class="plan-feature-detail-link">
+                  Chatbot FAQ
+                </a>
+              </li>
+              <li>Pagina di autorità professionale</li>
+              <li>Aggiornamenti via vocale o testo</li>
+              <li>Modifiche pubblicate entro 24 ore</li>
+              <li>Supporto prioritario diretto</li>
+            </ul>
+            <a href="#contact" class="plan-cta">Delego tutto</a>
+          </div>
+        </div>
+        <!-- Custom Projects Section -->
+        <div class="custom-project reveal">
+          <div class="custom-project-label">
+            Hai bisogno di qualcosa di più?
+          </div>
+          <div class="custom-project-inner">
+            <div class="custom-project-left">
+              <div class="custom-project-name">Progetto Custom</div>
+              <div class="custom-project-tagline">
+                Funzionalità avanzate costruite su misura per la tua attività.
+              </div>
+              <div class="custom-project-types">
+                <div class="custom-type">
+                  <span class="custom-type-icon">🛒</span>
+                  <div>
+                    <strong>E-commerce</strong>
+                    <span
+                      >Vendita online di prodotti, menu digitale con ordini,
+                      shop con pagamenti integrati</span
+                    >
+                  </div>
+                </div>
+                <div class="custom-type">
+                  <span class="custom-type-icon">📅</span>
+                  <div>
+                    <strong>Web App Prenotazioni</strong>
+                    <span
+                      >Sistema di booking per ristoranti, B&B, sale prove, studi
+                      e centri estetici</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="custom-project-right">
+              <div class="custom-project-price">
+                <div class="custom-price-setup">999€<small>setup</small></div>
+                <div class="custom-price-monthly">
+                  <small>canone definito sul progetto.</small>
+                </div>
+              </div>
+              <a href="#contact" class="plan-cta custom-project-cta"
+                >Parliamoci prima →</a
+              >
+              <p class="custom-project-note">
+                Ogni progetto è diverso — raccontaci cosa ti serve e costruiamo
+                insieme la soluzione.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- <section class="testimonials">
       <div class="section-label reveal">Testimonianze</div>
       <div class="testimonials-container reveal reveal-delay-1">
         <div class="testimonials-slider" id="testimonial-slider">
@@ -286,544 +366,612 @@
           </div>
         </div>
         <div class="slider-nav">
-          <button onclick="prevSlide()" class="slider-btn">←</button>
+          <button
+            onclick="prevSlide()"
+            class="slider-btn"
+            aria-label="Testimonianza precedente"
+          >
+            ←
+          </button>
           <div class="slider-dots" id="slider-dots"></div>
-          <button onclick="nextSlide()" class="slider-btn">→</button>
-        </div>
-      </div>
-    </section>
-
-    <div class="addon-block reveal">
-      <div class="addon-content">
-        <div class="addon-eyebrow">Servizio standalone</div>
-        <div class="addon-title">Gestione social media</div>
-        <span class="addon-note">Incluso nel piano Full Service.</span>
-        <p class="addon-desc">
-          Mantieni i tuoi social attivi, professionali e coerenti con il tuo
-          brand. Creiamo e pubblichiamo contenuti, curiamo il profilo e ti
-          aiutiamo a comunicare in modo chiaro con i tuoi clienti. Così rimani
-          visibile online senza doverci pensare.
-        </p>
-        <a href="#contact" class="addon-cta">Scopri di più</a>
-      </div>
-      <div class="addon-price-panel">
-        <div class="addon-price-num">+199€</div>
-        <div class="addon-price-label">al mese</div>
-      </div>
-    </div>
-
-    <div class="addon-block reveal">
-      <div class="addon-content">
-        <div class="addon-eyebrow">Add-on opzionale</div>
-        <div class="addon-title">Chatbot FAQ per il tuo sito</div>
-        <span class="addon-note">Incluso nel piano Full Service.</span>
-        <p class="addon-desc">
-          Un assistente automatico risponde 24/7 alle domande più frequenti dei
-          tuoi clienti — orari, prezzi, servizi, come raggiungerti. Configurato
-          sulle informazioni del tuo sito, senza bisogno di intervento manuale.
-        </p>
-        <a href="#contact" class="addon-cta">Scopri di più</a>
-      </div>
-      <div class="addon-price-panel">
-        <div class="addon-price-num">+299€</div>
-        <div class="addon-price-label">una tantum</div>
-      </div>
-    </div>
-
-    <div class="addon-block reveal">
-      <div class="addon-content">
-        <div class="addon-eyebrow">Servizio standalone</div>
-        <div class="addon-title">Segretaria Digitale</div>
-        <span class="addon-note">Incluso nei piani Growth & Full Service.</span>
-        <p class="addon-desc">
-          Un form intelligente raccoglie nome, telefono, descrizione, CAP e
-          priorità — e te li manda su WhatsApp. Perfetto per artigiani e
-          tecnici. Nessun cliente perso.
-        </p>
-        <a href="#contact" class="addon-cta">Aggiungi al tuo sito</a>
-      </div>
-      <div class="addon-price-panel">
-        <div class="addon-price-num">+99€</div>
-        <div class="addon-price-label">al mese</div>
-      </div>
-    </div>
-
-    <div class="addon-block reveal">
-      <div class="addon-content">
-        <div class="addon-eyebrow">Servizio standalone</div>
-        <div class="addon-title">Promemoria Appuntamenti WhatsApp</div>
-        <span class="addon-note">Incluso nei piani Growth & Full Service.</span>
-        <p class="addon-desc">
-          Un messaggio automatico il giorno prima dell'appuntamento. Meno
-          no-show, più organizzazione — zero sforzo da parte tua.
-        </p>
-        <a href="#contact" class="addon-cta">Aggiungi al tuo sito</a>
-      </div>
-      <div class="addon-price-panel">
-        <div class="addon-price-num">+99€</div>
-        <div class="addon-price-label">al mese</div>
-      </div>
-    </div>
-
-    <section class="how" id="how">
-      <div class="section-label">Come funziona</div>
-      <h2 class="how-title reveal">
-        <span
-          >Dal primo contatto<br />al sito <em>online</em><br />in una
-          settimana.</span
-        >
-      </h2>
-      <div class="steps">
-        <div class="step reveal">
-          <span class="step-num">01</span>
-          <div class="step-icon">✉️</div>
-          <div class="step-title">Scrivici</div>
-          <p class="step-desc">Email → WhatsApp</p>
-          <span class="step-tag">Email → WhatsApp</span>
-        </div>
-        <div class="step reveal reveal-delay-1">
-          <span class="step-num">02</span>
-          <div class="step-icon">☕</div>
-          <div class="step-title">Una chiamata veloce</div>
-          <p class="step-desc">
-            30 minuti per capire cosa ti serve, scegliere il piano giusto e
-            raccogliere i tuoi materiali. Tu parli, noi prendiamo nota.
-          </p>
-          <span class="step-tag">Senza pressioni</span>
-        </div>
-        <div class="step reveal reveal-delay-2">
-          <span class="step-num">03</span>
-          <div class="step-icon">🚀</div>
-          <div class="step-title">Online in 7 giorni</div>
-          <p class="step-desc">
-            Costruiamo, testiamo e pubblichiamo il sito. Te lo presentiamo, dai
-            il via libera, e sei operativo — con supporto continuo.
-          </p>
-          <span class="step-tag">Consegna garantita</span>
-        </div>
-        <div class="step reveal">
-          <span class="step-num">04</span>
-          <div class="step-icon">🌐</div>
-          <div class="step-title">Visibilità</div>
-          <p class="step-desc">
-            Ogni giorno qualcuno vicino a te cerca esattamente quello che offri.
-            Con un sito professionale e la presenza su Google, quel cliente
-            arriva da te.
-          </p>
-          <span class="step-tag">Growth &amp; Full Service</span>
-        </div>
-        <div class="step reveal reveal-delay-1">
-          <span class="step-num">05</span>
-          <div class="step-icon">📊</div>
-          <div class="step-title">Crescita continua</div>
-          <p class="step-desc">
-            Report mensile, aggiornamenti contenuti, ottimizzazione progressiva.
-            Restiamo al tuo fianco nel lungo periodo.
-          </p>
-          <span class="step-tag">Supporto incluso</span>
-        </div>
-        <div class="step reveal reveal-delay-2">
-          <span class="step-num">06</span>
-          <div class="step-icon">💬</div>
-          <div class="step-title">Un contatto diretto, sempre</div>
-          <p class="step-desc">
-            Nessun ticket, nessun supporto generico. Hai il nostro numero —
-            risposta garantita entro 24 ore lavorative.
-          </p>
-          <span class="step-tag">Sempre raggiungibili</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="who" id="who">
-      <div class="section-label reveal">Per chi è fatto</div>
-      <h2 class="who-title reveal reveal-delay-1">
-        <span
-          >Se hai un'<em>attività locale,</em><br />sei nel posto giusto.</span
-        >
-      </h2>
-      <div class="who-grid">
-        <div class="who-card reveal">
-          <div class="who-emoji">🍝</div>
-          <div class="who-card-title">Ristoranti & Bar</div>
-          <p class="who-card-desc">
-            Più prenotazioni da Google. Il menu online azzera le domande al
-            telefono e le risposte automatiche alle recensioni ti fanno
-            risparmiare ore.
-          </p>
-        </div>
-        <div class="who-card reveal reveal-delay-1">
-          <div class="who-emoji">🔧</div>
-          <div class="who-card-title">Artigiani & Tecnici</div>
-          <p class="who-card-desc">
-            Mai più clienti persi mentre sei in cantiere. Ricevi le richieste
-            già filtrate e complete su WhatsApp, pronte per diventare
-            preventivi.
-          </p>
-        </div>
-        <div class="who-card reveal reveal-delay-2">
-          <div class="who-emoji">💇</div>
-          <div class="who-card-title">Saloni & Benessere</div>
-          <p class="who-card-desc">
-            Riduci i no-show del 60% con i promemoria automatici. I clienti
-            vedono i tuoi lavori, sanno quanto costa e ti contattano 24/7.
-          </p>
-        </div>
-        <div class="who-card reveal reveal-delay-3">
-          <div class="who-emoji">🏪</div>
-          <div class="who-card-title">Negozi & Retail</div>
-          <p class="who-card-desc">
-            Fatti trovare da chi cerca i tuoi prodotti in zona. Più visite
-            fisiche in negozio grazie a una vetrina digitale chiara e
-            indicazioni precise.
-          </p>
-        </div>
-        <div class="who-card reveal">
-          <div class="who-emoji">⚖️</div>
-          <div class="who-card-title">Professionisti & Studi</div>
-          <p class="who-card-desc">
-            Costruisci fiducia ancor prima del primo incontro. Una pagina
-            autorevole che posiziona le tue competenze e filtra i contatti non
-            in target.
-          </p>
-        </div>
-        <div class="who-card reveal reveal-delay-1">
-          <div class="who-emoji">🏋️</div>
-          <div class="who-card-title">Fitness & Sport</div>
-          <p class="who-card-desc">
-            Riempi i tuoi corsi senza fatica. Mostra il valore dei tuoi
-            allenamenti e fidelizza i clienti con comunicazioni automatiche.
-          </p>
-        </div>
-        <div class="who-card reveal reveal-delay-2">
-          <div class="who-emoji">🏡</div>
-          <div class="who-card-title">Immobiliari & Agenti</div>
-          <p class="who-card-desc">
-            Acquisisci più mandati e profila meglio gli acquirenti. Un portfolio
-            elegante e moduli intelligenti per scremare i curiosi.
-          </p>
-        </div>
-        <div class="who-card reveal reveal-delay-3">
-          <div class="who-emoji">🎓</div>
-          <div class="who-card-title">Formazione & Corsi</div>
-          <p class="who-card-desc">
-            Aumenta le iscrizioni convertendo i visitatori. Metti in risalto il
-            tuo programma e semplifica il processo per farsi contattare.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <div class="referral">
-      <div class="referral-inner">
-        <div>
-          <div class="referral-label">Programma referral</div>
-          <h3 class="referral-headline">
-            Presenta un cliente.<br />Guadagni 200€.
-          </h3>
-        </div>
-        <div class="referral-big">200€</div>
-        <div>
-          <p class="referral-desc">
-            Per ogni cliente Growth o Full che presenti e rimane attivo per
-            almeno 2 mesi, ti accreditiamo 200€.
-          </p>
-          <a href="#contact" class="btn-dark">Scopri di più</a>
-        </div>
-      </div>
-    </div>
-
-    <section class="faq" id="faq">
-      <div class="section-label reveal">Domande frequenti</div>
-      <h2 class="faq-title reveal">
-        <span>
-          Quanto vale un <em>sito web</em><br />che lavora davvero per te?
-        </span>
-      </h2>
-      <div class="faq-intro reveal reveal-delay-1">
-        Prezzi reali, senza sorprese. Ecco le risposte alle domande più
-        frequenti.
-      </div>
-
-      <div class="faq-grid">
-        <div class="faq-item reveal">
-          <button class="faq-q" aria-expanded="false">
-            <span>Quanto costa un sito web professionale?</span>
-            <span class="faq-icon">+</span>
+          <button
+            onclick="nextSlide()"
+            class="slider-btn"
+            aria-label="Testimonianza successiva"
+          >
+            →
           </button>
-          <div class="faq-a" hidden>
-            <p>
-              Con MadHat Works, il costo parte da 349€ di setup una tantum +
-              29€/mese per il piano Starter. Il piano Growth costa 499€ di setup
-              + 199€/mese e include automazioni e segretaria digitale. Il piano
-              Full Service è 799€ setup + 599€/mese con gestione completa. Tutti
-              i prezzi includono hosting, dominio e supporto. Nessun costo
-              nascosto.
+        </div>
+      </div>
+    </section> -->
+
+      <div class="addon-block reveal" id="addon-social">
+        <div class="addon-content">
+          <div class="addon-eyebrow">Servizio standalone</div>
+          <div class="addon-title">Gestione social media</div>
+          <span class="addon-note">Incluso nel piano Full Service.</span>
+          <p class="addon-desc">
+            Mantieni i tuoi social attivi, professionali e coerenti con il tuo
+            brand. Ti aiutiamo a pubblicare contenuti, aggiornare informazioni e
+            comunicare in modo chiaro con i tuoi clienti.Così rimani visibile
+            online senza doverci pensare.
+          </p>
+          <a href="#contact" class="addon-cta">Scopri di più</a>
+        </div>
+        <div class="addon-price-panel">
+          <div class="addon-price-num">+199€</div>
+          <div class="addon-price-label">al mese</div>
+        </div>
+      </div>
+
+      <div class="addon-block reveal" id="addon-chatbot">
+        <div class="addon-content">
+          <div class="addon-eyebrow">Add-on opzionale</div>
+          <div class="addon-title">Chatbot FAQ per il tuo sito</div>
+          <span class="addon-note">Incluso nel piano Full Service.</span>
+          <p class="addon-desc">
+            Un assistente automatico risponde 24/7 alle domande più frequenti
+            dei tuoi clienti — orari, servizi, prezzi, disponibilità o come
+            raggiungerti. Sempre aggiornato sulle informazioni del tuo sito,
+            aiuta i clienti anche quando non sei disponibile.
+          </p>
+          <a href="#contact" class="addon-cta">Scopri di più</a>
+        </div>
+        <div class="addon-price-panel">
+          <div class="addon-price-num">+299€</div>
+          <div class="addon-price-label">una tantum</div>
+        </div>
+      </div>
+
+      <div class="addon-block reveal">
+        <div class="addon-content">
+          <div class="addon-eyebrow">Servizio standalone</div>
+          <div class="addon-title">Segretaria Digitale</div>
+          <span class="addon-note"
+            >Incluso nei piani Growth & Full Service.</span
+          >
+          <p class="addon-desc">
+            Un form intelligente raccoglie nome, telefono, descrizione, CAP e
+            priorità — e te li manda su WhatsApp. Perfetto per artigiani e
+            tecnici. Nessun cliente perso.
+          </p>
+          <a href="#contact" class="addon-cta">Aggiungi al tuo sito</a>
+        </div>
+        <div class="addon-price-panel">
+          <div class="addon-price-num">+99€</div>
+          <div class="addon-price-label">al mese</div>
+        </div>
+      </div>
+
+      <div class="addon-block reveal">
+        <div class="addon-content">
+          <div class="addon-eyebrow">Servizio standalone</div>
+          <div class="addon-title">Promemoria Appuntamenti WhatsApp</div>
+          <span class="addon-note"
+            >Incluso nei piani Growth & Full Service.</span
+          >
+          <p class="addon-desc">
+            Un messaggio automatico il giorno prima dell'appuntamento. Meno
+            no-show, più organizzazione — zero sforzo da parte tua.
+          </p>
+          <a href="#contact" class="addon-cta">Aggiungi al tuo sito</a>
+        </div>
+        <div class="addon-price-panel">
+          <div class="addon-price-num">+99€</div>
+          <div class="addon-price-label">al mese</div>
+        </div>
+      </div>
+
+      <section class="how" id="how">
+        <div class="section-label">Come funziona</div>
+        <h2 class="how-title reveal">
+          <span
+            >Dal primo contatto<br />al sito <em>online</em><br />in 14
+            giorni</span
+          >
+        </h2>
+        <div class="steps">
+          <div class="step reveal">
+            <span class="step-num">01</span>
+            <div class="step-icon">✉️</div>
+            <div class="step-title">Scrivici</div>
+            <p class="step-desc">
+              Mandaci un messaggio via email o WhatsApp con una breve
+              descrizione della tua attività. Nessun modulo complicato, niente
+              pressioni.
+            </p>
+            <span class="step-tag">Email → WhatsApp</span>
+          </div>
+          <div class="step reveal reveal-delay-1">
+            <span class="step-num">02</span>
+            <div class="step-icon">☕</div>
+            <div class="step-title">Una chiamata veloce</div>
+            <p class="step-desc">
+              30 minuti per capire cosa ti serve, scegliere il piano giusto e
+              raccogliere i tuoi materiali. Tu parli, noi prendiamo nota.
+            </p>
+            <span class="step-tag">Senza pressioni</span>
+          </div>
+          <div class="step reveal reveal-delay-2">
+            <span class="step-num">03</span>
+            <div class="step-icon">🚀</div>
+            <div class="step-title">Online in 14 giorni</div>
+            <p class="step-desc">
+              Costruiamo, testiamo e pubblichiamo il sito. Te lo presentiamo,
+              dai il via libera, e sei operativo — con supporto continuo.
+            </p>
+            <span class="step-tag">Processo rapido e collaudato</span>
+          </div>
+          <div class="step reveal">
+            <span class="step-num">04</span>
+            <div class="step-icon">🌐</div>
+            <div class="step-title">Visibilità</div>
+            <p class="step-desc">
+              Ogni giorno qualcuno vicino a te cerca esattamente quello che
+              offri. Con un sito professionale e la presenza su Google, quel
+              cliente arriva da te.
+            </p>
+            <span class="step-tag">Growth &amp; Full Service</span>
+          </div>
+          <div class="step reveal reveal-delay-1">
+            <span class="step-num">05</span>
+            <div class="step-icon">📊</div>
+            <div class="step-title">Crescita continua</div>
+            <p class="step-desc">
+              Report mensile, aggiornamenti contenuti, ottimizzazione
+              progressiva. Restiamo al tuo fianco nel lungo periodo.
+            </p>
+            <span class="step-tag">Supporto incluso</span>
+          </div>
+          <div class="step reveal reveal-delay-2">
+            <span class="step-num">06</span>
+            <div class="step-icon">💬</div>
+            <div class="step-title">Un contatto diretto, sempre</div>
+            <p class="step-desc">
+              Nessun ticket, nessun supporto generico. Hai il nostro numero —
+              risposta garantita entro 24 ore lavorative.
+            </p>
+            <span class="step-tag">Sempre raggiungibili</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="who" id="who">
+        <div class="section-label reveal">Per chi è fatto</div>
+        <h2 class="who-title reveal reveal-delay-1">
+          <span
+            >Se hai un'<em>attività locale,</em><br />sei nel posto
+            giusto.</span
+          >
+        </h2>
+        <div class="who-grid">
+          <div class="who-card reveal">
+            <div class="who-emoji">🍝</div>
+            <div class="who-card-title">Ristoranti & Bar</div>
+            <p class="who-card-desc">
+              Più prenotazioni da Google. Il menu online azzera le domande al
+              telefono e le risposte automatiche alle recensioni ti fanno
+              risparmiare ore.
+            </p>
+          </div>
+          <div class="who-card reveal reveal-delay-1">
+            <div class="who-emoji">🔧</div>
+            <div class="who-card-title">Artigiani & Tecnici</div>
+            <p class="who-card-desc">
+              Mai più clienti persi mentre sei in cantiere. Ricevi le richieste
+              già filtrate e complete su WhatsApp, pronte per diventare
+              preventivi.
+            </p>
+          </div>
+          <div class="who-card reveal reveal-delay-2">
+            <div class="who-emoji">💇</div>
+            <div class="who-card-title">Saloni & Benessere</div>
+            <p class="who-card-desc">
+              Riduci i no-show del 60% con i promemoria automatici. I clienti
+              vedono i tuoi lavori, sanno quanto costa e ti contattano 24/7.
+            </p>
+          </div>
+          <div class="who-card reveal reveal-delay-3">
+            <div class="who-emoji">🏪</div>
+            <div class="who-card-title">Negozi & Retail</div>
+            <p class="who-card-desc">
+              Fatti trovare da chi cerca i tuoi prodotti in zona. Più visite
+              fisiche in negozio grazie a una vetrina digitale chiara e
+              indicazioni precise.
+            </p>
+          </div>
+          <div class="who-card reveal">
+            <div class="who-emoji">⚖️</div>
+            <div class="who-card-title">Professionisti & Studi</div>
+            <p class="who-card-desc">
+              Costruisci fiducia ancor prima del primo incontro. Una pagina
+              autorevole che posiziona le tue competenze e filtra i contatti non
+              in target.
+            </p>
+          </div>
+          <div class="who-card reveal reveal-delay-1">
+            <div class="who-emoji">🏋️</div>
+            <div class="who-card-title">Fitness & Sport</div>
+            <p class="who-card-desc">
+              Riempi i tuoi corsi senza fatica. Mostra il valore dei tuoi
+              allenamenti e fidelizza i clienti con comunicazioni automatiche.
+            </p>
+          </div>
+          <div class="who-card reveal reveal-delay-2">
+            <div class="who-emoji">🏡</div>
+            <div class="who-card-title">Immobiliari & Agenti</div>
+            <p class="who-card-desc">
+              Acquisisci più mandati e profila meglio gli acquirenti. Un
+              portfolio elegante e moduli intelligenti per scremare i curiosi.
+            </p>
+          </div>
+          <div class="who-card reveal reveal-delay-3">
+            <div class="who-emoji">🎓</div>
+            <div class="who-card-title">Formazione & Corsi</div>
+            <p class="who-card-desc">
+              Aumenta le iscrizioni convertendo i visitatori. Metti in risalto
+              il tuo programma e semplifica il processo per farsi contattare.
             </p>
           </div>
         </div>
-        <div class="faq-item reveal" id="faq-seo">
-          <button class="faq-q" aria-expanded="false">
-            <span>Cos'è la SEO e perché è importante?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a" hidden>
-            <p>
-              SEO significa Search Engine Optimization: è l'insieme delle
-              attività che rendono il tuo sito più facile da trovare e da capire
-              per Google e gli altri motori di ricerca. Oggi non basta più solo
-              la SEO tradizionale: serve anche un approccio più ampio che
-              includa AEO e Search Everywhere Optimization.
-            </p>
+      </section>
+
+      <div class="referral">
+        <div class="referral-inner">
+          <div>
+            <div class="referral-label">Programma referral</div>
+            <h3 class="referral-headline">
+              Presenta un cliente.<br />Guadagni 200€.
+            </h3>
           </div>
-        </div>
-        <div class="faq-item reveal reveal-delay-1">
-          <button class="faq-q" aria-expanded="false">
-            <span>In quanto tempo viene realizzato il sito?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a" hidden>
-            <p>
-              Dal primo contatto alla pubblicazione online in 7 giorni
-              lavorativi. Consegna garantita per tutti i piani.
+          <div class="referral-big">200€</div>
+          <div>
+            <p class="referral-desc">
+              Per ogni cliente Growth, Full o Custom che presenti e rimane
+              attivo per almeno 2 mesi, ti accreditiamo 200€.
             </p>
-          </div>
-        </div>
-        <div
-          class="faq-item reveal reveal-delay-2"
-          id="faq-digital-receptionist"
-        >
-          <button class="faq-q" aria-expanded="false">
-            <span>Cos'è la segretaria digitale e come funziona?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a" hidden>
-            <p>
-              È un form intelligente sul tuo sito che raccoglie i dati e te li
-              manda in tempo reale su WhatsApp — così non perdi mai un cliente
-              anche mentre sei al lavoro.
-            </p>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <button class="faq-q" aria-expanded="false">
-            <span>I prezzi includono hosting e dominio?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a" hidden>
-            <p>
-              Sì. Tutti i piani mensili includono hosting su server dedicato,
-              dominio personalizzato, certificato SSL, backup regolari e
-              aggiornamenti tecnici.
-            </p>
-          </div>
-        </div>
-        <div class="faq-item reveal reveal-delay-1" id="faq-whatsapp">
-          <button class="faq-q" aria-expanded="false">
-            <span
-              >Come funzionano i promemoria WhatsApp e il recupero
-              clienti?</span
-            >
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a" hidden>
-            <p>
-              Zero chiamate e nessun ritardo: il nostro promemoria automatico
-              avvisa il cliente un'ora prima dell'incontro.
-            </p>
+            <a href="#contact" class="btn-dark">Scopri di più</a>
           </div>
         </div>
       </div>
-    </section>
 
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "FAQPage",
-            "@id": "https://madhatworks.com/#faq",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "Quanto costa un sito web professionale?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Il costo parte da 349€ di setup una tantum + 29€/mese per il piano Starter. Nessun costo nascosto."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Cos'è la SEO e perché è importante?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "SEO significa Search Engine Optimization. Oggi serve un approccio ampio che includa AEO per farti trovare anche nelle risposte generate dall'AI."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "In quanto tempo viene realizzato il sito?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Dal primo contatto alla pubblicazione online in 7 giorni lavorativi."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Cos'è la segretaria digitale?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "È un form intelligente che raccoglie richieste e te le invia su WhatsApp."
-                }
-              }
-            ]
-          },
-          {
-            "@type": "Organization",
-            "@id": "https://madhatworks.com/#organization",
-            "name": "MadHat Works",
-            "url": "https://madhatworks.com",
-            "makesOffer": [
-              {
-                "@type": "Offer",
-                "priceSpecification": {
-                  "@type": "PriceSpecification",
-                  "price": "29.00",
-                  "priceCurrency": "EUR",
-                  "valueAddedTaxIncluded": true
+      <section class="faq" id="faq">
+        <div class="section-label reveal">Domande frequenti</div>
+        <h2 class="faq-title reveal">
+          <span>
+            Quanto vale un <em>sito web</em><br />che lavora davvero per te?
+          </span>
+        </h2>
+        <div class="faq-intro reveal reveal-delay-1">
+          Prezzi reali, senza sorprese. Ecco le risposte alle domande più
+          frequenti.
+        </div>
+
+        <div class="faq-grid">
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false">
+              <span>Quanto costa un sito web professionale?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a" hidden>
+              <p>
+                Il costo parte da 349€ di setup + 29€/mese con il piano Starter.
+                Il piano Growth costa 499€ + 199€/mese e include SEO,
+                automazioni WhatsApp e segretaria digitale. Il piano Full
+                Service è 799€ + 599€/mese con social media e chatbot inclusi.
+                Per e-commerce o web app di prenotazione il Progetto Custom
+                parte da 999€ + 99€/mese. Tutti i piani includono hosting,
+                dominio e supporto. Nessun costo nascosto.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item reveal" id="faq-seo">
+            <button class="faq-q" aria-expanded="false">
+              <span>Cos'è la SEO e perché è importante?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a" hidden>
+              <p>
+                SEO significa Search Engine Optimization: è l'insieme delle
+                attività che rendono il tuo sito più facile da trovare e da
+                capire per Google e gli altri motori di ricerca. Oggi non basta
+                più solo la SEO tradizionale: serve anche un approccio più ampio
+                che includa AEO e Search Everywhere Optimization.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item reveal reveal-delay-1">
+            <button class="faq-q" aria-expanded="false">
+              <span>In quanto tempo viene realizzato il sito?</span>
+              <span class="faq-icon">+</span>
+            </button>
+
+            <div class="faq-a" hidden>
+              <p>
+                Dalla firma del contratto alla pubblicazione online in meno di
+                14 giorni lavorativi.
+                <br />
+                <small>
+                  *Tempistiche valide dopo la ricezione di tutti i materiali
+                  necessari.
+                </small>
+              </p>
+            </div>
+          </div>
+          <div
+            class="faq-item reveal reveal-delay-2"
+            id="faq-digital-receptionist"
+          >
+            <button class="faq-q" aria-expanded="false">
+              <span>Cos'è la segretaria digitale e come funziona?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a" hidden>
+              <p>
+                È un form intelligente sul tuo sito che raccoglie i dati e te li
+                manda in tempo reale su WhatsApp — così non perdi mai un cliente
+                anche mentre sei al lavoro.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false">
+              <span>I prezzi includono hosting e dominio?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a" hidden>
+              <p>
+                Sì. Tutti i piani mensili includono hosting su server dedicato,
+                dominio personalizzato, certificato SSL, backup regolari e
+                aggiornamenti tecnici.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item reveal reveal-delay-1" id="faq-whatsapp">
+            <button class="faq-q" aria-expanded="false">
+              <span
+                >Come funzionano i promemoria WhatsApp e il recupero
+                clienti?</span
+              >
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a" hidden>
+              <p>
+                Zero chiamate e nessun ritardo: il nostro promemoria automatico
+                avvisa il cliente un'ora prima dell'incontro.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "FAQPage",
+              "@id": "https://madhatworks.com/#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Quanto costa un sito web professionale?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Il costo parte da 349€ di setup + 29€/mese con il piano Starter. Il piano Growth costa 499€ + 199€/mese e include SEO, automazioni WhatsApp e segretaria digitale. Il piano Full Service è 799€ + 599€/mese con social media e chatbot inclusi. Per e-commerce o web app di prenotazione il Progetto Custom parte da 999€ + 99€/mese. Tutti i piani includono hosting, dominio e supporto. Nessun costo nascosto."
+                  }
                 },
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Piano Starter",
-                  "description": "Sito professionale 1 pagina, hosting, dominio e aggiornamenti inclusi (Setup iniziale: 349€)."
-                }
-              },
-              {
-                "@type": "Offer",
-                "priceSpecification": {
-                  "@type": "PriceSpecification",
-                  "price": "199.00",
-                  "priceCurrency": "EUR",
-                  "valueAddedTaxIncluded": true
+                {
+                  "@type": "Question",
+                  "name": "Cos'è la SEO e perché è importante?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "SEO significa Search Engine Optimization. Oggi serve un approccio ampio che includa AEO per farti trovare anche nelle risposte generate dall'AI."
+                  }
                 },
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Piano Growth",
-                  "description": "Sito professionale 3 pagine, segretaria digitale WhatsApp, SEO e gestione recensioni (Setup iniziale: 499€)."
-                }
-              },
-              {
-                "@type": "Offer",
-                "priceSpecification": {
-                  "@type": "PriceSpecification",
-                  "price": "599.00",
-                  "priceCurrency": "EUR",
-                  "valueAddedTaxIncluded": true
+                {
+                  "@type": "Question",
+                  "name": "In quanto tempo viene realizzato il sito?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Dalla firma del contratto alla pubblicazione online in meno di 14 giorni lavorativi. Tempistiche valide dopo la ricezione di tutti i materiali necessari."
+                  }
                 },
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Piano Full Service",
-                  "description": "Gestione completa: sito 5 pagine, chatbot, social media management e supporto prioritario (Setup iniziale: 799€)."
+                {
+                  "@type": "Question",
+                  "name": "Cos'è la segretaria digitale?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "È un form intelligente che raccoglie richieste e te le invia su WhatsApp."
+                  }
                 }
-              }
-            ]
-          }
-        ]
-      }
-    </script>
+              ]
+            },
+            {
+              "@type": "Organization",
+              "@id": "https://madhatworks.com/#organization",
+              "name": "MadHat Works",
+              "url": "https://madhatworks.com",
+              "makesOffer": [
+                {
+                  "@type": "Offer",
+                  "priceSpecification": {
+                    "@type": "PriceSpecification",
+                    "price": "29.00",
+                    "priceCurrency": "EUR",
+                    "valueAddedTaxIncluded": true
+                  },
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Piano Starter",
+                    "description": "Sito professionale 1 pagina, hosting, dominio e aggiornamenti inclusi (Setup iniziale: 349€)."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "priceSpecification": {
+                    "@type": "PriceSpecification",
+                    "price": "199.00",
+                    "priceCurrency": "EUR",
+                    "valueAddedTaxIncluded": true
+                  },
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Piano Growth",
+                    "description": "Sito professionale 3 pagine, segretaria digitale WhatsApp, SEO e gestione recensioni (Setup iniziale: 499€)."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "priceSpecification": {
+                    "@type": "PriceSpecification",
+                    "price": "599.00",
+                    "priceCurrency": "EUR",
+                    "valueAddedTaxIncluded": true
+                  },
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Piano Full Service",
+                    "description": "Gestione completa: sito 5 pagine, chatbot, social media management e supporto prioritario (Setup iniziale: 799€)."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "priceSpecification": {
+                    "@type": "PriceSpecification",
+                    "minPrice": "999.00",
+                    "priceCurrency": "EUR",
+                    "valueAddedTaxIncluded": true
+                  },
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Progetto Custom",
+                    "description": "E-commerce o web app prenotazioni su misura. Setup iniziale a partire da 999€. Canone mensile definito sulle specifiche del progetto."
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      </script>
 
-    <section class="contact" id="contact">
-      <div class="section-label reveal">Contatto</div>
-      <div class="contact-inner">
-        <div>
-          <h2 class="contact-title reveal">
-            <span>Parliamoci.<br />Senza <em>impegno.</em></span>
-          </h2>
-          <p class="contact-body reveal reveal-delay-1">
-            Mandaci un messaggio con una breve descrizione della tua attività.
-            Rispondiamo entro 24 ore.
-          </p>
-          <div class="contact-links reveal reveal-delay-2">
-            <a href="https://wa.me/358000000000" class="contact-link">
-              <div class="contact-link-icon">💬</div>
-              <span>Scrivici su WhatsApp</span>
-            </a>
-            <a href="mailto:info@tuodominio.com" class="contact-link">
-              <div class="contact-link-icon">✉️</div>
-              <span>info@tuodominio.com</span>
-            </a>
+      <section class="contact" id="contact">
+        <div class="section-label reveal">Contatto</div>
+        <div class="contact-inner">
+          <div>
+            <h2 class="contact-title reveal">
+              <span>Parliamoci.<br />Senza <em>impegno.</em></span>
+            </h2>
+            <p class="contact-body reveal reveal-delay-1">
+              Mandaci un messaggio con una breve descrizione della tua attività.
+              Rispondiamo entro 24 ore.
+            </p>
+            <div class="contact-links reveal reveal-delay-2">
+              <a href="https://wa.me/358000000000" class="contact-link">
+                <div class="contact-link-icon">💬</div>
+                <span>Scrivici su WhatsApp</span>
+              </a>
+              <a href="mailto:info@tuodominio.com" class="contact-link">
+                <div class="contact-link-icon">✉️</div>
+                <span>info@tuodominio.com</span>
+              </a>
+            </div>
           </div>
-        </div>
 
-        <form
-          action="https://formspree.io/f/INSERISCI_IL_TUO_ID"
-          method="POST"
-          class="contact-form reveal reveal-delay-1"
-        >
-          <div class="form-row">
+          <form
+            action="https://formspree.io/f/your-form-id-here"
+            method="POST"
+            class="contact-form reveal reveal-delay-1"
+          >
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nome" class="form-label">Nome</label>
+                <input
+                  id="nome"
+                  name="nome"
+                  class="form-input"
+                  type="text"
+                  placeholder="Mario Rossi"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="attivita" class="form-label">Attività</label>
+                <input
+                  id="attivita"
+                  name="attivita"
+                  class="form-input"
+                  type="text"
+                  placeholder="Ristorante Da Mario"
+                />
+              </div>
+            </div>
             <div class="form-group">
-              <label for="nome" class="form-label">Nome</label>
+              <label for="email" class="form-label">Email</label>
               <input
-                id="nome"
-                name="nome"
+                id="email"
+                name="email"
                 class="form-input"
-                type="text"
-                placeholder="Mario Rossi"
+                type="email"
+                placeholder="mario@example.com"
                 required
               />
             </div>
             <div class="form-group">
-              <label for="attivita" class="form-label">Attività</label>
-              <input
-                id="attivita"
-                name="attivita"
-                class="form-input"
-                type="text"
-                placeholder="Ristorante Da Mario"
-              />
+              <label for="piano" class="form-label">Piano di interesse</label>
+              <select id="piano" name="piano" class="form-select">
+                <option value="" disabled selected>
+                  Seleziona un piano...
+                </option>
+                <option>Starter — 349€ setup + 29€/mese</option>
+                <option>Growth — 499€ setup + 199€/mese</option>
+                <option>Full Service — 799€ setup + 599€/mese</option>
+                <option>Progetto Custom — 999€ setup + 99€/mese</option>
+              </select>
             </div>
-          </div>
-          <div class="form-group">
-            <label for="email" class="form-label">Email</label>
-            <input
-              id="email"
-              name="email"
-              class="form-input"
-              type="email"
-              placeholder="mario@example.com"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="piano" class="form-label">Piano di interesse</label>
-            <select id="piano" name="piano" class="form-select">
-              <option>Seleziona un piano...</option>
-              <option>Starter — 349€ setup + 29€/mese</option>
-              <option>Growth — 499€ setup + 199€/mese</option>
-              <option>Full Service — 799€ setup + 599€/mese</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="messaggio" class="form-label"
-              >Messaggio (opzionale)</label
-            >
-            <textarea
-              id="messaggio"
-              name="messaggio"
-              class="form-textarea"
-              placeholder="Raccontaci brevemente la tua attività..."
-            ></textarea>
-          </div>
-          <button class="form-submit" type="submit">Invia richiesta →</button>
-        </form>
-      </div>
-    </section>
-
+            <div class="form-group">
+              <label for="messaggio" class="form-label"
+                >Messaggio (opzionale)</label
+              >
+              <textarea
+                id="messaggio"
+                name="messaggio"
+                class="form-textarea"
+                placeholder="Raccontaci brevemente la tua attività..."
+              ></textarea>
+            </div>
+            <button class="form-submit" type="submit">Invia richiesta →</button>
+          </form>
+        </div>
+      </section>
+    </main>
     <footer>
       <div class="footer-brand">MaD<span>HaT</span></div>
       <span class="footer-copy">© 2026 MaDHaT Works — Web Agency</span>
+      <nav class="footer-legal" aria-label="Link legali">
+        <a href="/privacy.html">Privacy Policy</a>
+        <span class="footer-sep">·</span>
+        <a href="/cookie.html">Cookie Policy</a>
+      </nav>
     </footer>
 
-    <script src="js/main.js"></script>
+    <div class="cookie-banner" id="cookie-banner" aria-live="polite">
+      <p class="cookie-banner-text">
+        Questo sito non utilizza cookie di profilazione. Utilizziamo solo cookie
+        tecnici essenziali.
+        <a href="/cookie.html" class="cookie-banner-link"
+          >Leggi la Cookie Policy</a
+        >
+      </p>
+      <button
+        class="cookie-banner-btn"
+        id="cookie-dismiss"
+        aria-label="Chiudi banner cookie"
+      >
+        Ho capito
+      </button>
+    </div>
+
+    <script src="js/main.js" defer></script>
   </body>
 </html>

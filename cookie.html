@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, follow" />
+  <title>Cookie Policy — MadHat Works</title>
+  <link rel="icon" type="image/png" href="../images/logoFI-favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0d1b2a;
+      --orange: #e07b39;
+      --cream: #f5f0e8;
+      --text: #1a1a1a;
+      --muted: #5a5a5a;
+      --border: #e0dbd0;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Syne', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    .top-nav {
+      background: var(--navy);
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .top-nav a {
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Syne', sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+    .top-nav a:hover { opacity: 1; }
+    .top-nav-brand {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      opacity: 1 !important;
+    }
+    .top-nav-brand span { color: var(--orange); }
+
+    .page-hero {
+      background: var(--navy);
+      color: #fff;
+      padding: 3rem 2rem 4rem;
+      text-align: center;
+    }
+    .page-hero-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    .page-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.15;
+    }
+    .page-hero h1 em {
+      font-style: italic;
+      color: var(--orange);
+    }
+    .page-hero-date {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      opacity: 0.6;
+    }
+
+    /* SUMMARY BOX */
+    .summary-bar {
+      background: var(--navy);
+      color: #fff;
+      text-align: center;
+      padding: 1.25rem 2rem;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .summary-bar strong { color: var(--orange); }
+
+    .legal-wrapper {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+    }
+
+    .legal-section {
+      margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .legal-section:last-child { border-bottom: none; }
+
+    .legal-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: var(--navy);
+    }
+    .legal-section h2 .num {
+      color: var(--orange);
+      margin-right: 0.4em;
+      font-style: italic;
+    }
+
+    .legal-section p {
+      font-size: 0.95rem;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+    }
+    .legal-section p:last-child { margin-bottom: 0; }
+
+    /* COOKIE TABLE */
+    .cookie-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.875rem;
+    }
+    .cookie-table th {
+      background: var(--navy);
+      color: #fff;
+      padding: 0.6rem 0.85rem;
+      text-align: left;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+    .cookie-table td {
+      padding: 0.6rem 0.85rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .cookie-table tr:nth-child(even) td { background: #fff; }
+    .badge {
+      display: inline-block;
+      padding: 0.15em 0.6em;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .badge-tech { background: #d4edda; color: #155724; }
+    .badge-third { background: #fff3cd; color: #7a5000; }
+    .badge-none { background: #f8d7da; color: #721c24; }
+
+    .highlight-box {
+      background: #fff;
+      border-left: 3px solid var(--orange);
+      padding: 1rem 1.25rem;
+      border-radius: 0 6px 6px 0;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+    }
+    .highlight-box strong {
+      display: block;
+      margin-bottom: 0.25rem;
+      color: var(--navy);
+    }
+    .highlight-box a { color: var(--orange); }
+
+    .legal-footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 1.5rem 2rem;
+      font-size: 0.8rem;
+    }
+    .legal-footer a {
+      color: var(--orange);
+      text-decoration: none;
+    }
+    .legal-footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <nav class="top-nav">
+    <a href="/" class="top-nav-brand">MaD<span>HaT</span> Works</a>
+    <a href="/">← Torna al sito</a>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-hero-label">Informativa legale</div>
+    <h1>Cookie <em>Policy</em></h1>
+    <div class="page-hero-date">Ultima modifica: Giugno 2025</div>
+  </div>
+
+  <div class="summary-bar">
+    Questo sito <strong>non utilizza cookie di profilazione o marketing.</strong>
+    Solo cookie tecnici essenziali e un trasferimento IP tramite Google Fonts.
+  </div>
+
+  <div class="legal-wrapper">
+
+    <div class="legal-section">
+      <h2><span class="num">1.</span> Cosa sono i cookie</h2>
+      <p>I cookie sono piccoli file di testo che i siti web salvano nel tuo browser durante la navigazione. Vengono utilizzati per far funzionare il sito, ricordare preferenze, o raccogliere informazioni statistiche e di marketing.</p>
+      <p>Non tutti i cookie sono uguali: alcuni sono indispensabili per il funzionamento del sito, altri richiedono il tuo consenso esplicito.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">2.</span> Cookie utilizzati su questo sito</h2>
+      <p>Questo sito utilizza esclusivamente cookie tecnici essenziali. Non utilizziamo cookie di profilazione, di tracciamento o di marketing di alcun tipo.</p>
+
+      <table class="cookie-table">
+        <thead>
+          <tr>
+            <th>Cookie / Tecnologia</th>
+            <th>Tipo</th>
+            <th>Finalità</th>
+            <th>Durata</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>cookie-notice-dismissed</strong></td>
+            <td><span class="badge badge-tech">Tecnico</span></td>
+            <td>Ricorda che hai chiuso il banner informativo sui cookie</td>
+            <td>365 giorni</td>
+          </tr>
+          <tr>
+            <td><strong>Google Fonts CDN</strong></td>
+            <td><span class="badge badge-third">Terze parti</span></td>
+            <td>Caricamento font tipografici. Al momento del caricamento, il tuo indirizzo IP viene trasmesso a Google. Non imposta cookie nel browser.</td>
+            <td>Non applicabile</td>
+          </tr>
+          <tr>
+            <td><strong>Cookie di profilazione</strong></td>
+            <td><span class="badge badge-none">Non presenti</span></td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><strong>Cookie analitici</strong></td>
+            <td><span class="badge badge-none">Non presenti</span></td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><strong>Cookie pubblicitari</strong></td>
+            <td><span class="badge badge-none">Non presenti</span></td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">3.</span> Google Fonts e trasferimento IP</h2>
+      <p>Questo sito carica i font tipografici tramite il servizio Google Fonts (fonts.googleapis.com). Quando visiti il sito, il tuo browser effettua una richiesta diretta ai server di Google, trasmettendo automaticamente il tuo indirizzo IP.</p>
+      <p>Google non imposta cookie nel tuo browser tramite questo servizio, ma il trasferimento dell'IP costituisce un trattamento di dato personale. Google è certificata nel quadro del <strong>Data Privacy Framework UE-USA</strong>, che fornisce garanzie adeguate per i trasferimenti di dati verso gli Stati Uniti.</p>
+      <div class="highlight-box">
+        <strong>Google LLC</strong>
+        Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a><br />
+        Google Fonts FAQ: <a href="https://developers.google.com/fonts/faq/privacy" target="_blank" rel="noopener">developers.google.com/fonts/faq/privacy</a>
+      </div>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">4.</span> Modulo di contatto (Formspree)</h2>
+      <p>Il modulo di contatto presente sul sito utilizza il servizio Formspree per l'invio e la gestione dei messaggi. Formspree non imposta cookie nel tuo browser, ma tratta i dati che inserisci nel modulo (nome, email, messaggio) per consegnarli a noi.</p>
+      <div class="highlight-box">
+        <strong>Formspree, Inc.</strong>
+        Privacy Policy: <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">formspree.io/legal/privacy-policy</a>
+      </div>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">5.</span> Come gestire i cookie</h2>
+      <p>Poiché questo sito utilizza solo cookie tecnici essenziali, non è necessario il tuo consenso per il loro utilizzo. Puoi comunque gestire o eliminare i cookie in qualsiasi momento dalle impostazioni del tuo browser:</p>
+      <ul style="margin: 0.75rem 0 0.75rem 1.25rem;">
+        <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Google Chrome</a></li>
+        <li><a href="https://support.mozilla.org/it/kb/Gestione%20dei%20cookie" target="_blank" rel="noopener">Mozilla Firefox</a></li>
+        <li><a href="https://support.apple.com/it-it/guide/safari/sfri11471/mac" target="_blank" rel="noopener">Apple Safari</a></li>
+        <li><a href="https://support.microsoft.com/it-it/windows/eliminare-e-gestire-i-cookie-168dab11-0753-043d-7c16-ede5947fc64d" target="_blank" rel="noopener">Microsoft Edge</a></li>
+      </ul>
+      <p>Tieni presente che la disabilitazione dei cookie tecnici potrebbe compromettere alcune funzionalità del sito.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">6.</span> Modifiche alla Cookie Policy</h2>
+      <p>Questa Cookie Policy può essere aggiornata in caso di modifiche tecniche al sito o evoluzioni normative. La data di ultima modifica è sempre indicata in cima alla pagina.</p>
+      <p>Per qualsiasi domanda: <a href="mailto:info@madhatworks.com">info@madhatworks.com</a></p>
+    </div>
+
+  </div>
+
+  <footer class="legal-footer">
+    © 2025 MadHat Works — Gabriele Gargani &nbsp;|&nbsp;
+    <a href="/privacy.html">Privacy Policy</a> &nbsp;|&nbsp;
+    <a href="/">Torna al sito</a>
+  </footer>
+
+</body>
+</html>
