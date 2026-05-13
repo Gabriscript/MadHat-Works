@@ -1,24 +1,29 @@
 ---
-version: 1.0.0
+version: 2.0.0
 ---
 
 # Privacy Policy
 
-_Last updated: June 2025_
+_Last updated: June 2025 — version 2.0.0_
+
+> **Courtesy translation.** The Italian text at `/privacy` (language: IT) is the only legally binding version.
 
 This Privacy Policy describes how **MadHat Works** ("MadHat", "we") collects and processes personal data of clients and prospects. We process data in compliance with the EU General Data Protection Regulation (GDPR — Regulation 2016/679).
 
 ## 1. Data Controller
 
-MadHat Works acts as Data Controller for the personal data processed via this platform. Contact details are published on our website.
+MadHat Works acts as Data Controller for the personal data processed via this platform.
+
+- **Email**: madhatworks@gmail.com
+- **Place of business**: Florence (Italy)
 
 ## 2. Data We Collect
 
 When you accept a proposal, we collect:
 
-- **Identification data:** full name, email, company name (optional)
-- **Acceptance evidence:** typed signature, timestamp, accepted Terms version and hash
-- **Technical data:** IP address, browser user agent, browser language
+- **Identification data**: full name, email, company name (optional)
+- **Acceptance evidence**: typed signature, timestamp, accepted Terms version and hash
+- **Technical data**: IP address, browser user agent, browser language
 
 We collect this information directly from you when you accept a proposal.
 
@@ -53,7 +58,7 @@ Where data is transferred outside the European Economic Area, we rely on adequac
 
 Under GDPR you have the right to: access, rectification, erasure, restriction, portability, objection, and to lodge a complaint with the supervisory authority (Garante per la protezione dei dati personali — www.garanteprivacy.it).
 
-To exercise your rights, contact us at the email address on our website.
+To exercise your rights, contact us at **madhatworks@gmail.com**.
 
 ## 8. Security
 

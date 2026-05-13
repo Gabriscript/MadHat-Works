@@ -1,10 +1,11 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import type { TermsContent } from '@/lib/terms';
 
 export function TermsView({ en, it, kind }: { en: TermsContent; it: TermsContent; kind: 'terms' | 'privacy' }) {
-  const [lang, setLang] = useState<'EN' | 'IT'>('EN');
+  // Default to IT (legally binding for MadHat). Visitors can toggle to the EN courtesy version.
+  const [lang, setLang] = useState<'EN' | 'IT'>('IT');
   const content = lang === 'EN' ? en : it;
 
   return (

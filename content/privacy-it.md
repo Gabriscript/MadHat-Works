@@ -1,24 +1,27 @@
 ---
-version: 1.0.0
+version: 2.0.0
 ---
 
 # Privacy Policy
 
-_Ultimo aggiornamento: Giugno 2025_
+_Ultimo aggiornamento: Giugno 2025 — versione 2.0.0_
 
 Questa Privacy Policy descrive come **MadHat Works** ("MadHat", "noi") raccoglie e tratta i dati personali di clienti e contatti commerciali. Trattiamo i dati nel rispetto del Regolamento UE 2016/679 (GDPR).
 
 ## 1. Titolare del Trattamento
 
-MadHat Works opera in qualità di Titolare del Trattamento per i dati raccolti tramite questa piattaforma. I dati di contatto sono pubblicati sul nostro sito.
+MadHat Works opera in qualità di Titolare del Trattamento per i dati raccolti tramite questa piattaforma.
+
+- **Email**: madhatworks@gmail.com
+- **Sede**: Firenze (Italia)
 
 ## 2. Dati Raccolti
 
 Quando accetti una proposta raccogliamo:
 
-- **Dati identificativi:** nome e cognome, email, ragione sociale (opzionale)
-- **Prove di accettazione:** firma digitata, timestamp, versione dei Termini accettati e relativo hash
-- **Dati tecnici:** indirizzo IP, user agent del browser, lingua del browser
+- **Dati identificativi**: nome e cognome, email, ragione sociale (opzionale)
+- **Prove di accettazione**: firma digitata, timestamp, versione dei Termini accettati e relativo hash
+- **Dati tecnici**: indirizzo IP, user agent del browser, lingua del browser
 
 Raccogliamo queste informazioni direttamente da te al momento dell'accettazione della proposta.
 
@@ -53,7 +56,7 @@ Qualora i dati siano trasferiti al di fuori dello Spazio Economico Europeo, ci a
 
 In base al GDPR hai diritto a: accesso, rettifica, cancellazione, limitazione, portabilità, opposizione e proposizione di reclamo al Garante per la protezione dei dati personali (www.garanteprivacy.it).
 
-Per esercitare i tuoi diritti, scrivici all'indirizzo email indicato sul nostro sito.
+Per esercitare i tuoi diritti scrivici a **madhatworks@gmail.com**.
 
 ## 8. Sicurezza
 
