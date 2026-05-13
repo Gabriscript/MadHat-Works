@@ -245,9 +245,9 @@ frontend:
 
   - task: "Admin create / edit proposal (/admin/new, /admin/edit/[id])"
     implemented: true
-    working: false
+    working: true
     file: "/app/app/admin/new/page.tsx, /app/app/admin/edit/[id]/page.tsx, /app/app/admin/_components/ProposalForm.tsx"
-    stuck_count: 1
+    stuck_count: 0
     priority: "high"
     needs_retesting: false
     status_history:
@@ -269,6 +269,56 @@ frontend:
           
           Issue: Form submission fails with 500 error, preventing proposal creation.
           This is a deployment/configuration issue, not a code issue.
+      - working: true
+        agent: "testing"
+        comment: |
+          ✅ FIXED! Server Action now working after updating next.config.js allowedOrigins.
+          
+          Root Cause: Next.js wildcards (*.preview.emergentcf.cloud) do NOT match multi-level subdomains like 
+          *.cluster-5.preview.emergentcf.cloud. This is a known Next.js limitation confirmed by GitHub discussions.
+          
+          Solution: Added explicit cluster patterns to allowedOrigins:
+          - *.cluster-1.preview.emergentcf.cloud
+          - *.cluster-2.preview.emergentcf.cloud
+          - *.cluster-3.preview.emergentcf.cloud
+          - *.cluster-4.preview.emergentcf.cloud
+          - *.cluster-5.preview.emergentcf.cloud
+          - *.cluster-6.preview.emergentcf.cloud
+          - *.cluster-7.preview.emergentcf.cloud
+          - *.cluster-8.preview.emergentcf.cloud
+          - *.cluster-9.preview.emergentcf.cloud
+          - *.cluster-10.preview.emergentcf.cloud
+          
+          Comprehensive Testing Completed - ALL TESTS PASSED:
+          ✅ Create proposal flow (/admin/new):
+             - Growth template chip auto-fills form (499/199/6 months) ✓
+             - Title: "Test Pizzeria Proposal Fix Verification" ✓
+             - Client: "Mario Test" / "mario@test.it" ✓
+             - Form submission successful (NO 500 error) ✓
+             - Navigated to /admin/edit/cmp3uj5ij0001j5vhov7ix94k ✓
+             - PENDING status badge visible ✓
+          
+          ✅ Copy link functionality:
+             - Copy link button clicked successfully ✓
+             - Toast notification appeared ✓
+          
+          ✅ Admin list verification:
+             - New proposal "Test Pizzeria Proposal Fix Verification" visible in list ✓
+             - PENDING status badge visible ✓
+             - Stats updated (Total: 2, Pending: 2) ✓
+          
+          ✅ Template edit flow (/admin/templates/edit/[id]):
+             - Added deliverable "Test deliverable via Enter key" ✓
+             - Save changes button clicked ✓
+             - Navigated back to /admin/templates without error ✓
+          
+          ✅ Proposal acceptance page (/proposal/[token]):
+             - Hero title with last word in orange italic ✓
+             - Pricing block: 499 € / 199 € / 6 months ✓
+             - 2 consent checkboxes present ✓
+             - Accept button disabled initially (correct behavior) ✓
+          
+          All critical flows working end-to-end. No 500 errors encountered.
 
   - task: "Admin templates CRUD (/admin/templates, /new, /edit/[id])"
     implemented: true

@@ -4,8 +4,33 @@ const nextConfig = {
     unoptimized: true,
   },
   experimental: {
-    // Remove if not using Server Components
-    serverComponentsExternalPackages: ['mongodb'],
+    // @react-pdf/renderer ships native font + canvas helpers - it must run outside
+    // the bundler so Node can load it server-side.
+    serverComponentsExternalPackages: ['@react-pdf/renderer', '@prisma/client', 'prisma'],
+    serverActions: {
+      // Next.js 14 blocks Server Actions when `origin` host differs from `x-forwarded-host`
+      // (a CSRF-style guard). Behind this Kubernetes ingress the browser-visible host and
+      // the cluster-internal host differ - whitelist both shapes.
+      allowedOrigins: [
+        'localhost:3000',
+        '*.preview.emergentagent.com',
+        '*.emergentagent.com',
+        '*.preview.emergentcf.cloud',
+        '*.cluster-1.preview.emergentcf.cloud',
+        '*.cluster-2.preview.emergentcf.cloud',
+        '*.cluster-3.preview.emergentcf.cloud',
+        '*.cluster-4.preview.emergentcf.cloud',
+        '*.cluster-5.preview.emergentcf.cloud',
+        '*.cluster-6.preview.emergentcf.cloud',
+        '*.cluster-7.preview.emergentcf.cloud',
+        '*.cluster-8.preview.emergentcf.cloud',
+        '*.cluster-9.preview.emergentcf.cloud',
+        '*.cluster-10.preview.emergentcf.cloud',
+        '*.emergentcf.cloud',
+        '*.emergent.host',
+      ],
+      bodySizeLimit: '2mb',
+    },
   },
   webpack(config, { dev }) {
     if (dev) {
