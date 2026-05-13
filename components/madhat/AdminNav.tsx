@@ -1,8 +1,10 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useTransition } from 'react';
 import { Logo } from './Logo';
-import { LayoutDashboard, FilePlus, Files } from 'lucide-react';
+import { LayoutDashboard, FilePlus, Files, LogOut } from 'lucide-react';
+import { logoutAction } from '@/app/login/actions';
 
 const items = [
   { href: '/admin',           label: 'Proposals',  icon: LayoutDashboard, exact: true },
@@ -12,6 +14,16 @@ const items = [
 
 export function AdminNav() {
   const pathname = usePathname();
+  const [pending, startTransition] = useTransition();
+
+  const logout = () => {
+    if (!confirm('Log out of the admin dashboard?')) return;
+    startTransition(() => {
+      // Server action; redirect happens server-side.
+      logoutAction().catch(() => {});
+    });
+  };
+
   return (
     <nav className="fixed top-0 inset-x-0 z-40 px-6 md:px-12 py-4 flex items-center justify-between bg-navy/95 backdrop-blur border-b border-orange/20">
       <div className="flex items-center gap-10">
@@ -36,7 +48,19 @@ export function AdminNav() {
           })}
         </ul>
       </div>
-      <span className="text-[0.6rem] uppercase tracking-widest-2 text-cream/35 hidden sm:inline">Internal · Admin</span>
+      <div className="flex items-center gap-4">
+        <span className="text-[0.6rem] uppercase tracking-widest-2 text-cream/35 hidden sm:inline">Internal · Admin</span>
+        <button
+          type="button"
+          onClick={logout}
+          disabled={pending}
+          className="inline-flex items-center gap-1.5 text-[0.7rem] uppercase tracking-wider-2 font-semibold text-cream/55 hover:text-orange-pale transition-colors disabled:opacity-50"
+          title="Sign out"
+        >
+          <LogOut className="w-3.5 h-3.5" strokeWidth={2.5} />
+          <span className="hidden sm:inline">{pending ? 'Bye…' : 'Sign out'}</span>
+        </button>
+      </div>
     </nav>
   );
 }

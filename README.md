@@ -14,6 +14,35 @@ Proposals are created from templates, shared via a unique private link, accepted
 - **gray-matter** + **marked** for Terms / Privacy markdown
 - **sonner** for toast notifications
 
+## Authentication
+
+The admin area is protected by a single shared password + an httpOnly HMAC-signed session cookie.
+There is **no database table** for users and **no external auth service** — just two env vars.
+
+`.env`:
+
+```env
+ADMIN_PASSWORD=madhat                # change this to whatever you want
+ADMIN_SESSION_SECRET=<64-char-hex>   # rotate to forcibly log everyone out
+```
+
+### How it works
+
+- `/app/lib/auth.ts` — Web Crypto (HMAC-SHA256). Signs/verifies a `{exp}` payload. Edge-runtime compatible.
+- `/app/middleware.ts` — protects `/admin/:path*`, redirects to `/login?from=<path>` when no valid cookie.
+- `/app/app/login` — the public login page (sits outside `/admin` so it bypasses the admin layout).
+- Session lives 7 days; logout button is in the admin top bar.
+
+### Public routes (no auth)
+
+`/`, `/login`, `/proposal/[token]`, `/terms`, `/privacy`, `POST /api/proposal/[token]/accept`, `GET /api/pdf/[id]`.
+
+### Production tips
+
+- Replace `ADMIN_PASSWORD=madhat` with a strong shared password.
+- Keep `ADMIN_SESSION_SECRET` in a secret manager (Vercel/GitHub envs / Doppler). Rotate it to revoke every active session at once.
+- `secure: true` on the cookie kicks in automatically in `NODE_ENV=production`.
+
 ## Routes
 
 ### Public

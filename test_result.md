@@ -375,6 +375,30 @@ frontend:
         agent: "main"
         comment: "Markdown loaded with gray-matter + marked, TOC built from H2s with anchor ids. EN/IT toggle in sticky sidebar. Version + hash displayed for transparency. Returns 200 for both routes."
 
+  - task: "Admin authentication: middleware + login page + session cookie"
+    implemented: true
+    working: true
+    file: "/app/lib/auth.ts, /app/middleware.ts, /app/app/login/*, /app/components/madhat/AdminNav.tsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "main"
+        comment: |
+          Single shared password (env ADMIN_PASSWORD) + httpOnly HMAC-SHA256 signed session cookie
+          (env ADMIN_SESSION_SECRET, 32 random bytes). Web-Crypto-based - works in both Node and Edge
+          runtimes so the middleware can verify without any extra runtime config.
+          Verified end-to-end:
+          - GET /admin while logged-out -> 307 to /login?from=/admin
+          - POST /login with wrong password -> stays on /login with "Wrong password." error
+          - POST /login with correct password ('madhat') -> 303 redirect to from= target (deep-link preserved)
+          - Subsequent /admin* requests pass through middleware
+          - Sign out button in AdminNav clears the cookie and bounces back to /login
+          - Public routes (/, /terms, /privacy, /proposal/[token], /api/proposal/[token]/accept, /api/pdf/[id]) remain open
+          - /admin/login (old path) is correctly redirected to /login by middleware
+
+
 metadata:
   created_by: "main_agent"
   version: "1.0"
