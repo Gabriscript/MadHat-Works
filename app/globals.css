@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --navy: #0C1A3A;
+    --navy-mid: #162448;
+    --navy-light: #1E3260;
+    --orange: #C4561A;
+    --orange-bright: #E06020;
+    --orange-pale: #F4A56A;
+    --cream: #F5F0E8;
+    --radius: 0px;
+  }
+
+  * {
+    border-color: rgba(245, 240, 232, 0.12);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--navy);
+    color: var(--cream);
+    font-family: var(--font-sans), system-ui, sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: var(--navy); }
+  ::-webkit-scrollbar-thumb { background: var(--orange); }
+  ::-webkit-scrollbar-thumb:hover { background: var(--orange-bright); }
+
+  ::selection { background: var(--orange); color: var(--navy); }
+}
+
+@layer components {
+  /* MadHat-style section label */
+  .mh-label {
+    @apply inline-flex items-center gap-3 text-[0.65rem] font-semibold uppercase text-orange tracking-widest-3;
+  }
+  .mh-label::before {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 1px;
+    background: var(--orange);
+  }
+
+  /* Headline w/ italic accent */
+  .mh-headline {
+    font-family: var(--font-serif), Georgia, serif;
+    font-weight: 900;
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+  }
+  .mh-headline em {
+    font-style: italic;
+    color: var(--orange);
+  }
+
+  /* Primary CTA - exact MadHat style */
+  .mh-btn-primary {
+    @apply inline-flex items-center justify-center text-[0.78rem] font-bold tracking-wider-2 uppercase text-navy bg-orange px-9 py-4 transition-all;
+  }
+  .mh-btn-primary:hover {
+    background: var(--orange-bright);
+    transform: translateY(-2px);
+  }
+  .mh-btn-primary:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none;
+    background: var(--orange);
+  }
+
+  .mh-btn-dark {
+    @apply inline-flex items-center justify-center text-[0.72rem] font-bold tracking-wider-2 uppercase text-cream bg-navy px-7 py-3 transition-colors;
+  }
+  .mh-btn-dark:hover { background: var(--navy-light); }
+
+  .mh-btn-ghost {
+    @apply inline-flex items-center text-[0.78rem] font-semibold tracking-wider-2 uppercase text-cream pb-0.5 transition-colors;
+    border-bottom: 1px solid rgba(245, 240, 232, 0.3);
+  }
+  .mh-btn-ghost:hover {
+    color: var(--orange-pale);
+    border-color: var(--orange-pale);
+  }
+
+  .mh-input {
+    @apply w-full text-sm text-cream px-4 py-3 transition-colors outline-none;
+    background: rgba(245, 240, 232, 0.04);
+    border: 1px solid rgba(245, 240, 232, 0.1);
+  }
+  .mh-input:focus { border-color: var(--orange); }
+  .mh-input::placeholder { color: rgba(245, 240, 232, 0.35); }
+
+  .mh-card {
+    background: var(--navy-mid);
+    border: 1px solid rgba(245, 240, 232, 0.06);
+  }
+
+  .mh-status-badge {
+    @apply inline-flex items-center gap-1.5 text-[0.6rem] font-bold uppercase tracking-widest-2 px-2.5 py-1;
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .bg-grid-orange {
+    background-image:
+      radial-gradient(ellipse 60% 80% at 80% 40%, rgba(196, 86, 26, 0.11) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 60% at 10% 80%, rgba(30, 50, 96, 0.8) 0%, transparent 60%);
+  }
+}
