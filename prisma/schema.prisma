@@ -85,10 +85,11 @@ model ProposalAcceptance {
 
 model TermsVersion {
   id        String   @id @default(cuid())
+  kind      String   // terms | privacy
   version   String
   lang      String   // EN | IT
   hash      String
   createdAt DateTime @default(now())
 
-  @@unique([version, lang])
+  @@unique([kind, version, lang])
 }

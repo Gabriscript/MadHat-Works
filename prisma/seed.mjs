@@ -28,9 +28,9 @@ async function seedTermsVersions() {
     const version = (data?.version) || '1.0.0';
     const hash = sha256(content).slice(0, 16);
     await prisma.termsVersion.upsert({
-      where: { version_lang: { version, lang: d.lang } },
+      where: { kind_version_lang: { kind: d.kind, version, lang: d.lang } },
       update: { hash },
-      create: { version, lang: d.lang, hash },
+      create: { kind: d.kind, version, lang: d.lang, hash },
     });
   }
 }
