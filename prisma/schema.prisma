@@ -1,0 +1,94 @@
+// MadHat Proposals - Database Schema
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// NOTE: SQLite does not support native enums.
+// We use String fields and validate via TypeScript types in /lib/types.ts.
+//   Duration       : 'ONE_TIME' | 'MONTHS_3' | 'MONTHS_6' | 'MONTHS_12'
+//   ProposalStatus : 'DRAFT' | 'PENDING' | 'ACCEPTED' | 'EXPIRED'
+//   TermsLang      : 'EN' | 'IT'
+
+model ProposalTemplate {
+  id                String    @id @default(cuid())
+  name              String
+  description       String
+  deliverables      String    // JSON array of strings
+  includedServices  String    // JSON array of strings
+  excludedServices  String    // JSON array of strings
+  oneTimePrice      Float?
+  monthlyFee        Float?
+  suggestedDuration String    @default("ONE_TIME")
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+
+  proposals         Proposal[]
+}
+
+model Proposal {
+  id                String              @id @default(cuid())
+  token             String              @unique
+  templateId        String?
+  template          ProposalTemplate?   @relation(fields: [templateId], references: [id], onDelete: SetNull)
+
+  title             String
+  clientName        String
+  clientEmail       String
+  companyName       String?
+
+  description       String
+  deliverables      String              // JSON array
+  includedServices  String              // JSON array
+  excludedServices  String              // JSON array
+
+  oneTimePrice      Float?
+  monthlyFee        Float?
+  duration          String              @default("ONE_TIME")
+  timeline          String?
+
+  status            String              @default("DRAFT")
+  expiresAt         DateTime?
+
+  createdAt         DateTime            @default(now())
+  updatedAt         DateTime            @updatedAt
+
+  acceptance        ProposalAcceptance?
+}
+
+model ProposalAcceptance {
+  id                    String   @id @default(cuid())
+  proposalId            String   @unique
+  proposal              Proposal @relation(fields: [proposalId], references: [id], onDelete: Cascade)
+
+  acceptedAt            DateTime @default(now())
+  clientName            String
+  clientEmail           String
+  typedSignature        String
+
+  acceptedTermsVersion  String
+  acceptedTermsHash     String
+
+  ipAddress             String?
+  userAgent             String?
+  browserLanguage       String?
+
+  checkboxTerms         Boolean
+  checkboxPrivacy       Boolean
+
+  pdfPath               String?
+}
+
+model TermsVersion {
+  id        String   @id @default(cuid())
+  version   String
+  lang      String   // EN | IT
+  hash      String
+  createdAt DateTime @default(now())
+
+  @@unique([version, lang])
+}
