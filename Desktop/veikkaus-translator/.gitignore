@@ -1,0 +1,15 @@
+# Build
+.gradle/
+build/
+app/build/
+
+# IDE
+.idea/
+*.iml
+local.properties
+
+# ATTENZIONE: mai committare chiavi di firma o segreti
+*.jks
+*.keystore
+*.b64
+SEGRETI*.txt

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Veikkaus Translator</string>
+    <string name="service_label">Veikkaus Translator</string>
+    <string name="service_description">Legge il testo visibile nell\'app Veikkaus e mostra la traduzione italiana in sovraimpressione. Funziona completamente offline: nessun dato lascia il telefono. App per uso personale.</string>
+</resources>

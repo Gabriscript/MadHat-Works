@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Sfondo navy arrotondato -->
+    <path
+        android:fillColor="#1E3260"
+        android:pathData="M22,4 h64 a18,18 0 0 1 18,18 v64 a18,18 0 0 1 -18,18 h-64 a18,18 0 0 1 -18,-18 v-64 a18,18 0 0 1 18,-18 z" />
+
+    <!-- Bolla dialogo 1 (cream, in alto a sinistra) -->
+    <path
+        android:fillColor="#F5F0E8"
+        android:pathData="M28,26 h34 a8,8 0 0 1 8,8 v14 a8,8 0 0 1 -8,8 h-22 l-8,8 v-8 h-4 a8,8 0 0 1 -8,-8 v-14 a8,8 0 0 1 8,-8 z" />
+
+    <!-- Bolla dialogo 2 (orange, in basso a destra) -->
+    <path
+        android:fillColor="#E06020"
+        android:pathData="M46,52 h34 a8,8 0 0 1 8,8 v14 a8,8 0 0 1 -8,8 h-4 v8 l-8,-8 h-22 a8,8 0 0 1 -8,-8 v-14 a8,8 0 0 1 8,-8 z" />
+</vector>

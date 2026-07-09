@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- Quasi-nero con leggera trasparenza: copre il finlandese, testo bianco sopra -->
+    <solid android:color="#F2181C24" />
+    <corners android:radius="5dp" />
+</shape>

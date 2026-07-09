@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Config del servizio di accessibilità.
+  NOTA: non fissiamo android:packageNames su fi.veikkaus perché non abbiamo ancora
+  verificato il package name esatto dell'app sul telefono. Il filtro per "veikkaus"
+  viene fatto nel codice (TranslatorService). Quando confermiamo il package esatto
+  (visibile nella schermata principale dell'app), possiamo bloccarlo qui per
+  risparmiare batteria.
+-->
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accessibilityEventTypes="typeWindowContentChanged|typeWindowStateChanged|typeViewScrolled"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:accessibilityFlags="flagDefault|flagRetrieveInteractiveWindows"
+    android:canRetrieveWindowContent="true"
+    android:description="@string/service_description"
+    android:notificationTimeout="100" />
